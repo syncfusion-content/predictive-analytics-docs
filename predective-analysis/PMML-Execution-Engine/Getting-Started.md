@@ -1,0 +1,337 @@
+---
+layout: post
+title: Getting-Started
+description: getting started
+platform: ug
+control: Essential Predictive Analytics
+documentation: predective-analysis
+---
+
+# Getting Started
+
+This section provides you the basic information about getting started with predictive analytics, that is, how to create a model in R, generate a PMML file and finally, how to deploy it in a .NET application using the PMML Execution Engine.
+
+Several samples are included with the product. Each sample contains R code that builds models from training data and serializes the model to PMML. The PMML file is also included for runtime use. C# code demonstrates consuming the PMML file using the PMML engine. The samples can be run by using the sample browser interface provided for several platforms including ASP.NET, MVC,  Windows Forms, WinRT and WPF. The individual samples can also be directly accessed from the following location, assuming it is the default install location. _%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics (assuming default install location)._
+
+## Getting Started with R
+
+R is a free software programming language and software environment for statistical computing and graphics. The R language is widely used among statisticians and data miners for developing statistical software and data analysis. R is freely available from [http://www.r-project.org/](http://www.r-project.org/).
+
+Syncfusion has published an eBook titled “R Succinctly” that allows you to quickly get started with the R modeling environment. This book is included with the documentation for this product.
+
+Once you build a model using R or any other modeling environment of your choice, you can export the model to PMML. The persisted model is then a stand-alone representation of the model that can then be interpreted at runtime by a suitable model such as the PMML engine. During deployment time there is no need for the original modeling environment or runtime to be present in any form.
+
+With R, you can use the PMML package available from [http://cran.r-project.org/web/packages/pmml/index.html](http://cran.r-project.org/web/packages/pmml/index.html) to persist supported models to PMML. All it takes is one line of R code.
+
+The following extract shows the creation of PMML in the Cars sample included with the product, under the category titled Regression. Default installation path is: _%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Regression\Cars._
+
+PMML generation code is as follows.
+
+# Load pmml package
+
+library(pmml) 
+
+....
+
+# Applying Regression model
+
+cars_Regression<-lm(Price~.,data=trainData)	 							 					 
+
+....
+
+# PMML generation
+
+pmmlFile<-pmml(cars_Regression,data=trainData)
+
+write(toString(pmmlFile),file="Cars.pmml")
+
+saveXML(pmmlFile,file="Cars.pmml")
+
+
+
+If you are modeling with an alternate environment such as SAS or SPSS, refer to that product’s documentation on the persistence of models to PMML. 
+
+Once you have a PMML file that represents your model, you are ready to start the process of deployment.
+
+The generated PMML file for the simple regression model illustrated in the sample is as follows.
+
+PMML File:
+
+ &lt;?xml version="1.0"?&gt;
+
+&lt;PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd"&gt;
+
+ &lt;Header copyright="Copyright (c) 2014 Syncfusion" description="Linear Regression Model"&gt;
+
+  &lt;Extension name="user" value="Syncfusion" extender="Rattle/PMML"/&gt;
+
+  &lt;Application name="Rattle/PMML" version="1.4"/&gt;
+
+  <Timestamp>2014-07-17 12:38:17</Timestamp>
+
+ &lt;/Header&gt;
+
+ &lt;DataDictionary numberOfFields="18"&gt;
+
+  &lt;DataField name="Price" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="Mileage" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="Cylinder" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="Doors" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="Cruise" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="Sound" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="Leather" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="Buick" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="Cadillac" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="Chevy" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="Pontiac" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="Saab" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="Saturn" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="convertible" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="coupe" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="hatchback" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="sedan" optype="continuous" dataType="double"/&gt;
+
+  &lt;DataField name="wagon" optype="continuous" dataType="double"/&gt;
+
+ &lt;/DataDictionary&gt;
+
+ &lt;RegressionModel modelName="Linear_Regression_Model" functionName="regression" algorithmName="least squares"&gt;
+
+  &lt;MiningSchema&gt;
+
+   &lt;MiningField name="Price" usageType="predicted"/&gt;
+
+   &lt;MiningField name="Mileage" usageType="active"/&gt;
+
+   &lt;MiningField name="Cylinder" usageType="active"/&gt;
+
+   &lt;MiningField name="Doors" usageType="active"/&gt;
+
+   &lt;MiningField name="Cruise" usageType="active"/&gt;
+
+   &lt;MiningField name="Sound" usageType="active"/&gt;
+
+   &lt;MiningField name="Leather" usageType="active"/&gt;
+
+   &lt;MiningField name="Buick" usageType="active"/&gt;
+
+   &lt;MiningField name="Cadillac" usageType="active"/&gt;
+
+   &lt;MiningField name="Chevy" usageType="active"/&gt;
+
+   &lt;MiningField name="Pontiac" usageType="active"/&gt;
+
+   &lt;MiningField name="Saab" usageType="active"/&gt;
+
+   &lt;MiningField name="Saturn" usageType="active"/&gt;
+
+   &lt;MiningField name="convertible" usageType="active"/&gt;
+
+   &lt;MiningField name="coupe" usageType="active"/&gt;
+
+   &lt;MiningField name="hatchback" usageType="active"/&gt;
+
+   &lt;MiningField name="sedan" usageType="active"/&gt;
+
+   &lt;MiningField name="wagon" usageType="active"/&gt;
+
+  &lt;/MiningSchema&gt;
+
+  &lt;Output&gt;
+
+   &lt;OutputField name="Predicted_Price" feature="predictedValue"/&gt;
+
+  &lt;/Output&gt;
+
+  &lt;RegressionTable intercept="-1404.85634354542"&gt;
+
+   &lt;NumericPredictor name="Mileage" exponent="1" coefficient="-0.201340622164363"/&gt;
+
+   &lt;NumericPredictor name="Cylinder" exponent="1" coefficient="3794.8236596627"/&gt;
+
+   &lt;NumericPredictor name="Doors" exponent="1" coefficient="1588.3110092597"/&gt;
+
+   &lt;NumericPredictor name="Cruise" exponent="1" coefficient="424.970769596581"/&gt;
+
+   &lt;NumericPredictor name="Sound" exponent="1" coefficient="499.61577647855"/&gt;
+
+   &lt;NumericPredictor name="Leather" exponent="1" coefficient="784.986438997019"/&gt;
+
+   &lt;NumericPredictor name="Buick" exponent="1" coefficient="552.173111394673"/&gt;
+
+   &lt;NumericPredictor name="Cadillac" exponent="1" coefficient="12611.32359635"/&gt;
+
+   &lt;NumericPredictor name="Chevy" exponent="1" coefficient="-568.090998283941"/&gt;
+
+   &lt;NumericPredictor name="Pontiac" exponent="1" coefficient="-1716.28817772575"/&gt;
+
+   &lt;NumericPredictor name="Saab" exponent="1" coefficient="12439.5191213991"/&gt;
+
+   &lt;NumericPredictor name="Saturn" exponent="1" coefficient="0"/&gt;
+
+   &lt;NumericPredictor name="convertible" exponent="1" coefficient="10562.3973171046"/&gt;
+
+   &lt;NumericPredictor name="coupe" exponent="1" coefficient="0"/&gt;
+
+   &lt;NumericPredictor name="hatchback" exponent="1" coefficient="-6530.39136964952"/&gt;
+
+   &lt;NumericPredictor name="sedan" exponent="1" coefficient="-4505.20249327318"/&gt;
+
+   &lt;NumericPredictor name="wagon" exponent="1" coefficient="0"/&gt;
+
+  &lt;/RegressionTable&gt;
+
+ &lt;/RegressionModel&gt;
+
+&lt;/PMML&gt;
+
+
+
+This PMML file thus generated can then be used by the PMML Execution Engine along with input data to obtain predicted results.
+
+The following code demonstrates predicting car prices using independent predictors, present in the model. The entire dataset is loaded and predictions are made.
+
+[C#]
+
+public Table PredictResult(string inputDataCSVPath, string pmmlPath)
+
+        {
+
+            //Load input csv
+
+            inputTable = new Table(inputDataCSVPath, true, ',');
+
+
+
+            //Get PMML Evaluator instance
+
+            PMMLEvaluator evaluator = new PMMLEvaluatorFactory().
+
+              GetPMMLEvaluatorInstance(pmmlPath);
+
+
+
+            string[] predictedCategories = null;
+
+
+
+            //Predict the value for each record using the PMML Evaluator instance
+
+            for (int i = 0; i < inputTable.RowCount; i++)
+
+            {
+
+                var cars = GetDataObject(inputTable, i);
+
+
+
+                //Get result
+
+                PredictedResult predictedResult = evaluator.GetResult(cars, null);
+
+
+
+                if (i == 0)
+
+                {
+
+                    //Get the predicted propability fields
+
+                    predictedCategories = predictedResult.GetPredictedCategories();
+
+                    //Initialize the output table
+
+                    InitializeTable(inputTable.RowCount, predictedCategories);
+
+                }
+
+
+
+                //Add predicted value
+
+                outputTable[i, 0] = predictedResult.PredictedValue;
+
+            }
+
+
+
+            return outputTable;
+
+        }  
+
+public object GetDataObject(Table inputTable, int row)
+
+        {
+
+            var cars = new
+
+            {
+
+                Price = inputTable[row, "Price"],
+
+                Mileage = inputTable[row, "Mileage"],
+
+                Cylinder = inputTable[row, "Cylinder"],
+
+                Doors = inputTable[row, "Doors"],
+
+                Cruise = inputTable[row, "Cruise"],
+
+                Sound = inputTable[row, "Sound"],
+
+                Leather = inputTable[row, "Leather"],
+
+                Buick = inputTable[row, "Buick"],
+
+                Cadillac = inputTable[row, "Cadillac"],
+
+                Chevy = inputTable[row, "Chevy"],
+
+                Pontiac = inputTable[row, "Pontiac"],
+
+                Saab = inputTable[row, "Saab"],
+
+                Saturn = inputTable[row, "Saturn"],
+
+                convertible = inputTable[row, "convertible"],
+
+                coupe = inputTable[row, "coupe"],
+
+                hatchback = inputTable[row, "hatchback"],
+
+                sedan = inputTable[row, "sedan"],
+
+                wagon = inputTable[row, "wagon"]
+
+            };
+
+            return cars;
+
+        }          
+
+
+
+The output as it appears in the sample, is displayed in the following image.
+
+
+
+![](Getting-Started_images/Getting-Started_img1.png)
+{:.image }
+
+
