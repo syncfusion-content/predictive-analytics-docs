@@ -11,15 +11,15 @@ documentation: predective-analysis
 
 This section explains you the PMML Execution Engine with its key features, prerequisites to use the API, its compatibilities with Visual Studio Frameworks and finally the documentation details complimentary with the product.
 
-Introduction toPMML Execution Engine
+## Introduction toPMML Execution Engine
 
 PMML Execution Engine is a C# library developed for predicting results based on predicted modelling done in PMML over the input data and you can run on the following .Net platforms – Windows forms, WinRT, WPF, ASP.NET and ASP.NET MVC. PMML stands for Predictive Model Markup Language. It is an XML-based file format developed by the [Data Mining Group](http://www.dmg.org) to provide a way for applications to describe and exchange models produced by data mining and machine learning algorithms.
 
-Use Case Scenario
+## Use Case Scenario
 
 PMML Execution Engine is used to make predictions based on the input PMML file. You can bind the predicted results to dashboard applications for intuitive understanding and decision making. 
 
-Key Features
+## Key Features
 
 Important features of PMML Execution Engine are as follows,
 
@@ -90,7 +90,8 @@ Association Rules Model</td><td>
 </td><td>
 arules</td></tr>
 </table>
-User Guide Organization
+
+## User Guide Organization
 
 The product is derived with example of PMMLs and input data samples as well as an extensive documentation to guide you. This User guide provides you detailed information on the features and methodologies of PMML Execution Engine. It is organized into the following sections:
 
@@ -108,7 +109,7 @@ Concepts and Features-The features of PMML Execution Engine are illustrated with
 
 Frequently Asked Questions-This section covers the list of questions with expert solutions.
 
-Document Conventions
+## Document Conventions
 
 The following conventions helps you in quickly identifying the important sections of information when using the content.
 
@@ -123,9 +124,8 @@ Description</td></tr>
 <tr>
 <td>
 Note</td><td>
-{ ![](Overview_images/Overview_img1.jpeg) | markdownify }
-{:.image }
-{{ _Note:_ | markdownify }}</td><td>
+{{ '![](Overview_images/Overview_img1.jpeg)' | markdownify }}
+{{ '_Note:_' | markdownify }}</td><td>
 Represents important information</td></tr>
 <tr>
 <td>
@@ -135,15 +135,15 @@ Represents an example</td></tr>
 <tr>
 <td>
 Tip</td><td>
-{ ![](Overview_images/Overview_img2.jpeg) | markdownify }
-{:.image }
+{{ '![](Overview_images/Overview_img2.jpeg) '| markdownify }}
+
 </td><td>
 Represents useful hints that helps you in using the controls/features</td></tr>
 <tr>
 <td>
 Additional Information</td><td>
-{ ![](Overview_images/Overview_img3.jpeg) | markdownify }
-{:.image }
+{{ '![](Overview_images/Overview_img3.jpeg) '| markdownify }}
+
 </td><td>
 Represents additional information on the topic</td></tr>
 </table>

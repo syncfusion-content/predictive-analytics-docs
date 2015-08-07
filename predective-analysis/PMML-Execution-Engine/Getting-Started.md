@@ -27,6 +27,7 @@ The following extract shows the creation of PMML in the Cars sample included wit
 
 PMML generation code is as follows.
 
+{% highlight r%}
 # Load pmml package
 
 library(pmml) 
@@ -46,7 +47,7 @@ pmmlFile<-pmml(cars_Regression,data=trainData)
 write(toString(pmmlFile),file="Cars.pmml")
 
 saveXML(pmmlFile,file="Cars.pmml")
-
+{% endhighlight %}
 
 
 If you are modeling with an alternate environment such as SAS or SPSS, refer to that product’s documentation on the persistence of models to PMML. 
@@ -55,157 +56,161 @@ Once you have a PMML file that represents your model, you are ready to start the
 
 The generated PMML file for the simple regression model illustrated in the sample is as follows.
 
-PMML File:
+## PMML File:
 
- &lt;?xml version="1.0"?&gt;
+{% highlight r %}
 
-&lt;PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd"&gt;
+ <?xml version="1.0"?>
 
- &lt;Header copyright="Copyright (c) 2014 Syncfusion" description="Linear Regression Model"&gt;
+<PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd">
 
-  &lt;Extension name="user" value="Syncfusion" extender="Rattle/PMML"/&gt;
+ <Header copyright="Copyright (c) 2014 Syncfusion" description="Linear Regression Model">
 
-  &lt;Application name="Rattle/PMML" version="1.4"/&gt;
+  <Extension name="user" value="Syncfusion" extender="Rattle/PMML"/>
+
+  <Application name="Rattle/PMML" version="1.4"/>
 
   <Timestamp>2014-07-17 12:38:17</Timestamp>
 
- &lt;/Header&gt;
+ </Header>
 
- &lt;DataDictionary numberOfFields="18"&gt;
+ <DataDictionary numberOfFields="18">
 
-  &lt;DataField name="Price" optype="continuous" dataType="double"/&gt;
+  <DataField name="Price" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="Mileage" optype="continuous" dataType="double"/&gt;
+  <DataField name="Mileage" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="Cylinder" optype="continuous" dataType="double"/&gt;
+  <DataField name="Cylinder" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="Doors" optype="continuous" dataType="double"/&gt;
+  <DataField name="Doors" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="Cruise" optype="continuous" dataType="double"/&gt;
+  <DataField name="Cruise" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="Sound" optype="continuous" dataType="double"/&gt;
+  <DataField name="Sound" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="Leather" optype="continuous" dataType="double"/&gt;
+  <DataField name="Leather" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="Buick" optype="continuous" dataType="double"/&gt;
+  <DataField name="Buick" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="Cadillac" optype="continuous" dataType="double"/&gt;
+  <DataField name="Cadillac" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="Chevy" optype="continuous" dataType="double"/&gt;
+  <DataField name="Chevy" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="Pontiac" optype="continuous" dataType="double"/&gt;
+  <DataField name="Pontiac" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="Saab" optype="continuous" dataType="double"/&gt;
+  <DataField name="Saab" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="Saturn" optype="continuous" dataType="double"/&gt;
+  <DataField name="Saturn" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="convertible" optype="continuous" dataType="double"/&gt;
+  <DataField name="convertible" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="coupe" optype="continuous" dataType="double"/&gt;
+  <DataField name="coupe" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="hatchback" optype="continuous" dataType="double"/&gt;
+  <DataField name="hatchback" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="sedan" optype="continuous" dataType="double"/&gt;
+  <DataField name="sedan" optype="continuous" dataType="double"/>
 
-  &lt;DataField name="wagon" optype="continuous" dataType="double"/&gt;
+  <DataField name="wagon" optype="continuous" dataType="double"/>
 
- &lt;/DataDictionary&gt;
+ </DataDictionary>
 
- &lt;RegressionModel modelName="Linear_Regression_Model" functionName="regression" algorithmName="least squares"&gt;
+ <RegressionModel modelName="Linear_Regression_Model" functionName="regression" algorithmName="least squares">
 
-  &lt;MiningSchema&gt;
+  <MiningSchema>
 
-   &lt;MiningField name="Price" usageType="predicted"/&gt;
+   <MiningField name="Price" usageType="predicted"/>
 
-   &lt;MiningField name="Mileage" usageType="active"/&gt;
+   <MiningField name="Mileage" usageType="active"/>
 
-   &lt;MiningField name="Cylinder" usageType="active"/&gt;
+   <MiningField name="Cylinder" usageType="active"/>
 
-   &lt;MiningField name="Doors" usageType="active"/&gt;
+   <MiningField name="Doors" usageType="active"/>
 
-   &lt;MiningField name="Cruise" usageType="active"/&gt;
+   <MiningField name="Cruise" usageType="active"/>
 
-   &lt;MiningField name="Sound" usageType="active"/&gt;
+   <MiningField name="Sound" usageType="active"/>
 
-   &lt;MiningField name="Leather" usageType="active"/&gt;
+   <MiningField name="Leather" usageType="active"/>
 
-   &lt;MiningField name="Buick" usageType="active"/&gt;
+   <MiningField name="Buick" usageType="active"/>
 
-   &lt;MiningField name="Cadillac" usageType="active"/&gt;
+   <MiningField name="Cadillac" usageType="active"/>
 
-   &lt;MiningField name="Chevy" usageType="active"/&gt;
+   <MiningField name="Chevy" usageType="active"/>
 
-   &lt;MiningField name="Pontiac" usageType="active"/&gt;
+   <MiningField name="Pontiac" usageType="active"/>
 
-   &lt;MiningField name="Saab" usageType="active"/&gt;
+   <MiningField name="Saab" usageType="active"/>
 
-   &lt;MiningField name="Saturn" usageType="active"/&gt;
+   <MiningField name="Saturn" usageType="active"/>
 
-   &lt;MiningField name="convertible" usageType="active"/&gt;
+   <MiningField name="convertible" usageType="active"/>
 
-   &lt;MiningField name="coupe" usageType="active"/&gt;
+   <MiningField name="coupe" usageType="active"/>
 
-   &lt;MiningField name="hatchback" usageType="active"/&gt;
+   <MiningField name="hatchback" usageType="active"/>
 
-   &lt;MiningField name="sedan" usageType="active"/&gt;
+   <MiningField name="sedan" usageType="active"/>
 
-   &lt;MiningField name="wagon" usageType="active"/&gt;
+   <MiningField name="wagon" usageType="active"/>
 
-  &lt;/MiningSchema&gt;
+  </MiningSchema>
 
-  &lt;Output&gt;
+  <Output>
 
-   &lt;OutputField name="Predicted_Price" feature="predictedValue"/&gt;
+   <OutputField name="Predicted_Price" feature="predictedValue"/>
 
-  &lt;/Output&gt;
+  </Output>
 
-  &lt;RegressionTable intercept="-1404.85634354542"&gt;
+  <RegressionTable intercept="-1404.85634354542">
 
-   &lt;NumericPredictor name="Mileage" exponent="1" coefficient="-0.201340622164363"/&gt;
+   <NumericPredictor name="Mileage" exponent="1" coefficient="-0.201340622164363"/>
 
-   &lt;NumericPredictor name="Cylinder" exponent="1" coefficient="3794.8236596627"/&gt;
+   <NumericPredictor name="Cylinder" exponent="1" coefficient="3794.8236596627"/>
 
-   &lt;NumericPredictor name="Doors" exponent="1" coefficient="1588.3110092597"/&gt;
+   <NumericPredictor name="Doors" exponent="1" coefficient="1588.3110092597"/>
 
-   &lt;NumericPredictor name="Cruise" exponent="1" coefficient="424.970769596581"/&gt;
+   <NumericPredictor name="Cruise" exponent="1" coefficient="424.970769596581"/>
 
-   &lt;NumericPredictor name="Sound" exponent="1" coefficient="499.61577647855"/&gt;
+   <NumericPredictor name="Sound" exponent="1" coefficient="499.61577647855"/>
 
-   &lt;NumericPredictor name="Leather" exponent="1" coefficient="784.986438997019"/&gt;
+   <NumericPredictor name="Leather" exponent="1" coefficient="784.986438997019"/>
 
-   &lt;NumericPredictor name="Buick" exponent="1" coefficient="552.173111394673"/&gt;
+   <NumericPredictor name="Buick" exponent="1" coefficient="552.173111394673"/>
 
-   &lt;NumericPredictor name="Cadillac" exponent="1" coefficient="12611.32359635"/&gt;
+   <NumericPredictor name="Cadillac" exponent="1" coefficient="12611.32359635"/>
 
-   &lt;NumericPredictor name="Chevy" exponent="1" coefficient="-568.090998283941"/&gt;
+   <NumericPredictor name="Chevy" exponent="1" coefficient="-568.090998283941"/>
 
-   &lt;NumericPredictor name="Pontiac" exponent="1" coefficient="-1716.28817772575"/&gt;
+   <NumericPredictor name="Pontiac" exponent="1" coefficient="-1716.28817772575"/>
 
-   &lt;NumericPredictor name="Saab" exponent="1" coefficient="12439.5191213991"/&gt;
+   <NumericPredictor name="Saab" exponent="1" coefficient="12439.5191213991"/>
 
-   &lt;NumericPredictor name="Saturn" exponent="1" coefficient="0"/&gt;
+   <NumericPredictor name="Saturn" exponent="1" coefficient="0"/>
 
-   &lt;NumericPredictor name="convertible" exponent="1" coefficient="10562.3973171046"/&gt;
+   <NumericPredictor name="convertible" exponent="1" coefficient="10562.3973171046"/>
 
-   &lt;NumericPredictor name="coupe" exponent="1" coefficient="0"/&gt;
+   <NumericPredictor name="coupe" exponent="1" coefficient="0"/>
 
-   &lt;NumericPredictor name="hatchback" exponent="1" coefficient="-6530.39136964952"/&gt;
+   <NumericPredictor name="hatchback" exponent="1" coefficient="-6530.39136964952"/>
 
-   &lt;NumericPredictor name="sedan" exponent="1" coefficient="-4505.20249327318"/&gt;
+   <NumericPredictor name="sedan" exponent="1" coefficient="-4505.20249327318"/>
 
-   &lt;NumericPredictor name="wagon" exponent="1" coefficient="0"/&gt;
+   <NumericPredictor name="wagon" exponent="1" coefficient="0"/>
 
-  &lt;/RegressionTable&gt;
+  </RegressionTable>
 
- &lt;/RegressionModel&gt;
+ </RegressionModel>
 
-&lt;/PMML&gt;
-
+</PMML>
+{% endhighlight %}
 
 
 This PMML file thus generated can then be used by the PMML Execution Engine along with input data to obtain predicted results.
 
 The following code demonstrates predicting car prices using independent predictors, present in the model. The entire dataset is loaded and predictions are made.
+
+{% highlight r %}
 
 [C#]
 
@@ -324,7 +329,7 @@ public object GetDataObject(Table inputTable, int row)
             return cars;
 
         }          
-
+{% endhighlight %}
 
 
 The output as it appears in the sample, is displayed in the following image.
@@ -332,6 +337,6 @@ The output as it appears in the sample, is displayed in the following image.
 
 
 ![](Getting-Started_images/Getting-Started_img1.png)
-{:.image }
+
 
 

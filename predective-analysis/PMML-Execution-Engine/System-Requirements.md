@@ -7,11 +7,11 @@ control: Essential Predictive Analytics
 documentation: predective-analysis
 ---
 
-## System Requirements
+# System Requirements
 
 This section explains you the requirements that are mandatory for using PMML Execution Engine. It also lists operating systems and IDE’s compatible with the product.
 
-Prerequisites
+## Prerequisites
 
 The prerequisites details are as follows:
 
@@ -21,15 +21,15 @@ _Table_ _3__: Prerequisites_
 <tr>
 <td>
 Supported IDEs</td><td>
-Visual Studio 2013Visual Studio 2012Visual Studio 2010 Visual Studio 2008 </td></tr>
+<br>Visual Studio 2013<br>Visual Studio 2012<br>Visual Studio 2010<br> Visual Studio 2008 </td></tr>
 <tr>
 <td>
 .NET Framework versions</td><td>
-.NET 4.5.1.NET 4.5.NET 4.0.NET 3.5</td></tr>
+<br>.NET 4.5.1<br>.NET 4.5<br>.NET 4.0<br>.NET 3.5</td></tr>
 </table>
 
 
-The compatibility details are as follows:
+## The compatibility details are as follows:
 
 _Table_ _4__: Compatibility_
 
@@ -37,11 +37,11 @@ _Table_ _4__: Compatibility_
 <tr>
 <td>
 Operating Systems</td><td>
-Windows 8.1Windows 8Windows Server 2012Windows Server 2008Windows 7Windows VistaWindows XPWindows 2003</td></tr>
+<br>Windows 8.1<br>Windows 8<br>Windows Server 2012<br>Windows Server 2008<br>Windows 7<br>Windows Vista<br>Windows XP<br>Windows 2003</td></tr>
 <tr>
 <td>
 PMML Versions</td><td>
-PMML version 4.1PMML version 4.2PMML version 4.2.1</td></tr>
+<br>PMML version 4.1<br>PMML version 4.2<br>PMML version 4.2.1</td></tr>
 </table>
 
 
