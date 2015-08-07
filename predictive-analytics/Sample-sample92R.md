@@ -2,9 +2,9 @@
 layout: post
 title: Sample-sample92R
 description: sample: sample_9_2.r 
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Sample: sample_9_2.R 

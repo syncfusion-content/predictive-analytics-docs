@@ -2,9 +2,9 @@
 layout: post
 title: System-Requirements
 description: system requirements
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # System Requirements

@@ -2,9 +2,9 @@
 layout: post
 title: Statistics-for-Associations
 description: statistics for associations 
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Statistics for Associations 

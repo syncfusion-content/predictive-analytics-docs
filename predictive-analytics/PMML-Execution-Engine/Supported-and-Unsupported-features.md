@@ -2,9 +2,9 @@
 layout: post
 title: Supported-and-Unsupported-features
 description: supported and unsupported features
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Supported and Unsupported features

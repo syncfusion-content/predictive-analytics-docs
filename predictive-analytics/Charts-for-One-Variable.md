@@ -2,9 +2,9 @@
 layout: post
 title: Charts-for-One-Variable
 description: charts for one variable 
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 ## Charts for One Variable 

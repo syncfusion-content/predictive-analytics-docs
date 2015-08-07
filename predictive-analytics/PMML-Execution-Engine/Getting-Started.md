@@ -2,9 +2,9 @@
 layout: post
 title: Getting-Started
 description: getting started
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Getting Started

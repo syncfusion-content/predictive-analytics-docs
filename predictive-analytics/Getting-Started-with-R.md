@@ -2,9 +2,9 @@
 layout: post
 title: Getting-Started-with-R
 description: getting started with r
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Getting Started with R

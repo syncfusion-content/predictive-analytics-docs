@@ -2,9 +2,9 @@
 layout: post
 title: Working-with-the-Data-File
 description: working with the data file 
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Working with the Data File 

@@ -2,9 +2,9 @@
 layout: post
 title: Charts-for-Three-or-More-Variables
 description: charts for three or more variables 
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 ## Charts for Three or More Variables 

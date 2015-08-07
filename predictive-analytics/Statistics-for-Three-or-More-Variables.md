@@ -2,9 +2,9 @@
 layout: post
 title: Statistics-for-Three-or-More-Variables
 description: statistics for three or more variables 
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Statistics for Three or More Variables 

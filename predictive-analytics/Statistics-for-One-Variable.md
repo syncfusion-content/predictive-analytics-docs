@@ -2,9 +2,9 @@
 layout: post
 title: Statistics-for-One-Variable
 description:  statistics for one variable 
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 #  Statistics for One Variable 

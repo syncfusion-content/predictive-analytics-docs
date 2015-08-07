@@ -2,9 +2,9 @@
 layout: post
 title: Modifying-Data
 description: modifying data 
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Modifying Data 

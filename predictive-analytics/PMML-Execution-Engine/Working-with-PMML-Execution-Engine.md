@@ -2,9 +2,9 @@
 layout: post
 title: Working-with-PMML-Execution-Engine
 description: working with pmml execution engine
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Working with PMML Execution Engine

@@ -2,9 +2,9 @@
 layout: post
 title: Installation-and-Deployment
 description: installation and deployment
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Installation and Deployment

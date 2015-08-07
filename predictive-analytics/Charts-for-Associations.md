@@ -2,9 +2,9 @@
 layout: post
 title: Charts-for-Associations
 description: charts for associations 
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 ## Charts for Associations 

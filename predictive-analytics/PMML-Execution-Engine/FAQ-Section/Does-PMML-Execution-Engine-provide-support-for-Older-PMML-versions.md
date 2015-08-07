@@ -2,9 +2,9 @@
 layout: post
 title: Does-PMML-Execution-Engine-provide-support-for-Older-PMML-versions
 description: does pmml execution engine provide support for older pmml versions?
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Does PMML Execution Engine provide support for Older PMML versions?

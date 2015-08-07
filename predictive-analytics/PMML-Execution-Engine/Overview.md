@@ -2,9 +2,9 @@
 layout: post
 title: Overview
 description: overview
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Overview

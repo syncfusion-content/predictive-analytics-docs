@@ -2,9 +2,9 @@
 layout: post
 title: Deploying-PMML-Execution-Engine
 description: deploying pmml execution engine
-platform: ug
+platform: predictive-analytics
 control: Essential Predictive Analytics
-documentation: predective-analysis
+documentation: ug
 ---
 
 # Deploying PMML Execution Engine
