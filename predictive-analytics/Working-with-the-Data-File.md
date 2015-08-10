@@ -17,7 +17,7 @@ documentation: ug
 
 
 
-####In this example is used the mtcars data from R’s datasets package. This dataset contains road test data from a 1974 issue of Motor Trend__magazine. In the code that follows, first load the package and the data, and then display the first three cases.
+####In this example is used the mtcars data from R’s datasets package. This dataset contains road test data from a 1974 issue of Motor Trend magazine. In the code that follows, first load the package and the data, and then display the first three cases.
 
 ### Sample: sample_5_1.R 
 {% highlight r %}
@@ -123,7 +123,7 @@ aggregate(iris$Petal.Width ~ iris$Species, FUN = mean)   iris$Species iris$Petal
 
 ####virginica
 
-####To compare the groups on more than one outcome variable, replace the single outcome variable with the column binding function cbind() and list the desired outcomes as arguments. cbind() makes it possible to combine several vectors or variables into a single, new data frame. In this case, R does not give the variable names but uses generic labels—V1, V2, etc.—so you must note the order in which you entered the variables.
+####To compare the groups on more than one outcome variable, replace the single outcome variable with the column binding function cbind() and list the desired outcomes as arguments. cbind() makes it possible to combine several vectors or variables into a single, new data frame. In this case, R does not give the variable names but uses generic labels V1, V2, etc. so you must note the order in which you entered the variables.
 {% highlight r %}
 # COMPARE GROUPS ON TWO VARIABLES aggregate(cbind(iris$Petal.Width,                 iris$Petal.Length) 
 

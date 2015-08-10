@@ -74,7 +74,7 @@ islands.ln <- log(islands)  # Compute natural log (base = e) boxplot(islands.ln,
 {% endhighlight %}
 
 
-The log() function calculates natural logs with base e, which is approximately 2.718. R also calculates common, base 10 logs with log10() and binary, base 2 logs with log2(), with similar results. Note that logarithms are undefined for zero. If you have zeros in your data, then you could add a small amount—0.5 or 1.0—to each score to avoid this problem. 
+The log() function calculates natural logs with base e, which is approximately 2.718. R also calculates common, base 10 logs with log10() and binary, base 2 logs with log2(), with similar results. Note that logarithms are undefined for zero. If you have zeros in your data, then you could add a small amount 0.5 or 1.0 to each score to avoid this problem. 
 
 ####![](Modifying-Data_images/Modifying-Data_img3.png)
 

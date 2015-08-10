@@ -210,7 +210,7 @@ detach("package:MASS", unload = TRUE)  # Unloads MASS package detach("package:RC
 
 ## Scatter Plots 
 
-### Perhaps the most common and useful chart for visualizing the association between two variables is the scatter plot. Scatter plots are used when two variables are quantitative—that is, interval or ratio level of measurement—although they can be adapted to many other situations. In the base installation of R, the general-purpose plot() function is typically used for scatter plots. It works well both in its default configuration and with its several options. In addition, it is possible to overlay a variety of regression lines and smoothers. 
+### Perhaps the most common and useful chart for visualizing the association between two variables is the scatter plot. Scatter plots are used when two variables are quantitative that is, interval or ratio level of measurement although they can be adapted to many other situations. In the base installation of R, the general-purpose plot() function is typically used for scatter plots. It works well both in its default configuration and with its several options. In addition, it is possible to overlay a variety of regression lines and smoothers. 
 
 
 
@@ -227,7 +227,7 @@ detach("package:MASS", unload = TRUE)  # Unloads MASS package detach("package:RC
 
  {%endhighlight%}
  
-### Because the cars dataset contains only two variables—speed and dist (i.e., distance to stop from the corresponding speed)—and both are quantitative, it is possible to have nothing more than the name of the dataset as an argument to the plot() function. 
+### Because the cars dataset contains only two variables speed and dist (i.e., distance to stop from the corresponding speed) and both are quantitative, it is possible to have nothing more than the name of the dataset as an argument to the plot() function. 
 
 
 {%highlight r%}
@@ -260,7 +260,7 @@ detach("package:MASS", unload = TRUE)  # Unloads MASS package detach("package:RC
 ![](Charts-for-Associations_images/Charts-for-Associations_img6.png)
 
 
-### The upward pattern that indicates a positive association between the two variables in the above figure is easy to see. However, the relationship can be even clearer when fit lines are added. In the following code example, a linear regression line is overlaid with the abline() function that takes a linear regression model from the lm() function as its argument. In addition, a lowess line— locally weighted scatter plot smoothing—can be added with the lines() function that takes the lowess() function as its argument. See    ?abline, ?lines, and ?lowess for more information on these functions. 
+### The upward pattern that indicates a positive association between the two variables in the above figure is easy to see. However, the relationship can be even clearer when fit lines are added. In the following code example, a linear regression line is overlaid with the abline() function that takes a linear regression model from the lm() function as its argument. In addition, a lowess line locally weighted scatter plot smoothing can be added with the lines() function that takes the lowess() function as its argument. See    ?abline, ?lines, and ?lowess for more information on these functions. 
 
 {%highlight r%}
 
@@ -279,7 +279,7 @@ The scatter plot with the added fit lines is shown in the following screenshot.
 ![](Charts-for-Associations_images/Charts-for-Associations_img7.png)
 
 
-_Figure_ _30__: Scatter Plot with Linear Regression and Lowess Fit Lines_
+_Figure30: Scatter Plot with Linear Regression and Lowess Fit Lines_
 
 ### For a final variation on the bivariate scatter plot, you can use the scatterplot() or sp() functions from the coincidentally named car package (that in this case, stands for "Companion to Applied Regression"). This package has many variations on scatter plots. You ca use the package that has marginal boxplots, smoothers, and quantile regression intervals. See help(package = "car") for more information. 
 
@@ -295,7 +295,7 @@ _Figure_ _30__: Scatter Plot with Linear Regression and Lowess Fit Lines_
  
 {%endhighlight%}
 
-### Next, you can call the scatter plot function—that can be called with scatterplot() or sp()— with a few attribute arguments to alter the dots and provide titles and labels. Otherwise, the code is closed to the default setup. 
+### Next, you can call the scatter plot function that can be called with scatterplot() or sp()— with a few attribute arguments to alter the dots and provide titles and labels. Otherwise, the code is closed to the default setup. 
 
 {%highlight r%}
 

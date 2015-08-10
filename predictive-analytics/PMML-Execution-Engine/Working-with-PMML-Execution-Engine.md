@@ -17,13 +17,13 @@ The PMMLEvaluatorFactory is a class that represents methods to instantiate respe
 
 ### Properties and Methods
 
-_Table_ _5__: Property Table_
+_Table5: Property Table_
 
 <table>
 <tr>
-<td>
-Property/Method</td><td>
-Description</td></tr>
+<th>
+Property/Method</th><th>
+Description</th></tr>
 <tr>
 <td>
 GetPMMLEvaluatorInstance(string)</td><td>
@@ -64,7 +64,7 @@ Output: SetosaThe predicted output (Setosa) obtained from PMML Execution engine 
 
 {% endhighlight %}
 
->![](Working-with-PMML-Execution-Engine_images/Working-with-PMML-Execution-Engine_img1.jpeg)  _Note: The above code example uses PMMLEvaluator instance. In case when the model to be evaluated is known before, then you can call the model evaluator directly._
+> Note: The above code example uses PMMLEvaluator instance. In case when the model to be evaluated is known before, then you can call the model evaluator directly.
 
 ## PMMLEvaluator
 
@@ -72,13 +72,13 @@ The PMMLEvaluator is an abstract class and it represents the base methods and pr
 
 Properties and Methods
 
-_Table_ _6__: PMMLEvaluator Public Properties/Methods_
+_Table6: PMMLEvaluator Public Properties/Methods_
 
 <table>
 <tr>
-<td>
-Property/ Method</td><td>
-Description</td></tr>
+<th>
+Property/ Method</th><th>
+Description</th></tr>
 <tr>
 <td>
 PMMLDocument</td><td>
@@ -105,13 +105,13 @@ Regression Model Evaluator represents the evaluator for Regression models. It in
 
 The general purpose of regression model is to learn more about the relationship between several independent or predictor variables and a dependent variable. In the social and natural sciences multiple regression procedures are very widely used in research. 
 
-_Table_ _7__: Property Table_
+_Table7: Property Table_
 
 <table>
 <tr>
-<td>
-Property/Method</td><td>
-Description</td></tr>
+<th>
+Property/Method</th><th>
+Description</th></tr>
 <tr>
 <td>
 RegressionModelEvaluator(PMMLDocument)</td><td>
@@ -177,13 +177,13 @@ General Regression Model is a supervised learning model used for both classifica
 
 
 
-_Table_ _8__: General Regression Model Public Properties or Methods_
+_Table8: General Regression Model Public Properties or Methods_
 
 <table>
 <tr>
-<td>
-Property/Method</td><td>
-Description</td></tr>
+<th>
+Property/Method</th><th>
+Description</th></tr>
 <tr>
 <td>
 GeneralRegressionModelEvaluator (PMMLDocument)</td><td>
@@ -244,13 +244,13 @@ Naive Bayes classifier is a simple probabilistic classifier based on applying Ba
 
 Bayesian classifiers have been used for text classification, such as junk email filtering such as spam, author identification, topic categorization and intrusion detection or anomaly detection in computer networks.
 
-_Table_ _9__: NaiveBayes Model Public Properties or Methods_
+_Table9: NaiveBayes Model Public Properties or Methods_
 
 <table>
 <tr>
-<td>
-Property/Method</td><td>
-Description</td></tr>
+<th>
+Property/Method</th><th>
+Description</th></tr>
 <tr>
 <td>
 NaiveBayesModelEvaluator(PMMLDocument)</td><td>
@@ -305,13 +305,13 @@ Output: VirginicaThe predicted output (Virginica) obtained from PMML Execution e
 
 Tree Model Evaluator represents the evaluator for tree models and it inherits all the properties and methods of PMMLEvaluator.
 
-_Table_ _10__: Tree Model Public Properties or Methods_
+_Table10: Tree Model Public Properties or Methods_
 
 <table>
 <tr>
-<td>
-Property/Method</td><td>
-Description</td></tr>
+<th>
+Property/Method</th><th>
+Description</th></tr>
 <tr>
 <td>
 TeeeModelEvaluator(PMMLDocument)</td><td>
@@ -370,13 +370,13 @@ Support Vector Machine Model Evaluator represents the evaluator for support vect
 
 Support Vector Machines (SVM) model is a set of related supervised learning model with associated learning algorithms that analyse data and recognize patterns, used for both classification and regression analysis. It has gained popularity due to its potential for high accuracy.
 
-_Table_ _11__: SupportVectorMachine Model Public Properties/Methods_
+_Table11: SupportVectorMachine Model Public Properties/Methods_
 
 <table>
 <tr>
-<td>
-Property/Method</td><td>
-Description</td></tr>
+<th>
+Property/Method</th><th>
+Description</th></tr>
 <tr>
 <td>
 SupportVectorMachineModelEvaluator (PMMLDocument)</td><td>
@@ -435,13 +435,13 @@ Mining Model Evaluator represents the evaluator for mining models and it inherit
 
 Mining model operates by constructing multiple decision trees. It draws random samples from the original data and for each random sample it grows a tree. It is used in both classification and regression cases.
 
-_Table_ _12__: Mining Model Public Properties or Methods_
+_Table12: Mining Model Public Properties or Methods_
 
 <table>
 <tr>
-<td>
-Property/Method</td><td>
-Description</td></tr>
+<th>
+Property/Method</th><th>
+Description</th></tr>
 <tr>
 <td>
 MiningModelEvaluator (PMMLDocument)</td><td>
@@ -453,7 +453,7 @@ Evaluates the given input against the scoring procedure of the MiningModel and r
 </table>
 
 
-> ![](Working-with-PMML-Execution-Engine_images/Working-with-PMML-Execution-Engine_img2.jpeg) _Note: Gradient Boosting Model also initializes the Mining Model Evaluator as the PMML structure is similar._ 
+>  Note: Gradient Boosting Model also initializes the Mining Model Evaluator as the PMML structure is similar.
 
 
 
@@ -505,13 +505,13 @@ Neural Network Model Evaluator represents the evaluator for neural network model
 
 A Neural network also called an ANN or an Artificial Neural Network is an artificial system made of artificial neuron cells. It is modeled after the way the human brain works through imitating how the brain's neurons are fired or activated. The idea of neural networks is that, they are able to learn by themselves, an ability that makes them remarkably distinctive in comparison to normal computers, that cannot do anything for that they are not programmed. It is used in both classification and regression cases.
 
-_Table_ _13__: Neural Network Model Public Properties or Methods_
+_Table13: Neural Network Model Public Properties or Methods_
 
 <table>
 <tr>
-<td>
-Property/Method</td><td>
-Description</td></tr>
+<th>
+Property/Method</th><th>
+Description</th></tr>
 <tr>
 <td>
 NeuralNetwokModelEvaluator (PMMLDocument)</td><td>
@@ -571,13 +571,13 @@ Clustering Model Evaluator represents the evaluator for clustering models and it
 
 Clustering is the task of grouping a set of objects in such a way that objects in the same group called a cluster are more similar in some sense or another to each other than to those in other groups (clusters). For each cluster a center vector can be provided. In center-based models a cluster is defined by a vector of center coordinates. Some distance measure is used to determine the nearest center that is the nearest cluster for a given input record.
 
-_Table_ _14__: Clustering Model Public Properties or Methods_
+_Table14: Clustering Model Public Properties or Methods_
 
 <table>
 <tr>
-<td>
-Property/Method</td><td>
-Description</td></tr>
+<th>
+Property/Method</th><th>
+Description</th></tr>
 <tr>
 <td>
 ClusteringModelEvaluator (PMMLDocument)</td><td>
@@ -637,13 +637,13 @@ Association Rules Model Evaluator represents the evaluator for the Association r
 
 Association rule mining finds elements or attributes that frequently occur together—for example, products that are often bought together during a shopping session. Such information can be used to recommend products to shoppers, to place frequently bundled items together on store shelves. Machine learning methods for identifying associations among items in transactional data called market basket analysis in retail stores.
 
-_Table_ _9__: Association Rules Model Public Properties or Methods_
+_Table9: Association Rules Model Public Properties or Methods_
 
 <table>
 <tr>
-<td>
-Property/Method</td><td>
-Description</td></tr>
+<th>
+Property/Method</th><th>
+Description</th></tr>
 <tr>
 <td>
 AssociationRulesModelEvaluator(PMMLDocument)</td><td>
@@ -706,13 +706,13 @@ The PMMLDocument class is used to represent the object model for PMML document. 
 
 The PMMLDocument contains properties with read only option. 
 
-_Table_ _15__: PMMLDocument Properties_
+_Table15: PMMLDocument Properties_
 
 <table>
 <tr>
-<td>
-Properties/Methods</td><td>
-Description</td></tr>
+<th>
+Properties/Methods</th><th>
+Description</th></tr>
 <tr>
 <td>
 Header</td><td>
@@ -845,13 +845,13 @@ The PredictedResult class is used to represent the predicted output for all PMML
 
 ### Properties and Methods
 
-_Table_ _13__: PredictedResult__Properties_
+_Table13: PredictedResult__Properties_
 
 <table>
 <tr>
-<td>
-Properties/Methods</td><td>
-Description</td></tr>
+<th>
+Properties/Methods</th><th>
+Description</th></tr>
 <tr>
 <td>
 PredictedField</td><td>
@@ -910,13 +910,13 @@ Using BinomialThreshold property in Model options of General Regression, that is
 
 Based on the value, probability (0 - 1) is split into two boundary regions.
 
-_Table_ _16__: Binary Prediction_
+_Table16: Binary Prediction_
 
 <table>
 <tr>
-<td>
-Category 1</td><td>
-0 to BinomialThreshold</td></tr>
+<th>
+Category 1</th><th>
+0 to BinomialThreshold</th></tr>
 <tr>
 <td>
 Category 2</td><td>

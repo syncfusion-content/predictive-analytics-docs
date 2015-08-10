@@ -40,7 +40,7 @@ data(warpbreaks)  # Load data into workspace
 
 {%endhighlight%}
 
-#### It is convenient when these data can work directly with R’s barplot() function, like this: barplot(breaks ~ wool*tension, data = warpbreaks). Unfortunately, that gives an error message saying “'height' must be a vector or a matrix,” that is, the variable containing the height for the bars—that should be the mean number of breaks in this example—must have a different format. You can get the data into the correct format by using a combination of the list() function that identifies the type of wool and the level of tension as factors (i.e., categorical predictor variables), and tapply() that applies a function—FUN = mean, in this case—to a ragged array, or an array that may contain empty cells. You can then save the restructured data into a new object called wbdata for “warpbreaks data”. 
+#### It is convenient when these data can work directly with R’s barplot() function, like this: barplot(breaks ~ wool*tension, data = warpbreaks). Unfortunately, that gives an error message saying “'height' must be a vector or a matrix,” that is, the variable containing the height for the bars that should be the mean number of breaks in this example must have a different format. You can get the data into the correct format by using a combination of the list() function that identifies the type of wool and the level of tension as factors (i.e., categorical predictor variables), and tapply() that applies a function FUN = mean, in this case to a ragged array, or an array that may contain empty cells. You can then save the restructured data into a new object called wbdata for “warpbreaks data”. 
 
 {%highlight r%}
 
@@ -126,7 +126,7 @@ require("car")  # "Companion to Applied Regression"
 
 {%endhighlight%}
 
-### You can use the scatterplot() function that can also be called with abbreviated name sp(). The important difference between this code and the command for the bivariate scatter plot is the addition of the pipe operator, that is used here to separate a grouping variable or factor— Species, in this case—from the rest of the function. 
+### You can use the scatterplot() function that can also be called with abbreviated name sp(). The important difference between this code and the command for the bivariate scatter plot is the addition of the pipe operator, that is used here to separate a grouping variable or factor  Species, in this case from the rest of the function. 
 
 {%highlight r%}
 
@@ -176,7 +176,7 @@ data(iris)  # Load data into the workspace. iris[1:3, ]  # Show the first three 
 
 {%endhighlight%}
 
-### The first approach you can use is R’s pairs() function. The only argument needed for this function is the name of data frame. However, because the fifth variable in iris is categorical— the species name—you can exclude it by using only the first four columns of data. 
+### The first approach you can use is R’s pairs() function. The only argument needed for this function is the name of data frame. However, because the fifth variable in iris is categorical  the species name you can exclude it by using only the first four columns of data. 
 
 
 {%highlight r%}

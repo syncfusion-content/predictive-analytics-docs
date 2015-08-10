@@ -13,7 +13,7 @@ documentation: ug
 
 ## Multiple regression 
 
-####The goal of regression is simple: take a collection of predictor variables and use them to predict scores on a single, quantitative outcome variable. Multiple regression is the most flexible approach that is covered in this section. All the other parametric procedures that you have covered—t-tests, ANOVA, correlation, and bivariate regression—can all be seen as special cases of multiple regression. 
+####The goal of regression is simple: take a collection of predictor variables and use them to predict scores on a single, quantitative outcome variable. Multiple regression is the most flexible approach that is covered in this section. All the other parametric procedures that you have covered t-tests, ANOVA, correlation, and bivariate regression can all be seen as special cases of multiple regression. 
 
 ####In this section, you can start by looking at the simplest version of multiple regression: simultaneous entry. This is when all the predictors are entered as a group and all of them are retained in the equation. 
 
@@ -120,7 +120,7 @@ F-statistic: 332.9 on 11 and 31 DF,  p-value: < 2.2e-16
 
 
 
-####With those stern warnings in mind, you can nonetheless take a brief look at two versions of stepwise regression because they are very common—and commonly requested—procedures. The first variation you can examine is backwards removal, where all possible variables are initially entered, and then variables that do make statistically significant contributions to the overall model is removed one at a time.  
+####With those stern warnings in mind, you can nonetheless take a brief look at two versions of stepwise regression because they are very common and commonly requested procedures. The first variation you can examine is backwards removal, where all possible variables are initially entered, and then variables that do make statistically significant contributions to the overall model is removed one at a time.  
 
 
 
@@ -192,7 +192,7 @@ A more common approach to stepwise regression is forward selection that starts w
 
 ####Given the possible fluctuations of stepwise regression, it is reassuring to know that both approaches finished with the same model, although they are listed in a different order. 
 
-####Again, it is important to remember that multiple regression can be very complicated and subtle procedure and that many analysts have criticized stepwise methods vigorously. Fortunately, R and its available packages offer many alternatives—and more are added on a regular basis—it is encouraged you to explore options before committing to a single approach. 
+####Again, it is important to remember that multiple regression can be very complicated and subtle procedure and that many analysts have criticized stepwise methods vigorously. Fortunately, R and its available packages offer many alternatives and more are added on a regular basis it is encouraged you to explore options before committing to a single approach. 
 
 ####Once you have saved your work, you should clean the workspace by removing any variables or objects you created. 
 {% highlight r %}
@@ -203,5 +203,5 @@ rm(list = ls())  # Remove all objects from the workspace.
 
 ## Two-factor ANOVA 
 
-####The multiple regression procedure that you have seen in the previous section is enormously flexible, and the procedure that you can learn in this section is the two-factor analysis of variance (ANOVA), can accurately be described as a special case of multiple regression. There are, however, advantages of using the specialized procedures of ANOVA. The most important advantage is that it is developed specifically to work in situations where two categorical variables—called factors in ANOVA—are used simultaneously to predict a single quantitative outcome. ANOVA gives easily interpreted results for the main effect of each factor and a third result for their interaction. You can examine these effects by using the warpbreaks data from R’sdatasets package. 
+####The multiple regression procedure that you have seen in the previous section is enormously flexible, and the procedure that you can learn in this section is the two-factor analysis of variance (ANOVA), can accurately be described as a special case of multiple regression. There are, however, advantages of using the specialized procedures of ANOVA. The most important advantage is that it is developed specifically to work in situations where two categorical variables called factors in ANOVA are used simultaneously to predict a single quantitative outcome. ANOVA gives easily interpreted results for the main effect of each factor and a third result for their interaction. You can examine these effects by using the warpbreaks data from R’sdatasets package. 
 

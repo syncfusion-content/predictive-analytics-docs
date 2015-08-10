@@ -31,14 +31,14 @@ Important features of PMML Execution Engine are as follows,
 
 
 
-_Table_ _1__: List of models currently supported in PMML Execution Engine_
+_Table1: List of models currently supported in PMML Execution Engine_
 
 <table>
 <tr>
-<td>
-Model  Name</td><td>
-Function Name</td><td>
-Algorithm Name</td></tr>
+<th>
+Model  Name</th><th>
+Function Name</th><th>
+Algorithm Name</th></tr>
 <tr>
 <td>
 Regression Model</td><td>
@@ -113,14 +113,14 @@ Frequently Asked Questions-This section covers the list of questions with expert
 
 The following conventions helps you in quickly identifying the important sections of information when using the content.
 
-_Table_ _2__: Document Conventions_
+_Table2: Document Conventions_
 
 <table>
 <tr>
-<td>
-Convention</td><td>
-Icon</td><td>
-Description</td></tr>
+<th>
+Convention</th><th>
+Icon</th><th>
+Description</th></tr>
 <tr>
 <td>
 Note</td><td>

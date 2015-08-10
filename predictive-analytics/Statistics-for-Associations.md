@@ -42,7 +42,7 @@ Fertility Agriculture Examination Education Catholic
   Agriculture           0.35        1.00       -0.69     -0.64     0.40
 {% endhighlight %}
 
-####Missing from this printout are probability values. R does not have a built-in function to get pvalues—or even asterisks indicating statistical significance—for a correlation matrix. Instead, you can test each correlation separately with cor.test(). This function gives the correlation value, a hypothesis test, and a confidence interval for the correlation. 
+####Missing from this printout are probability values. R does not have a built-in function to get pvalues or even asterisks indicating statistical significance for a correlation matrix. Instead, you can test each correlation separately with cor.test(). This function gives the correlation value, a hypothesis test, and a confidence interval for the correlation. 
 {% highlight r %}
 # INFERENTIAL TEST FOR SINGLE CORRELATION cor.test(swiss$Fertility, swiss$Education) 
 
@@ -64,7 +64,7 @@ alternative hypothesis: true correlation is not equal to 0 95 percent confidence
  install.packages("Hmisc") require("Hmisc")
 {% endhighlight %}
 
-####When you load Hmisc, you can receive message that R is also loading several other packages—grid, lattice, survival, splines, and Formula—that Hmisc relies on. You may also receive a message that a few functions, such as format.pval, round.POSIXt, trunc.POSIXt, and units, are masked from package:base. This happens because Hmisc is temporarily overriding those functions that is supposed to happen, so you can ignore those messages. 
+####When you load Hmisc, you can receive message that R is also loading several other packages grid, lattice, survival, splines, and Formula that Hmisc relies on. You may also receive a message that a few functions, such as format.pval, round.POSIXt, trunc.POSIXt, and units, are masked from package:base. This happens because Hmisc is temporarily overriding those functions that is supposed to happen, so you can ignore those messages. 
 
 
 
@@ -253,7 +253,7 @@ alternative hypothesis: true difference in means is not equal to 0 95 percent co
 mean in group 1 mean in group 2             0.75            2.33
 {% endhighlight %}
 
-####These results show that while there is a difference between the two group’s means—2.33 vs. 0.75—the difference does not meet the conventional levels of statistical significance, as the observed p-value of .08 is greater than the standard cut-off of .05. As a note, R uses the Welch two-sample t-test by default that is often used for samples with unequal variances. One consequence of this choice is that the degree of freedom is a fractional value, 17.776 in this case. For the more common, equal-variance t-test, just add the argument var.equal = TRUE to the function call (see ?t.test for more information). 
+####These results show that while there is a difference between the two group’s means 2.33 vs. 0.75 the difference does not meet the conventional levels of statistical significance, as the observed p-value of .08 is greater than the standard cut-off of .05. As a note, R uses the Welch two-sample t-test by default that is often used for samples with unequal variances. One consequence of this choice is that the degree of freedom is a fractional value, 17.776 in this case. For the more common, equal-variance t-test, just add the argument var.equal = TRUE to the function call (see ?t.test for more information). 
 
 
 
@@ -365,7 +365,7 @@ alternative hypothesis: true difference in means is greater than 6 99 percent co
 
 mean of the differences                 5.816891 
 {% endhighlight %}
-####In this case the difference is not statistically significant, but that is primarily due to different null value used—6 vs. 0—and not to the variations in the datat. 
+####In this case the difference is not statistically significant, but that is primarily due to different null value used 6 vs. 0 and not to the variations in the datat. 
 
 ####You can complete by clearing the workspace. 
 {% highlight r %}
@@ -442,7 +442,7 @@ rm(list = ls())  # Remove all objects from workspace
 
 ## Comparing proportions 
 
-####In the last five procedures that you have examined—correlations, regression, two-sample t-tests, paired t-tests, and ANOVA—the outcome variable is quantitative (i.e., an interval or ratio level of measurement). This made it possible to calculate means and standard deviations that are then used in the inferential tests. However, there are situations where the outcome variable is categorical (i.e., a nominal or possibly ordinal level of measurement.) The last two sections in this chapter address those situations. In the case of a dichotomous outcome—that is, an outcome with only two possible values, such as yes or no, on or off, and click or don’t click, then a proportion test is an ideal way to compare the performance of two or more groups. 
+####In the last five procedures that you have examined correlations, regression, two-sample t-tests, paired t-tests, and ANOVA the outcome variable is quantitative (i.e., an interval or ratio level of measurement). This made it possible to calculate means and standard deviations that are then used in the inferential tests. However, there are situations where the outcome variable is categorical (i.e., a nominal or possibly ordinal level of measurement.) The last two sections in this chapter address those situations. In the case of a dichotomous outcome that is, an outcome with only two possible values, such as yes or no, on or off, and click or don’t click, then a proportion test is an ideal way to compare the performance of two or more groups. 
 
 
 
@@ -480,7 +480,7 @@ X-squared = 10.9578, df = 4, p-value = 0.02704 alternative hypothesis: two.sided
 prop 1 prop 2 prop 3 prop 4 prop 5    0.65   0.60   0.60   0.50   0.45 
 {% endhighlight %}
 
-####The output includes a chi-squared test—shown here as X-squared—and the p-value that in this case is below the standard cutoff of .05. It also gives the observed sample proportions. 
+####The output includes a chi-squared test shown here as X-squared and the p-value that in this case is below the standard cutoff of .05. It also gives the observed sample proportions. 
 
 
 

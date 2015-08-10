@@ -302,7 +302,7 @@ mean of x     4.6204
 
 {% endhighlight %}
 
-####The conclusion here matches the default t-test: the p-value is almost zero and you reject the null hypothesis. This is true even though you chose a hypothesized population mean, ϰ2 or mu— of 4.5, which was much closer to the sample mean of 4.62. The difference between the two means is much smaller than before but, given the large sample size of 1000, even negligible differences would be statistically significant. 
+####The conclusion here matches the default t-test: the p-value is almost zero and you reject the null hypothesis. This is true even though you chose a hypothesized population mean, ϰ2 or mu of 4.5, which was much closer to the sample mean of 4.62. The difference between the two means is much smaller than before but, given the large sample size of 1000, even negligible differences would be statistically significant. 
 
 ####Once you save your work, you can clear the workspace of unwanted variables, objects, or packages: 
 
@@ -380,7 +380,7 @@ X-squared = 6.4717, df = 3, p-value = 0.09079
 
 {% endhighlight %}
 
-####In this case your value of chi-square—again, X-squared in the printout—is much smaller: 6.4717. With three degrees of freedom, that gives a probability value of .09079, which does not exceed the standard cut-off of 0.5. You can therefore conclude that your sample’s eye color proportions do not differ significantly from those of the general population. 
+####In this case your value of chi-square again, X-squared in the printout is much smaller: 6.4717. With three degrees of freedom, that gives a probability value of .09079, which does not exceed the standard cut-off of 0.5. You can therefore conclude that your sample’s eye color proportions do not differ significantly from those of the general population. 
 
 
 

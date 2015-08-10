@@ -11,7 +11,7 @@ documentation: ug
 
 ## Next steps 
 
-### This section has been of necessity, a short one that is designed primarily to give you a flavor what R can do for you and how you can use it in your own work. The depth and breadth of R—especially when coupled with its contributed packages—make it impossible for anyone book to do it justice. But hopefully this serves as a jumping off point for some of your own explorations with R. 
+### This section has been of necessity, a short one that is designed primarily to give you a flavor what R can do for you and how you can use it in your own work. The depth and breadth of Respecially when coupled with its contributed packages make it impossible for anyone book to do it justice. But hopefully this serves as a jumping off point for some of your own explorations with R. 
 
 ### There is a short list of possible next steps for learning about statistical programming and data analysis. These resources include books and websites, associated software, and local and global events for users of R.  
 

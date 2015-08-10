@@ -430,7 +430,7 @@ txtdata <- read.table("~/Desktop/rawdata.txt", header = TRUE, sep = "\t
 
 
 
-### Second, I am going to use two plotting commands in this example—barplot() and plot()and the next on color that I have not yet presented. Right now I am using them to demonstrate other principles but I will explain them fully in the next chapter on graphics. 
+### Second, I am going to use two plotting commands in this example barplot() and plot()and the next on color that I have not yet presented. Right now I am using them to demonstrate other principles but I will explain them fully in the next chapter on graphics. 
 
 
 
@@ -462,7 +462,7 @@ UCBAdmissions  # Prints six tables; one for each department.
 
 
 
-_Figure_ _4__: Default Plot of UCBAdmissions_
+_Figure4: Default Plot of UCBAdmissions_
 
 ### The next step is to get the marginal frequencies from the 3-way table. At this point, the frequencies are just displayed in the console.
 

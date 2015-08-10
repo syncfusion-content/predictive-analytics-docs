@@ -49,7 +49,7 @@ aov2 <- aov(breaks ~ wool*tension,              data = warpbreaks)
 {% endhighlight %}
 ## Cluster analysis 
 
-####Cluster analysis performs a fundamental task: determining which cases are similar. This task makes it possible to place cases such as people, companies, and regions of the country, etc.—into relatively homogeneous groups while distinguishing them from other groups. R has built-in functions that approach the formation of clusters in two ways. The first approach is k-means clustering with the kmeans() function. This approach requires the researcher to specify how many clusters like to form, although it is possible to try several variations. The second approach is hierarchical clustering with the hclust() function, in which each case starts by itself and then the cases are gradually joined together according to their similarity. You can learn these two procedures in turn. 
+####Cluster analysis performs a fundamental task: determining which cases are similar. This task makes it possible to place cases such as people, companies, and regions of the country, etc. into relatively homogeneous groups while distinguishing them from other groups. R has built-in functions that approach the formation of clusters in two ways. The first approach is k-means clustering with the kmeans() function. This approach requires the researcher to specify how many clusters like to form, although it is possible to try several variations. The second approach is hierarchical clustering with the hclust() function, in which each case starts by itself and then the cases are gradually joined together according to their similarity. You can learn these two procedures in turn. 
 
 
 
@@ -93,7 +93,7 @@ clusplot(mtcars1,        # Data frame          km$cluster,     # Cluster data   
 # HIERARCHICAL CLUSTERING d <- dist(mtcars1)  # Calculate the distance matrix. c <- hclust(d)  # Use distance matrix for clustering. plot(c)  # Plot a dendrogram of clusters.
 {% endhighlight %}
 
-####The following screenshot shows the default dendrogram produced by plot(). In this plot, each case is listed individually at the bottom. The lines above join each case to other similar cases, while cases that are more similar are joined lower down—such as the Mercedes-Benz 280 and 280C on the far right—and cases that are more different are joined higher up. For example, it is clear from this diagram that the Maserati Bora on the far left is substantially different from every other car in the data set. 
+####The following screenshot shows the default dendrogram produced by plot(). In this plot, each case is listed individually at the bottom. The lines above join each case to other similar cases, while cases that are more similar are joined lower down such as the Mercedes-Benz 280 and 280C on the far right and cases that are more different are joined higher up. For example, it is clear from this diagram that the Maserati Bora on the far left is substantially different from every other car in the data set. 
 
 ![](Sample-sample92R_images/Sample-sample92R_img3.jpeg)
 
@@ -155,7 +155,7 @@ Datsun 710         22.8   4  108  93   2.320  18.61  1    4    1
 # PRINCIPAL COMPONENTS pc <- prcomp(mtcars1,              center = TRUE,  # Centers means to 0 (optional).              scale = TRUE)  # Sets unit variance (helpful).
 {% endhighlight %}
 
-####By saving the analysis in an object—pc in this case—you can call additional functions for several functions. The first is summary() that gives the proportion of total variance accounted for by each component. The first line, standard deviation, contains the square roots of the eigenvalues of the covariance/correlation matrix. 
+####By saving the analysis in an object pc in this case you can call additional functions for several functions. The first is summary() that gives the proportion of total variance accounted for by each component. The first line, standard deviation, contains the square roots of the eigenvalues of the covariance/correlation matrix. 
 {% highlight r %}
 # OUTPUT 
 
