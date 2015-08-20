@@ -49,7 +49,7 @@ R is a great way to work with data but the interface is not perfect. Part of the
 
 Like R, RStudio is also available for Windows, Mac, and Linux computers and can be downloaded for free. Again, installation is a simple process, but note that you must first install R.
 
-1. Open a web browser and go to [http://www.rstudio.com/](http://www.rstudio.com/)
+1. Open a web browser and go to <http://www.rstudio.com>
 2. Click “Download now”.
 3. RStudio can run on desktop or over a Linux server. For the desktop version, click “Download RStudio Desktop”.
 4. RStudio checks your operating system. Click the link under “Recommended for your system”.
@@ -96,7 +96,7 @@ The first line contains the command you entered. In this case it is 9 + 11. Note
 {%endhighlight%}
 The second line does not have a command prompt because it has the program’s output. The “1” in square brackets, [1], requires some explanation. R uses vectors to do math and that’s it how it returns the responses. The number in brackets is the index number for the first item in the vector on this line of output. Many other programs begin with an index number of 0, but R begins at 1. After the index number, R prints the output, the sum “20” in this case.
 
-1 For more information on good form in R, see Google's style guide at  [http://google- ](http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml)[styleguide.googlecode.com/svn/trunk/Rguide.xml.](http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml)
+> For more information on good form in R, see Google's style guide at  <http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml>
 
 The contents of the console scroll up as new information comes in. You can also clear the console by selecting Edit > Clear console or by pressing Ctrl+L (a lower-case L) on a Mac or PC. Note that this only clears the displayed data, it does not purge the data from the memory or lose the history of commands.
 
@@ -173,7 +173,7 @@ To make a comment in R, type # followed by your text. You can also “comment ou
 ## Variables 
 
 
-### Variables are easy to create in R. Just type the name of the variable, there is no need to assign the variable type. Next, use the assignment operator, “<-“. You can read this as “gets," so that x <- 2 means "x gets 2." It is possible to use the equal sign for assigning values, but that is bad form in R. In the following two lines, a variable x is created, assigned the values 1 to 5, and then made to display the contents of x by typing its name. 
+Variables are easy to create in R. Just type the name of the variable, there is no need to assign the variable type. Next, use the assignment operator, “<-“. You can read this as “gets," so that x <- 2 means "x gets 2." It is possible to use the equal sign for assigning values, but that is bad form in R. In the following two lines, a variable x is created, assigned the values 1 to 5, and then made to display the contents of x by typing its name. 
 
 {%highlight r%}
 
@@ -183,11 +183,11 @@ Displays the values in x
 
 {%endhighlight%}
 
-### If When you want to specify each value that you assign to a variable, you can use the function c. This stands for "concatenate," although you can also think of it as "combine" or "collection." This function creates a single vector with the items you assign to it. As a note, RStudio has a convenient shortcut for the assignment operator, <-. When you are typing in your code, use the shortcut Alt+Hyphen and RStudio inserts a leading space, the assignment operator, and a trailing space. You can then continue with your coding. 
+If When you want to specify each value that you assign to a variable, you can use the function c. This stands for "concatenate," although you can also think of it as "combine" or "collection." This function creates a single vector with the items you assign to it. As a note, RStudio has a convenient shortcut for the assignment operator, <-. When you are typing in your code, use the shortcut Alt+Hyphen and RStudio inserts a leading space, the assignment operator, and a trailing space. You can then continue with your coding. 
 
 
 
-### Assigned here are the values 7, 12, 5, 4, and 9 to the vector y. 
+Assigned here are the values 7, 12, 5, 4, and 9 to the vector y. 
 
 
 {%highlight r%}
@@ -196,7 +196,7 @@ x	<- c(7, 12, 5, 4, 9)
 
 {%endhighlight%}
 
-### The assignment operator can also go from left to right or it can include several variables at once. 
+The assignment operator can also go from left to right or it can include several variables at once. 
 
 {%highlight r%}
 
@@ -206,7 +206,7 @@ a <- b <- c <- 30  # Assign the same value to multiple variables.
 
 {%endhighlight%}
 
-### To remove a variable from R's workspace, use the rm function. 
+To remove a variable from R's workspace, use the rm function. 
 
 {%highlight r%}
 
@@ -220,15 +220,11 @@ Clear the entire workspace.
 
 ## Packages 
 
-### The default installation of R is impressive in its functionality but it cannot do everything. One of the great strengths of R is that you can add packages. Packages are bundles of code that extend R's capabilities. In other languages, these bundles are libraries, but in R the library is the place that stores all the packages. Packages for R can come from two different places. 
+The default installation of R is impressive in its functionality but it cannot do everything. One of the great strengths of R is that you can add packages. Packages are bundles of code that extend R's capabilities. In other languages, these bundles are libraries, but in R the library is the place that stores all the packages. Packages for R can come from two different places. 
 
+Some packages ship with R but are not active by default. You can see these in the Packages tab in RStudio. Other packages are available online at repositories. A list of available packages can be viewed [here](http://cran.r-project.org/web/views)[.](http://cran.r-project.org/web/views) This webpage is part of the Comprehensive R Archive Network (CRAN). It contains a list of topics or "task views" for packages. When you click on a topic, it takes you to an annotated list with links to individual packages. You can also search for packages by name [here](http://cran.r-project.org/web/packages/available_packages_by_name.html)[.](http://cran.r-project.org/web/packages/available_packages_by_name.html) Another good option is the website [CRANtastic](http://crantastic.org/)[.](http://crantastic.org/) All the packages at these sites are, like R, free and open source.  
 
-
-### Some packages ship with R but are not active by default. You can see these in the Packages tab in RStudio. Other packages are available online at repositories. A list of available packages can be viewed [here](http://cran.r-project.org/web/views)[.](http://cran.r-project.org/web/views) This webpage is part of the Comprehensive R Archive Network (CRAN). It contains a list of topics or "task views" for packages. When you click on a topic, it takes you to an annotated list with links to individual packages. You can also search for packages by name [here](http://cran.r-project.org/web/packages/available_packages_by_name.html)[.](http://cran.r-project.org/web/packages/available_packages_by_name.html) Another good option is the website [CRANtastic](http://crantastic.org/)[.](http://crantastic.org/) All the packages at these sites are, like R, free and open source.  
-
-
-
-### To see the packages that are currently installed or loaded, use the following functions: 
+To see the packages that are currently installed or loaded, use the following functions: 
 
 {%highlight r%}
 
@@ -238,11 +234,9 @@ Shows packages that are currently loaded.
 
 {%endhighlight%}
 
-### library() brings up a text list of functions. The same information is available in hyperlinked format under the Packages tab in RStudio. search() displays the names of the active packages in the console. These are the same packages that have checks in RStudio's Package tab. 
+library() brings up a text list of functions. The same information is available in hyperlinked format under the Packages tab in RStudio. search() displays the names of the active packages in the console. These are the same packages that have checks in RStudio's Package tab. 
 
-
-
-### To install new packages, you have several options in RStudio. First, you can use the menus under Tools > Install Packages. Second, you can click "Install Packages" at the top of the Packages tab. Third, you can use the function install.packages(). Just put the name of the desired package in quotes and remember that, like most programming languages, R is case sensitive. The last option is best when you want to save the command as part of a script. 
+To install new packages, you have several options in RStudio. First, you can use the menus under Tools > Install Packages. Second, you can click "Install Packages" at the top of the Packages tab. Third, you can use the function install.packages(). Just put the name of the desired package in quotes and remember that, like most programming languages, R is case sensitive. The last option is best when you want to save the command as part of a script. 
 
 {%highlight r%}
 
@@ -250,7 +244,7 @@ install.packages("ggplot2")  # Download and install the ggplot2 package.
 
 {%endhighlight%}
 
-### R. There are two ways to do this. The first is library(), often used for loading packages in scripts. The second is require(), often used for loading packages in functions. Usually require(), works in either setting and avoids confusion about the meaning of "library".
+R. There are two ways to do this. The first is library(), often used for loading packages in scripts. The second is require(), often used for loading packages in functions. Usually require(), works in either setting and avoids confusion about the meaning of "library".
 
 
 {%highlight r%}
@@ -271,35 +265,29 @@ browseVignettes(package = "grid")  # Open webpage with hyperlinks vignette()  # 
 
 {%endhighlight%}
 
-### You should also check for package updates on a regular basis. There are three ways to do this. First, you can use the menus in RStudio: Tools > Check for Package Updates. Second, you can go the Package tab in RStudio and click "Check for Updates." Third, you can run this command: update.packages(). 
+You should also check for package updates on a regular basis. There are three ways to do this. First, you can use the menus in RStudio: Tools > Check for Package Updates. Second, you can go the Package tab in RStudio and click "Check for Updates." Third, you can run this command: update.packages(). 
 
+When you finish working in R, you may want to unload or remove packages that you may not use again soon. By default, R unloads all packages when it quits. If you want to unload them before then, you have two options. First, you can go to the Packages tab in RStudio and uncheck the packages one by one. Second, you can use the detach() command, like this: detach("package:ggplot2", unload = TRUE).
 
-
-### When you finish working in R, you may want to unload or remove packages that you may not use again soon. By default, R unloads all packages when it quits. If you want to unload them before then, you have two options. First, you can go to the Packages tab in RStudio and uncheck the packages one by one. Second, you can use the detach() command, like this: detach("package:ggplot2", unload = TRUE).
-
-
-
-### If you would like to delete a package, use remove.packages(), like this: remove.packages("psytabs"). This trashes the packages. If you want to use a deleted package again you need to download it and reinstall it. 
+If you would like to delete a package, use remove.packages(), like this: remove.packages("psytabs"). This trashes the packages. If you want to use a deleted package again you need to download it and reinstall it. 
 
 ## R’s datasets package 
 
-### The built-in package "datasets" makes it easy to experiment with R's procedures using real data. Although this package is part of R's base installation, you must load it. You can either select it in the Packages tab or enter library("datasets") or require("datasets"). You can see a list of the available data sets by typing data() or by going to the [R Datasets](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[ ](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[Package](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[ ](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)list. 
+The built-in package "datasets" makes it easy to experiment with R's procedures using real data. Although this package is part of R's base installation, you must load it. You can either select it in the Packages tab or enter library("datasets") or require("datasets"). You can see a list of the available data sets by typing data() or by going to the [R Datasets](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[ ](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[Package](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[ ](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)list. 
 
+For more information on a particular data set, you can search R Help by typing “?” and the name of the dataset with no space: ?airmiles. You can also see the contents of the dataset by entering its name: airmiles. To see the structure of the dataset, use str(), like this: str(airmiles). This shows you what kind of data set it is, how many observations and variables it has, and the first few values. 
 
+When you are ready to work with the dataset, you can load it with data(), like this: data(airmiles). It appears in the Environment tab in the top right of RStudio. 
 
-### For more information on a particular data set, you can search R Help by typing “?” and the name of the dataset with no space: ?airmiles. You can also see the contents of the dataset by entering its name: airmiles. To see the structure of the dataset, use str(), like this: str(airmiles). This shows you what kind of data set it is, how many observations and variables it has, and the first few values. 
-
-IWhen you are ready to work with the dataset, you can load it with data(), like this: data(airmiles). It appears in the Environment tab in the top right of RStudio. 
-
-### ’s built-in datasets are a wonderful resource. You can use them to try out different functions and procedures without having to find or enter data. You can learn all about datasets here.
+R’s built-in datasets are a wonderful resource. You can use them to try out different functions and procedures without having to find or enter data. You can learn all about datasets here.
 
 ## Entering data manually 
 
-### R is flexible in that it allows you to get data into the program in many different ways.  
+R is flexible in that it allows you to get data into the program in many different ways.  
 
-### The simplest, but not always the fastest, is to enter the data right into R. When you only have a handful of values, then this method might make sense.  
+The simplest, but not always the fastest, is to enter the data right into R. When you only have a handful of values, then this method might make sense.  
 
-### IWhen you want to create patterned data, you have two common choices. First, the colon operator “:” creates a set of sequential integer values. For example: 
+IWhen you want to create patterned data, you have two common choices. First, the colon operator “:” creates a set of sequential integer values. For example: 
 
 {%highlight r%}
 
@@ -307,7 +295,7 @@ IWhen you are ready to work with the dataset, you can load it with data(), like 
 
 {%endhighlight%}
 
-### Gives this ascending list: 
+Gives this ascending list: 
 
 {%highlight r%}
 
@@ -315,7 +303,7 @@ IWhen you are ready to work with the dataset, you can load it with data(), like 
 
 {%endhighlight%}
 
-### Or, by placing the larger number first, as shown here: 
+Or, by placing the larger number first, as shown here: 
 
 {%highlight r%}
 
@@ -323,8 +311,7 @@ IWhen you are ready to work with the dataset, you can load it with data(), like 
 {%endhighlight%}
 
 
-### Then R creates a descending list: 
-
+Then R creates a descending list: 
 
 {%highlight r%}
 
@@ -332,7 +319,7 @@ IWhen you are ready to work with the dataset, you can load it with data(), like 
 
 {%endhighlight%}
 
-### , more flexible choice for patterned data is the sequence function seq(). YYou can choose the step size:
+, more flexible choice for patterned data is the sequence function seq(). YYou can choose the step size:
 
 {%highlight r%}
 
@@ -343,7 +330,7 @@ seq(
 
 {%endhighlight%}
 
-### This size yields the following: 
+This size yields the following: 
 
 {%highlight r%}
 
@@ -352,7 +339,7 @@ seq(
 
 {%endhighlight%}
 
-### Or you can choose the list length: 
+Or you can choose the list length: 
 
 {%highlight r%}
 
@@ -360,7 +347,7 @@ seq(0, 5, length.out = 11)
 
 {%endhighlight%}
 
-### That gives you: 
+That gives you: 
 
 {%highlight r%}
 
@@ -368,7 +355,7 @@ seq(0, 5, length.out = 11)
 
 {%endhighlight%}
 
-### You can also feed any of these functions into a new variable. Just declare the variable name and put the assignment operator before the function, like this: 
+You can also feed any of these functions into a new variable. Just declare the variable name and put the assignment operator before the function, like this: 
 
 {%highlight r%}
 
@@ -376,7 +363,7 @@ x <- seq(50, 150, by = 5)
 
 {%endhighlight%}
 
-### In case you have real data that is not sequenced, you can enter them into R by two ways. First, you can use the concatenate function c() as mentioned earlier. For example: 
+In case you have real data that is not sequenced, you can enter them into R by two ways. First, you can use the concatenate function c() as mentioned earlier. For example: 
 
 {%highlight r%}
 
@@ -384,9 +371,9 @@ x <- c(5, 4, 1, 6, 7, 2, 2, 3, 2, 8)
 
 {%endhighlight%}
 
-### Second, you can enter the numbers in the console using the scan() function. After calling this function, go to the console and type one number at a time. Press return after each number. When you finish, press return twice to send the data to the variable. 
+Second, you can enter the numbers in the console using the scan() function. After calling this function, go to the console and type one number at a time. Press return after each number. When you finish, press return twice to send the data to the variable. 
 
-### It only makes sense to enter data into R when you have sequential data or toy data. For a dataset of any real size, it is almost always easier to import the data into R. 
+It only makes sense to enter data into R when you have sequential data or toy data. For a dataset of any real size, it is almost always easier to import the data into R. 
 
 ## Importing data 
 
@@ -402,7 +389,7 @@ Many of the same problems apply to SPSS files. The good news is that there is a 
 
 ## Importing CSV files 
 
-### The easiest way to import data into R is with a CSV file, or comma-separated values spreadsheet. Any spreadsheet program, including Excel, can save files in the CSV format. Statistical programs like SPSS can do this, too. Then, to read a CSV file, use the read.csv function. You need to specify the location of the file and whether it has a header row for variable names. For example, on your Mac, you can import a file named "rawdata.csv" from the desktop this way: 
+The easiest way to import data into R is with a CSV file, or comma-separated values spreadsheet. Any spreadsheet program, including Excel, can save files in the CSV format. Statistical programs like SPSS can do this, too. Then, to read a CSV file, use the read.csv function. You need to specify the location of the file and whether it has a header row for variable names. For example, on your Mac, you can import a file named "rawdata.csv" from the desktop this way: 
 
 {%highlight r%}
 
@@ -410,7 +397,8 @@ csvdata <- read.csv("~/Desktop/rawdata.csv", header = TRUE)
 
 
 {%endhighlight%}
-### A similar process can read data in tab-delimited TXT files. The differences are these: First, use read.table instead of read.csv. Second, you may need to be explicit about the separator, such as a comma or a tab, by specifying that in the command. Third, if you have missing data values, be sure to specify an unambiguous separator for the cells. When your separators are tabs, use the command sep = \t, as in this example: 
+
+A similar process can read data in tab-delimited TXT files. The differences are these: First, use read.table instead of read.csv. Second, you may need to be explicit about the separator, such as a comma or a tab, by specifying that in the command. Third, if you have missing data values, be sure to specify an unambiguous separator for the cells. When your separators are tabs, use the command sep = \t, as in this example: 
 
 {%highlight r%}
 
@@ -418,26 +406,19 @@ txtdata <- read.table("~/Desktop/rawdata.txt", header = TRUE, sep = "\t
 
 {%endhighlight%}
 
-### R and its available packages offer a variety of ways to get data into the program. Though it is almost always easiest to put the data into a CSV file and import that. But regardless of how you get your data into R, now you are ready to begin exploring your data. 
+R and its available packages offer a variety of ways to get data into the program. Though it is almost always easiest to put the data into a CSV file and import that. But regardless of how you get your data into R, now you are ready to begin exploring your data. 
 
 ## Converting tabular data to row data 
 
-### One important question to ask right away is whether your data is in the right format for your analyses. This is most important for categorical data, because it is possible to collapse the data into frequency counts. An excellent example is the built-in R dataset UCBAdmissions. This dataset describes outcomes for graduate admissions at UC Berkeley in 1973. These data are important because they formed the basis of a major discrimination lawsuit. They are also a perfect example of Simpson's Paradox in statistics. Before you take a look at the code, you must know two things.  
+One important question to ask right away is whether your data is in the right format for your analyses. This is most important for categorical data, because it is possible to collapse the data into frequency counts. An excellent example is the built-in R dataset UCBAdmissions. This dataset describes outcomes for graduate admissions at UC Berkeley in 1973. These data are important because they formed the basis of a major discrimination lawsuit. They are also a perfect example of Simpson's Paradox in statistics. Before you take a look at the code, you must know two things.  
 
+First, tabular data are data that can be organized into tables with rows and columns of frequencies. For example, you could create a table that showed the popularity of several Internet browsers. That table would have just one dimension or factor: which browser was installed. You could then add a second dimension that broke down the data by operating system. The browsers would be listed in the columns and the operating systems would be listed in the rows. This would be a two-way table, or cross-tabulation. The numbers in each cell of the table would give you the number of cases that matched that combination of categories, such as the number of Windows PCs running IE or the number of Android tablets running Chrome. It is, of course, possible to add more variables, that would usually be shown as separate panels or tables, each of which would have the same rows and columns. This is also the case in the UCBAdmissions data that is used in this example. The data are arranged in rows and columns, or simply panels, to get “marginal” totals, that are more often just called “marginals.” These marginals are the totals for one or more variables summed across other variables. So, for example, in your hypothetical table of browsers and operating systems, the marginal for browsers would be the total number of installations of each browser, ignoring the operating systems. In a similar manner, the marginals for the operating system give the total number of installations for each OS, ignoring the browser. The marginals are important because they are often of greater interest than the data at maximum dimensionality, that is., where all of the dimensions or factors are broken down to their most detailed level). 
 
+Second, I am going to use two plotting commands in this example barplot() and plot()and the next on color that I have not yet presented. Right now I am using them to demonstrate other principles but I will explain them fully in the next chapter on graphics. 
 
-### First, tabular data are data that can be organized into tables with rows and columns of frequencies. For example, you could create a table that showed the popularity of several Internet browsers. That table would have just one dimension or factor: which browser was installed. You could then add a second dimension that broke down the data by operating system. The browsers would be listed in the columns and the operating systems would be listed in the rows. This would be a two-way table, or cross-tabulation. The numbers in each cell of the table would give you the number of cases that matched that combination of categories, such as the number of Windows PCs running IE or the number of Android tablets running Chrome. It is, of course, possible to add more variables, that would usually be shown as separate panels or tables, each of which would have the same rows and columns. This is also the case in the UCBAdmissions data that is used in this example. The data are arranged in rows and columns, or simply panels, to get “marginal” totals, that are more often just called “marginals.” These marginals are the totals for one or more variables summed across other variables. So, for example, in your hypothetical table of browsers and operating systems, the marginal for browsers would be the total number of installations of each browser, ignoring the operating systems. In a similar manner, the marginals for the operating system give the total number of installations for each OS, ignoring the browser. The marginals are important because they are often of greater interest than the data at maximum dimensionality, that is., where all of the dimensions or factors are broken down to their most detailed level). 
+The code for this section is available in a single R file, sample_1_1.R, but I will break it into parts for readability. 
 
-
-
-### Second, I am going to use two plotting commands in this example barplot() and plot()and the next on color that I have not yet presented. Right now I am using them to demonstrate other principles but I will explain them fully in the next chapter on graphics. 
-
-
-
-### The code for this section is available in a single R file, sample_1_1.R, but I will break it into parts for readability. 
-
-
-## Sample: sample_1_1.R 
+### Sample: sample_1_1.R 
 
 {%highlight r%}
 # LOAD DATA 
@@ -456,15 +437,13 @@ UCBAdmissions  # Prints six tables; one for each department.
 
 {%endhighlight%}
 
-### This code produces the following figure, an unusual 3-way bar plot. When you want a simple bar chart of the number of people who applied to each of the six departments, this doesn't work. 
+This code produces the following figure, an unusual 3-way bar plot. When you want a simple bar chart of the number of people who applied to each of the six departments, this doesn't work. 
 
 ![](Getting-Started-with-R_images/Getting-Started-with-R_img4.jpeg)
 
+Figure: Default Plot of UCBAdmissions
 
-
-_Figure4: Default Plot of UCBAdmissions_
-
-### The next step is to get the marginal frequencies from the 3-way table. At this point, the frequencies are just displayed in the console.
+The next step is to get the marginal frequencies from the 3-way table. At this point, the frequencies are just displayed in the console.
 
 
 {%highlight r%}
@@ -478,7 +457,7 @@ Admit margin.table(UCBAdmissions, 2)  # Gender
 
 {%endhighlight%}
 
-### Next save the marginal frequency for department, as this has the data you need for the chart. 
+Next save the marginal frequency for department, as this has the data you need for the chart. 
 
 {%highlight r%}
 
@@ -492,7 +471,7 @@ round(prop.table(admit.dept), 2)  # Show as proportions w/2 digits round(prop.ta
 
 {%endhighlight%}
 
-### However, further analyses need the data to be structured as one row per person. You can do that by converting from a table to a data frame to a list to a data frame.
+However, further analyses need the data to be structured as one row per person. You can do that by converting from a table to a data frame to a list to a data frame.
 
 {%highlight r%}
 
@@ -505,7 +484,7 @@ round(prop.table(admit.dept), 2)  # Show as proportions w/2 digits round(prop.ta
 
 {%endhighlight%}
 
-### It is also possible, though substitution, to do the entire conversion in one long command: 
+It is also possible, though substitution, to do the entire conversion in one long command: 
 
 {%highlight r%}
 
@@ -515,13 +494,13 @@ admit.rows <- as.data.frame(lapply(as.data.frame.table(UCBAdmissions), function(
 
 {%endhighlight%}
 
-### The commands above show one way to organize data into the structure that are most useful for analysis. In other situations different approaches will be more helpful, but this gives you a useful idea of what you can do in R. 
+The commands above show one way to organize data into the structure that are most useful for analysis. In other situations different approaches will be more helpful, but this gives you a useful idea of what you can do in R. 
 
 ## Color 
 
-### When you make graphs in R, you should consider your design decisions. Factors like layout and color can make or break visualizations. Consider a bar chart made with R’s default colors. 
+When you make graphs in R, you should consider your design decisions. Factors like layout and color can make or break visualizations. Consider a bar chart made with R’s default colors. 
 
-## Sample: sample_1_2.R 
+### Sample: sample_1_2.R 
 
 {%highlight r%}
 
@@ -532,7 +511,7 @@ x = c(12, 4, 21, 17, 13, 9)  # Data for bar chart
 
 {%endhighlight%}
 
-### The following command uses the default colors.
+The following command uses the default colors.
 
 {%highlight r%}
 
@@ -546,9 +525,9 @@ Default barplot
 
 
 
-### You can improve the above figure by changing the colors of the bars using the col attribute in the barplot function. R gives you several methods to specify colors. 
+You can improve the above figure by changing the colors of the bars using the col attribute in the barplot function. R gives you several methods to specify colors. 
 
-### R has names for 657 colors, arranged in alphabetical order, except for white, that is first on the list. You can see a text list of all the color names by entering colors(). You can also see a PDF with color charts [here](http://research.stowers-institute.org/efg/R/Color/Chart)[.](http://research.stowers-institute.org/efg/R/Color/Chart) If you want to change the bars to slategray3, you can do so in several ways: 
+R has names for 657 colors, arranged in alphabetical order, except for white, that is first on the list. You can see a text list of all the color names by entering colors(). You can also see a PDF with color charts [here](http://research.stowers-institute.org/efg/R/Color/Chart)[.](http://research.stowers-institute.org/efg/R/Color/Chart) If you want to change the bars to slategray3, you can do so in several ways: 
 
 * Color name: slategray3. 
 * Color location in list: slategray3 is index number 602 in the vector of colors. 
@@ -556,7 +535,7 @@ Default barplot
 * RGB color on a 0-255 scale: Use col2rgb("slategray3")  to get 159, 182, and 205 or see the values on the previous PDF. You must specify 255 as the maximum value. 
 * RGB color on a 0-1 scale: Divide the previous values by 255 to get .62, .71, and .80. 
 
-### You can then use these values in the col attribute: 
+You can then use these values in the col attribute: 
 
 {%highlight r%}
 
@@ -570,15 +549,13 @@ barplot(x, col = rgb(159, 182, 205, max = 255))  # RGB 0-255 barplot(x, col = rg
 
 {%endhighlight%}
 
-### Any of the previous commands produce the chart in the following figure.
+Any of the previous commands produce the chart in the following figure.
 
 ![](Getting-Started-with-R_images/Getting-Started-with-R_img6.png)
 
+When you want the bars to be of different colors, then you can either specify the colors one at a time or you can use a color palette. To specify the individual colors, just use the concatenate function c() in the col attribute, like this: col = c("red", "blue"). You can use any of the color specification methods in the section. Then the colors cycle through for each of the bars. 
 
-
-### When you want the bars to be of different colors, then you can either specify the colors one at a time or you can use a color palette. To specify the individual colors, just use the concatenate function c() in the col attribute, like this: col = c("red", "blue"). You can use any of the color specification methods in the section. Then the colors cycle through for each of the bars. 
-
-### A palette can give a wider range of colors, as well as colors that look better together. You can use R's built-in palettes by specifying the name of the palette and the number of colors you desire. Some of R’s palettes are: 
+A palette can give a wider range of colors, as well as colors that look better together. You can use R's built-in palettes by specifying the name of the palette and the number of colors you desire. Some of R’s palettes are: 
 
 * rainbow: bright primary colors 
 * heat.colors: yellow through red 
@@ -586,9 +563,9 @@ barplot(x, col = rgb(159, 182, 205, max = 255))  # RGB 0-255 barplot(x, col = rg
 * topo.colors: purple through tan 
 * cm.colors: blues and pinks 
 
-### Run the command “?paletteb” for more information on R’s built-in palettes. 
+Run the command “?paletteb” for more information on R’s built-in palettes. 
 
-### To use the topo.colors palette for the six bars, enter the following: 
+To use the topo.colors palette for the six bars, enter the following: 
 
 {%highlight r%}
 
@@ -596,15 +573,11 @@ barplot(x, col = rgb(159, 182, 205, max = 255))  # RGB 0-255 barplot(x, col = rg
 
 {%endhighlight%}
 
-### The output of the previous code is shown in the following figure.
-
-
+The output of the previous code is shown in the following figure.
 
 ![](Getting-Started-with-R_images/Getting-Started-with-R_img7.png)
 
-
-
-### An attractive alternative to R's palettes is the package RColorBrewer. This package derives from the excellent website [ColorBrewer 2.0](http://colorbrewer2.org/)[.](http://colorbrewer2.org/) RColorBrewer provides several palettes of sequential, diverging, and qualitative colors. To use RColorBrewer, you must first install it and load it in R: 
+An attractive alternative to R's palettes is the package RColorBrewer. This package derives from the excellent website [ColorBrewer 2.0](http://colorbrewer2.org/)[.](http://colorbrewer2.org/) RColorBrewer provides several palettes of sequential, diverging, and qualitative colors. To use RColorBrewer, you must first install it and load it in R: 
 
 {%highlight r%}
 
@@ -612,25 +585,19 @@ barplot(x, col = rgb(159, 182, 205, max = 255))  # RGB 0-255 barplot(x, col = rg
 
 {%endhighlight%}
 
-### I encourage you to explore the help information for RColorBrewer by entering help(package = 
+I encourage you to explore the help information for RColorBrewer by entering help(package = 
 
-### "RColorBrewer"). You can see all the available palettes by entering display.brewer.all(). 
+"RColorBrewer"). You can see all the available palettes by entering display.brewer.all(). 
 
-### This produces the following figure. The overlapping labels are due to the landscape aspect ratio.
+This produces the following figure. The overlapping labels are due to the landscape aspect ratio.
 
 ![](Getting-Started-with-R_images/Getting-Started-with-R_img8.png)
 
-
-
-### You can get a better view of an individual palette by specifying the palette and the number of colors desired, like this: display.brewer.pal(8, "Accent"). The following figure illustrates this palette. 
-
-
+You can get a better view of an individual palette by specifying the palette and the number of colors desired, like this: display.brewer.pal(8, "Accent"). The following figure illustrates this palette. 
 
 ![](Getting-Started-with-R_images/Getting-Started-with-R_img9.png)
 
-
-
-### To apply an RColorBrewer palette to a bar chart, call brewer.pal in the col attribute. Also specify the palette and the number of colors desired. 
+To apply an RColorBrewer palette to a bar chart, call brewer.pal in the col attribute. Also specify the palette and the number of colors desired. 
 
 {%highlight r%}
 
@@ -640,14 +607,11 @@ barplot(x, col = brewer.pal(6, "Blues"))
 
 {%endhighlight%}
 
-### This command produces the following figure. 
+This command produces the following figure. 
 
 ![](Getting-Started-with-R_images/Getting-Started-with-R_img10.png)
 
-
-
-### When you finish, it is a good idea to restore the default palette and clean up: 
-
+When you finish, it is a good idea to restore the default palette and clean up: 
 
 {%highlight r%}
 
