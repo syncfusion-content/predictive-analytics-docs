@@ -15,7 +15,7 @@ This section explains you the requirements that are mandatory for using PMML Exe
 
 The prerequisites details are as follows:
 
-_Table3: Prerequisites_
+Table3: Prerequisites
 
 <table>
 <tr>
@@ -31,7 +31,7 @@ Supported IDEs</td><td>
 
 ## The compatibility details are as follows:
 
-_Table4: Compatibility_
+Table4: Compatibility
 
 <table>
 <tr>

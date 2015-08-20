@@ -17,7 +17,7 @@ The PMMLEvaluatorFactory is a class that represents methods to instantiate respe
 
 ### Properties and Methods
 
-_Table5: Property Table_
+Table5: Property Table
 
 <table>
 <tr>
@@ -37,7 +37,7 @@ The following code example illustrates you the PMMLEvaluatorFactory that renders
 
 {% highlight r %}
 
-[C#]            
+           
 //Sample record passed as anonymous type            
  var anonymousType = new           
  {                
@@ -70,9 +70,9 @@ Output: SetosaThe predicted output (Setosa) obtained from PMML Execution engine 
 
 The PMMLEvaluator is an abstract class and it represents the base methods and properties for all model evaluators.
 
-Properties and Methods
+### Properties and Methods
 
-_Table6: PMMLEvaluator Public Properties/Methods_
+Table6: PMMLEvaluator Public Properties/Methods
 
 <table>
 <tr>
@@ -105,7 +105,7 @@ Regression Model Evaluator represents the evaluator for Regression models. It in
 
 The general purpose of regression model is to learn more about the relationship between several independent or predictor variables and a dependent variable. In the social and natural sciences multiple regression procedures are very widely used in research. 
 
-_Table7: Property Table_
+Table7: Property Table
 
 <table>
 <tr>
@@ -126,14 +126,14 @@ Consider the Tips dataset taken from the “reshape2” R package that has infor
 
 #### Samples location:
 
-_%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Regression\Tips_
+%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Regression\Tips
 
 The following code example illustrates the procedure to call Regression Model Evaluator directly without the help of PMMLEvaluatorFactory.
 
 
 {% highlight r %}
 
-[C#]  
+ 
 //Sample data is passed as anonymous type            
 var anonymousType = new            
 {              
@@ -177,7 +177,7 @@ General Regression Model is a supervised learning model used for both classifica
 
 
 
-_Table8: General Regression Model Public Properties or Methods_
+Table8: General Regression Model Public Properties or Methods
 
 <table>
 <tr>
@@ -199,13 +199,13 @@ Consider the Iris dataset taken from the "datasets" R package. A General regress
 
 #### Samples location:
 
-_%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\General Regression\Iris Logit_
+%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\General Regression\Iris Logit
 
 The following code example illustrates the procedure to call General Regression Model Evaluator directly without the help of PMMLEvaluatorFactory.
 
 {% highlight r %}
 
-[C#]
+
 //Sample record is passed as anonymous type           
 var anonymousType = new            
 {                
@@ -244,7 +244,7 @@ Naive Bayes classifier is a simple probabilistic classifier based on applying Ba
 
 Bayesian classifiers have been used for text classification, such as junk email filtering such as spam, author identification, topic categorization and intrusion detection or anomaly detection in computer networks.
 
-_Table9: NaiveBayes Model Public Properties or Methods_
+Table9: NaiveBayes Model Public Properties or Methods
 
 <table>
 <tr>
@@ -266,13 +266,13 @@ Consider the Iris dataset taken from the "datasets" R package. A Naïve Bayes mo
 
 #### Samples location:
 
-_%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Naive Bayes\Iris_
+%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Naive Bayes\Iris
 
 The following code example illustrates the procedure to call Naïve Bayes model evaluator directly without the help of PMMLEvaluatorFactory.
 
 {% highlight r %}
 
-[C#]     
+    
 //Sample record is passed as anonymous type           
  var anonymousType = new            
  {                
@@ -305,7 +305,7 @@ Output: VirginicaThe predicted output (Virginica) obtained from PMML Execution e
 
 Tree Model Evaluator represents the evaluator for tree models and it inherits all the properties and methods of PMMLEvaluator.
 
-_Table10: Tree Model Public Properties or Methods_
+Table10: Tree Model Public Properties or Methods
 
 <table>
 <tr>
@@ -327,13 +327,13 @@ Consider the Iris dataset taken from the "datasets" R package. Created here is a
 
 #### Samples location:
 
-_%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Tree Model\Iris_
+%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Tree Model\Iris
 
 The following code example illustrates the procedure to call TreeModel evaluator directly without the help of PMMLEvaluatorFactory.
 
 {% highlight r %}
 
-[C#]
+
 //Sample values are passed as anonymous type            
 var anonymousType = new            
 {                
@@ -370,7 +370,7 @@ Support Vector Machine Model Evaluator represents the evaluator for support vect
 
 Support Vector Machines (SVM) model is a set of related supervised learning model with associated learning algorithms that analyse data and recognize patterns, used for both classification and regression analysis. It has gained popularity due to its potential for high accuracy.
 
-_Table11: SupportVectorMachine Model Public Properties/Methods_
+Table11: SupportVectorMachine Model Public Properties/Methods
 
 <table>
 <tr>
@@ -392,13 +392,13 @@ Consider the Iris dataset taken from the "datasets" R package. Created here is a
 
 #### Samples location:
 
-_%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Support Vector Machine\Iris Sigmoid_
+%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Support Vector Machine\Iris Sigmoid
 
 The following code example illustrates the procedure to call Support Vector Machine model evaluator directly without the help of PMMLEvaluatorFactory.
 
 {% highlight r %}
 
-[C#] 
+
 //Sample values are passed as anonymous type            
 var anonymousType = new            
 {               
@@ -435,7 +435,7 @@ Mining Model Evaluator represents the evaluator for mining models and it inherit
 
 Mining model operates by constructing multiple decision trees. It draws random samples from the original data and for each random sample it grows a tree. It is used in both classification and regression cases.
 
-_Table12: Mining Model Public Properties or Methods_
+Table12: Mining Model Public Properties or Methods
 
 <table>
 <tr>
@@ -461,13 +461,13 @@ Consider the Iris dataset taken from the "datasets" R package. Created here is a
 
 #### Samples location:
 
-_%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Random Forest\Iris_ 
+%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Random Forest\Iris 
 
 The following code example illustrates the procedure to call Mining Model Evaluator directly without the help of PMMLEvaluatorFactory.
 
 {% highlight r %}
 
-[C#]
+
 
 //Sample values are passed as anonymous type           
  var anonymousType = new            
@@ -505,7 +505,7 @@ Neural Network Model Evaluator represents the evaluator for neural network model
 
 A Neural network also called an ANN or an Artificial Neural Network is an artificial system made of artificial neuron cells. It is modeled after the way the human brain works through imitating how the brain's neurons are fired or activated. The idea of neural networks is that, they are able to learn by themselves, an ability that makes them remarkably distinctive in comparison to normal computers, that cannot do anything for that they are not programmed. It is used in both classification and regression cases.
 
-_Table13: Neural Network Model Public Properties or Methods_
+Table13: Neural Network Model Public Properties or Methods
 
 <table>
 <tr>
@@ -527,13 +527,13 @@ Consider the Iris dataset taken from the "datasets" R package. Created here is a
 
 #### Samples location:
 
-_%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Neural Networks\Iris_ 
+%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Neural Networks\Iris 
 
 The following code example illustrates the procedure to call Neural Network Model Evaluator directly without the help of PMMLEvaluatorFactory.
 
 {% highlight r %}
 
-[C#]
+
 //Sample values are passed as anonymous type            
 var anonymousType = new            
 {                
@@ -559,7 +559,8 @@ Console.WriteLine(predictedResult.PredictedValue);
 {% endhighlight %}
 
 {% highlight text %}
-Output: VersicolorThe predicted output (Versicolor) obtained from PMML Execution engine provides a clear picture that is based on given sepal and petal width and length, the iris species is more likely to be Versicolor.</td></tr>
+
+ Output: VersicolorThe predicted output (Versicolor) obtained from PMML Execution engine provides a clear picture that is based on given sepal and petal width and length, the iris species is more likely to be Versicolor.</td></tr>
 {% endhighlight %}
 
 
@@ -571,7 +572,7 @@ Clustering Model Evaluator represents the evaluator for clustering models and it
 
 Clustering is the task of grouping a set of objects in such a way that objects in the same group called a cluster are more similar in some sense or another to each other than to those in other groups (clusters). For each cluster a center vector can be provided. In center-based models a cluster is defined by a vector of center coordinates. Some distance measure is used to determine the nearest center that is the nearest cluster for a given input record.
 
-_Table14: Clustering Model Public Properties or Methods_
+Table14: Clustering Model Public Properties or Methods
 
 <table>
 <tr>
@@ -593,13 +594,13 @@ Consider the Iris dataset taken from the "datasets" R package. Created here is a
 
 #### Samples location:
 
-_%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Clustering Model\Iris_ 
+%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Clustering Model\Iris
 
 The following code example illustrates the procedure to call Clustering Model Evaluator directly without the help of PMMLEvaluatorFactory.
 
 {% highlight r %}
 
-[C#]
+
 //Sample values are passed as anonymous type            
 var anonymousType = new            
 {                
@@ -637,7 +638,7 @@ Association Rules Model Evaluator represents the evaluator for the Association r
 
 Association rule mining finds elements or attributes that frequently occur together—for example, products that are often bought together during a shopping session. Such information can be used to recommend products to shoppers, to place frequently bundled items together on store shelves. Machine learning methods for identifying associations among items in transactional data called market basket analysis in retail stores.
 
-_Table9: Association Rules Model Public Properties or Methods_
+Table9: Association Rules Model Public Properties or Methods
 
 <table>
 <tr>
@@ -659,13 +660,13 @@ Consider the Groceries dataset taken from the "arules" R package. An Association
 
 #### Samples location:
 
-_%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Association Rules\Groceries_
+%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Association Rules\Groceries
 
 The following code example illustrates the procedure to call Association rules model evaluator directly without the help of PMMLEvaluatorFactory.
 
 {% highlight r %}
 
-[C#]            
+           
 //Sample input items is passed as list of string            
 List<string> input = null;            
 input.Add(“citrus fruit”);            
@@ -706,7 +707,7 @@ The PMMLDocument class is used to represent the object model for PMML document. 
 
 The PMMLDocument contains properties with read only option. 
 
-_Table15: PMMLDocument Properties_
+Table15: PMMLDocument Properties
 
 <table>
 <tr>
@@ -786,7 +787,7 @@ The following code example illustrates you on how the PMML file is loaded. Here 
 
 {% highlight r %}
 
-[C#]
+
 
 //Gets the filepath of the PMML file as String
 
@@ -812,7 +813,7 @@ The following code example illustrates you the same method OpenPMMLDocument but 
 
 {% highlight r %}
 
-[C#]
+
 
 // Gets the Stream filepath of the PMML file 
 
@@ -845,7 +846,7 @@ The PredictedResult class is used to represent the predicted output for all PMML
 
 ### Properties and Methods
 
-_Table13: PredictedResult__Properties_
+Table13: PredictedResult Properties
 
 <table>
 <tr>
@@ -910,7 +911,7 @@ Using BinomialThreshold property in Model options of General Regression, that is
 
 Based on the value, probability (0 - 1) is split into two boundary regions.
 
-_Table16: Binary Prediction_
+Table16: Binary Prediction
 
 <table>
 <tr>
@@ -926,7 +927,7 @@ The following code example illustrates the procedure to call General Regression 
 
 {% highlight r %}
 
-[C#]
+
 var iris = new            
 {                
 Sepal_Length = 6.5, 

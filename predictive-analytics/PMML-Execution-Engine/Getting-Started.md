@@ -212,7 +212,7 @@ The following code demonstrates predicting car prices using independent predicto
 
 {% highlight r %}
 
-[C#]
+
 
 public Table PredictResult(string inputDataCSVPath, string pmmlPath)
 

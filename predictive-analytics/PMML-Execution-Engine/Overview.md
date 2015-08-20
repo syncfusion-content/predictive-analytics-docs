@@ -31,7 +31,7 @@ Important features of PMML Execution Engine are as follows,
 
 
 
-_Table1: List of models currently supported in PMML Execution Engine_
+Table1: List of models currently supported in PMML Execution Engine
 
 <table>
 <tr>
@@ -113,7 +113,7 @@ Frequently Asked Questions-This section covers the list of questions with expert
 
 The following conventions helps you in quickly identifying the important sections of information when using the content.
 
-_Table2: Document Conventions_
+Table2: Document Conventions
 
 <table>
 <tr>
@@ -124,8 +124,8 @@ Description</th></tr>
 <tr>
 <td>
 Note</td><td>
-{{ '![](Overview_images/Overview_img1.jpeg)' | markdownify }}
-{{ '_Note:_' | markdownify }}</td><td>
+
+{{ 'Note:' | markdownify }}</td><td>
 Represents important information</td></tr>
 <tr>
 <td>

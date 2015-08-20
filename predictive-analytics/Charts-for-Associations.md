@@ -64,7 +64,7 @@ fill = c("steelblue3", "thistle3"))
 
 {%endhighlight%}
 
-## ADD LEGEND INTERACTIVELY 
+### ADD LEGEND INTERACTIVELY 
 
 The resulting grouped bar plot is shown in the following figure. 
 
@@ -214,7 +214,7 @@ Perhaps the most common and useful chart for visualizing the association between
 
 For this example, you can use cars data from R’s datasets package. 
 
-##  1.1.1.1 Sample: sample_6_4.R 
+###  Sample: sample_6_4.R 
 
 {%highlight r%}
 

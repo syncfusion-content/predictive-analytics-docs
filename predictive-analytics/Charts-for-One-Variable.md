@@ -7,7 +7,7 @@ control: Essential Predictive Analytics
 documentation: ug
 ---
 
-## Charts for One Variable 
+# Charts for One Variable 
 
 As mentioned above, analyses are most useful when graphics come first, before the statistical procedures. In addition, the individual variables that form the basis of all later work need to be well understood and, if appropriate, adapted to the analytical needs. With those two points in mind, the following guidelines begins with charts for one variable. 
 
@@ -23,7 +23,7 @@ It is easiest to begin with categorical variables, such as a respondent's gender
 
 For this example, you can use chickwts from R’s datasets package. This data set records the weights of chicks and the feed that they had. To see more on this dataset, enter “?chickwts”. To see the entire dataset in the console it has 71 cases enter chickwts. To make the plot, run the following two commands: 
 
-## Sample: sample_2_1.R 
+### Sample: sample_2_1.R 
 
 {%highlight r%}
 # LOAD DATA 
@@ -96,7 +96,7 @@ There are two ways to save charts so you can export them. The first method, is t
 
 To save images using R's method, you must open a device or "graphical device." The following code shows how to use devices to save either PNG files for raster graphics or PDF files for vector graphics. You must use one or the other for the command; you cannot run both at once. There are also several other formats available. Refer ?png, ?pdf, and ?dev for more information on these functions. 
 
-## Sample: sample_2_2.R
+### Sample: sample_2_2.R
 
 {%highlight r%}
 
@@ -300,7 +300,7 @@ Once you have saved your work, clean the workspace of unwanted variables and obj
 
 The last univariate chart explained here is the boxplot. Boxplots are well suited to identifying outliers in quantitative variables. The default boxplot is simple to create: 
 
-## Sample: sample_2_5.R 
+### Sample: sample_2_5.R 
 {%highlight r%}
 
 # LOAD DATA SET require(“datasets”)  # Load datasets package. data(lynx)  # Annual Canadian Lynx trappings 1821-1934. 

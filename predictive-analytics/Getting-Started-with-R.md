@@ -379,7 +379,7 @@ It only makes sense to enter data into R when you have sequential data or toy da
 
 An enormous amount of data resides in spreadsheets. R makes it easy to import such data, with some important qualifications. Many people also have data in statistical programs such as SPSS or SAS. R is also able to read that data, but again with an important qualification. 
 
-## Avoid native files from Excel or SPSS 
+### Avoid native files from Excel or SPSS 
 
 You must not try to import native Excel spreadsheets or SPSS files. While there are packages designed to do both of these, they are often difficult to use and they can introduce problems. The R website says this about importing Excel spreadsheets (emphasis added): 
 
@@ -387,7 +387,7 @@ The most common R data import/export question seems to be “how do I read an Ex
 
 Many of the same problems apply to SPSS files. The good news is that there is a simple solution for these problems. 
 
-## Importing CSV files 
+### Importing CSV files 
 
 The easiest way to import data into R is with a CSV file, or comma-separated values spreadsheet. Any spreadsheet program, including Excel, can save files in the CSV format. Statistical programs like SPSS can do this, too. Then, to read a CSV file, use the read.csv function. You need to specify the location of the file and whether it has a header row for variable names. For example, on your Mac, you can import a file named "rawdata.csv" from the desktop this way: 
 
