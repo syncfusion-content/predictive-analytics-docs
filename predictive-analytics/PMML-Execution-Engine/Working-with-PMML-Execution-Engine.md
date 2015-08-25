@@ -64,7 +64,7 @@ Output: SetosaThe predicted output (Setosa) obtained from PMML Execution engine 
 
 {% endhighlight %}
 
-> Note: The above code example uses PMMLEvaluator instance. In case when the model to be evaluated is known before, then you can call the model evaluator directly.
+N> The above code example uses PMMLEvaluator instance. In case when the model to be evaluated is known before, then you can call the model evaluator directly.
 
 ## PMMLEvaluator
 
@@ -453,7 +453,7 @@ Evaluates the given input against the scoring procedure of the MiningModel and r
 </table>
 
 
->  Note: Gradient Boosting Model also initializes the Mining Model Evaluator as the PMML structure is similar.
+N> Gradient Boosting Model also initializes the Mining Model Evaluator as the PMML structure is similar.
 
 
 
