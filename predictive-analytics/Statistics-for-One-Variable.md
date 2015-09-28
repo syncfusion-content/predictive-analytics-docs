@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Statistics-for-One-Variable
+title: Statistics for One Variable | Essential Predictive Analytics | Predictive Analytics | Syncfusion
 description:  statistics for one variable 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -16,10 +16,15 @@ The best beginning step for analyses is examining graphs for one variable. The f
 The most common statistics for categorical variables are frequencies and proportions. First create a dataset based on a recent Google search. 
 
 ### Sample: sample_3_1.R 
+
 {% highlight r %}
+
 # ENTER DATA 
 
-# Hits in millions for each word on Google groups <- c(rep("blue", 3990),             rep("red", 4140),             rep("orange", 1890),             rep("green", 3770),             rep("purple", 855))
+# Hits in millions for each word on Google groups <- c(rep("blue", 3990),            
+ rep("red", 4140),             rep("orange", 1890),             rep("green", 3770),   
+ rep("purple", 855))
+
 {% endhighlight %}
 
 The rep() function repeats an item for a specified number of times. In the above code, for example, it repeats the word “blue” 3990 times. When the five color words are put together in the object groups, there are 14,645 lines of data. Although it may be easier to work with the data in tabular form, it is preferred to also have a dataset with one row per case. 
@@ -35,6 +40,7 @@ This next command creates a data table:
 groups.t1 <- table(groups)  # Creates frequency table  groups.t1  # Print table 
 
   blue  green orange purple    red    3990   3770   1890    855   4140 
+
 {% endhighlight %}
 
 
@@ -42,6 +48,7 @@ The data are now in alphabetical order. There may be times when this is helpful,
 
 
 {% highlight r %}
+
 # MODIFY FREQUENCY TABLES 
 
 groups.t2 <- sort(groups.t1, decreasing = TRUE)  # Sorts by frequency groups.t2  # Prints table groups 
@@ -79,6 +86,7 @@ That’s an improvement but we can take it further. The leading zeroes and decim
 round(prop.table(groups.t2), 2) * 100  # Percents without decimals. 
 
    red   blue  green orange purple      28     27     26     13      6 
+   
 {% endhighlight %}
 
 
@@ -93,10 +101,13 @@ For categorical variables, there is a limited number of useful descriptive stati
 We will use R’s data set cars, which gives the speed of cars in MPH and the distances taken to stop in feet. The data were recorded in the 1920s, so there are some unusual values, such as a car taking 120 feet to stop from 24 MPH. (See ?cars for more information.) 
 
 ### Sample: sample_3_2.R 
+
 {% highlight r %}
+
 # LOAD DATA SET 
 
-require(“datasets”)  # Load the data sets package cars  # Print the cars data to the console data(cars)  # Load the data into the workspace
+require(“datasets”)  # Load the data sets package cars  # Print the cars data to the console data(cars) 
+ # Load the data into the workspace
 
 {% endhighlight %}
 
@@ -118,7 +129,8 @@ You can also do an entire data set at once:
 
 {% highlight r %}
 
-summary(cars)  # Summary for entire table (inc. categories)      speed           dist         Min.   : 4.0   Min.   :  2.00   
+summary(cars)  # Summary for entire table (inc. categories)      speed          
+ dist         Min.   : 4.0   Min.   :  2.00   
 
  1st Qu.:12.0   1st Qu.: 26.00   
 
@@ -151,9 +163,13 @@ To use the describe function, you must first install and load the psych package,
 
 {% highlight r %}
 
-# ALTERNATIVE DESCRIPTIVES require("psych") describe(cars)  
+# ALTERNATIVE DESCRIPTIVES require("psych") 
+describe(cars)  
 
-      var  n  mean    sd median trimmed   mad speed   1 50 15.40  5.29     15   15.47  5.93 dist    2 50 42.98 25.77     36   40.88 23.72         min  max range  skew kurtosis   se speed     4   25    21 -0.11    -0.67 0.75 dist      2  120   118  0.76     0.12 3.64
+      var  n  mean    sd median trimmed   mad speed   1 50 15.40  5.29     15   15.47  
+	  5.93 dist    2 50 42.98 25.77     36   40.88 23.72         min  max range  skew 
+	  kurtosis   se speed     4   25    21 -0.11    -0.67 0.75 dist      2  120   118
+	  0.76     0.12 3.64
 
 {% endhighlight %}
 
@@ -166,6 +182,7 @@ Once you have saved your work, you should clear the workspace of unwanted variab
 # CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads data sets package. 
 
 detach("package:psych", unload=TRUE)  # Unloads psych package. rm(list = ls())  # Remove all objects from workspace.
+
 {% endhighlight %}
 
 ##  Single Proportion: Hypothesis Test and Confidence Interval 
@@ -173,7 +190,9 @@ detach("package:psych", unload=TRUE)  # Unloads psych package. rm(list = ls())  
 The simplest inferential procedures are for single proportions. These are dichotomous outcomes: pass or fail, yes or no, left or right, etc. The only data needed for these procedures is the number of trials “n”, and the number of positive outcomes “X”. For example, when a person flips a coin 40 times and gets 27 heads, then n = 40 and X = 27. R's prop.test() function is able to do both a null hypothesis test and a confidence interval for these proportions. Used here is the coin flip data for this example, first with the default settings and then with some options. 
 
 ### Sample: sample_3_3.R 
+
 {% highlight r %}
+
 # PROPORTIONS TEST WITH DEFAULTS prop.test(27, 40)  # 27 heads in 40 coin flips. 
 
  	1-sample proportions test with continuity correction data:  27 out of 40, null probability 0.5 X-squared = 4.225, df = 1, p-value = 0.03983 alternative hypothesis: true p is not equal to 0.5 95 percent confidence interval: 
@@ -181,6 +200,7 @@ The simplest inferential procedures are for single proportions. These are dichot
  0.5075690 0.8092551 sample estimates: 
 
     p  0.675
+	
 {% endhighlight %}
 
 In these results, R repeats the data, 27 positive outcomes out of 40 trials, and gives the default null probability of 0.5. “X-squared” is ϰ2, the chi-squared value of 4.225. With one degree of freedom, the observed results have a probability value of 0.03983. Because this value is less than the standard .05, reject the null hypothesis; that is, it is concluded that 27 out of 40 heads is statistically significantly greater than 50%. R then states the alternative hypothesis that the true p, or the probability of a positive outcome, is not equal to 0.5. Next is the 95% confidence interval for the proportion, which ranges from 0.51 to 0.81. The output finishes with the observed sample proportion of 0.675, or 67.5%. 
@@ -199,13 +219,12 @@ Using some of these options, you could revise the previous hypothesis test condu
 
 # PROPORTION TEST WITH OPTIONS prop.test(27, 40,  # Same observed values.           p = .6,  # Null probability of .6 (vs. .5).           alt = "greater",  # Directional test for greater value.           conf.level = .90)  # Confidence level of 90% (vs. 95%). 
 
-
-
  	1-sample proportions test with continuity correction data:  27 out of 40, null probability 0.6 X-squared = 0.651, df = 1, p-value = 0.2099 alternative hypothesis: true p is greater than 0.6 90 percent confidence interval: 
 
  0.5619655 1.0000000 sample estimates: 
 
     p  0.675
+	
 {% endhighlight %}
 
 
@@ -227,7 +246,9 @@ In this example is used R's quakes dataset. This dataset includes the location, 
 Examined here is one variable: mag, for magnitude. Before conducting the t-test, though, you need to at least get a histogram and some basic summary statistics. 
 
 ### Sample: sample_3_4.R 
+
 {% highlight r %}
+
 # LOAD DATA & EXAMINE require(“datasets”)  # Loads data sets package.  mag <- quakes$mag  # Loads just the magnitude variable. 
 
 hist(mag) summary(mag)
@@ -238,12 +259,14 @@ The histogram in the following figure shows that the distribution has a strong, 
 
 
 
-![](Statistics-for-One-Variable_images/Statistics-for-One-Variable_img1.png)
+![](Statistics-for-One-Variable_images/img1.png)
 
-{% highlight r %}
+_Histogram of Earthquake Magnitudes_
+
 
 The basic summary statistics for mag are: 
 
+{% highlight r %}
 
 
    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.  
@@ -307,7 +330,9 @@ Once you save your work, you can clear the workspace of unwanted variables, obje
 
 {% highlight r %}
 
-# CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads data sets package. rm(list = ls())  # Remove all objects from workspace
+# CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads data sets package.
+ rm(list = ls())  # Remove all objects from workspace
+
 {% endhighlight %}
 
 ## Chi-square Goodness-of-fit Test 
@@ -319,36 +344,41 @@ When you have a categorical variable with more than two categories, a chi-square
 The chi-squared test in R uses summary tables as its input. If you have one row of data for each case or if you have a multidimensional table, you may need to restructure your data. In this example is used a three-dimensional table HairEyeColor from R's datasets package.
 
 ###  Sample: sample_3_5.R 
+
 {% highlight r %}
+
 # LOAD DATA & EXAMINE require(“datasets”)  # Loads data sets package.  
 
 # SHOW DATA & MARGINAL FREQUENCIES 
 
 HairEyeColor  # Shows data; see ?HairEyeColor for more information. margin.table(HairEyeColor, 1)  # Hair color marginal frequencies. margin.table(HairEyeColor, 2)  # Eye color marginal frequencies. margin.table(HairEyeColor, 3)  # Sex marginal frequencies. margin.table(HairEyeColor)     # Total frequencies.
+
 {% endhighlight %}
 
 
 You can see the full, three-way table by entering “?HairEyeColor”. In this analysis, though, you need only eye color, so create a new data frame to hold those data.  
+
 {% highlight r %}
+
 # CREATE DATA FRAME eyes <- margin.table(HairEyeColor, 2)  # Save the table. eyes  # Show frequency table in the console. 
 
 Brown  Blue Hazel Green  
 
-  220   215    93    64 
-
-
+220   215    93    64 
 
 round(prop.table(eyes), 2)  # Proportions w/2 digits 
 
 Brown  Blue Hazel Green  
 
- 0.37  0.36  0.16  0.11
+0.37  0.36  0.16  0.11
+
 {% endhighlight %}
 
 You can first conduct a version of the chi-squared goodness-of-fit test with the hypothesis that the eye colors are evenly distributed. This is the default setting for chisq.test(). 
 
 
 {% highlight r %}
+
 # CHI-SQUARED GOODNESS-OF-FIT 1 # DEFAULT: EQUAL FREQUENCIES 
 
 chi1 <- chisq.test(eyes)  # Save test as object "chi1" chi1  # Check results. 
@@ -380,8 +410,6 @@ X-squared = 6.4717, df = 3, p-value = 0.09079
 {% endhighlight %}
 
 In this case your value of chi-square again, X-squared in the printout is much smaller: 6.4717. With three degrees of freedom, that gives a probability value of .09079, which does not exceed the standard cut-off of 0.5. You can therefore conclude that your sample’s eye color proportions do not differ significantly from those of the general population. 
-
-
 
 At the end, you can clear the workspace of unwanted variables, objects, or packages: 
 

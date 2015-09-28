@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Statistics-for-Associations
+title: Statistics for Associations | Essential Predictive Analytics | Predictive Analytics | Syncfusion
 description: statistics for associations 
 platform: predictive-analytics
 control: Essential Predictive Analytics

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Statistics-for-Three-or-More-Variables
+title: Statistics for Three or More Variables | Essential Predictive Analytics | Predictive Analytics | Syncfusion
 description: statistics for three or more variables 
 platform: predictive-analytics
 control: Essential Predictive Analytics

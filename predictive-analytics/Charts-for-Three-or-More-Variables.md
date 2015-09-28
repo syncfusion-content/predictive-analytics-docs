@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Charts-for-Three-or-More-Variables
+title: Charts for Three or More Variables | Essential Predictive Analytics | Predictive Analytics | Syncfusion
 description: charts for three or more variables 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -42,13 +42,15 @@ It is convenient when these data can work directly with R’s barplot() function
 
 wbdata <- tapply(warpbreaks$breaks,  # Outcome 
 
-                 list(warpbreaks$wool, warpbreaks$tension),  # Factors                  FUN = mean)  # Summary function
+                 list(warpbreaks$wool, warpbreaks$tension),  # Factors                
+				 FUN = mean)  # Summary function
 
 {%endhighlight%}	
 
 You can then use wbdata to create the bar plot. 
 
 {%highlight r%}
+
 # CREATE BARPLOT barplot(wbdata,  # Use a new summary table. 
 
         beside = TRUE,  # Bars side-by-side vs. stacked         col = c("steelblue3", "thistle3"),  # Colors 
@@ -63,19 +65,26 @@ Then you can add a legend using the interactive locator(1) function that lets yo
 
 {%highlight r%}
 
-# ADD LEGEND legend(locator(1),  # Use mouse to locate the legend.        rownames(wbdata),  # Use matrix row names (A & B)        fill = c("steelblue3", "thistle3"))  # Colors
+# ADD LEGEND legend(locator(1),  # Use mouse to locate the legend.      
+  rownames(wbdata),  # Use matrix row names (A & B)        
+  fill = c("steelblue3", "thistle3"))  # Colors
+
 {%endhighlight%}
 
 The resulting chart is shown in the following screenshot.
 
-![](Charts-for-Three-or-More-Variables_images/Charts-for-Three-or-More-Variables_img1.jpeg)
+![](Charts-for-Three-or-More-Variables_images/img1.jpeg)
+
+_Grouped Bar Plot for Means_
 
 You can complete by cleaning up the workspace. 
 
 {%highlight r%}
+
 # CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads the datasets package. 
 
 rm(list = ls())  # Remove all objects from the workspace.
+
 {%endhighlight%}
 
 
@@ -88,6 +97,7 @@ For this example, you can use the iris data from R’s datasets package.
 ### Sample: sample_8_2.R 
 
 {%highlight r%}
+
 # LOAD DATA require(“datasets”)  # Load the datasets package. 
 
 data(iris)  # Load data into workspace. iris[1:3, ]  # Show the first three lines of data. 
@@ -122,12 +132,15 @@ You can use the scatterplot() function that can also be called with abbreviated 
 
 # SCATTERPLOT BY GROUPS sp(Sepal.Width ~ Sepal.Length | Species,  # Group by species. 
 
-   data = iris,     xlab = "Sepal Width",     ylab = "Sepal Length",     main = "Iris Data",     labels = row.names(iris))  # Label names. 
+   data = iris, xlab = "Sepal Width",  ylab = "Sepal Length",  main = "Iris Data", labels = row.names(iris))  # Label names. 
+
 {%endhighlight%}
 
 The resulting chart is shown in the following screenshot. 
 
-![](Charts-for-Three-or-More-Variables_images/Charts-for-Three-or-More-Variables_img2.jpeg)
+![](Charts-for-Three-or-More-Variables_images/img2.jpeg)
+
+_Scatter Plot by group_
 
 The car package uses both colors and shapes to indicate group membership. By default, it also superimposes a linear regression line and a lowess smoother for each group, matched by color. 
 
@@ -135,11 +148,11 @@ You can finish by unloading the packages and clearing the workspace.
 
 {%highlight r%}
 
-# CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads the datasets package. detach("package:car", unload = TRUE)  # Unloads the car package. rm(list = ls())  # 
-
-
+# CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads the datasets package. 
+detach("package:car", unload = TRUE)  # Unloads the car package. rm(list = ls())  # 
 
 Remove all objects from workspace.
+
 {%endhighlight%}
 
 ## Scatter plot matrices 
@@ -178,30 +191,34 @@ four variables from iris.
 
 The resulting plot is shown in the following screenshot.
 
-![](Charts-for-Three-or-More-Variables_images/Charts-for-Three-or-More-Variables_img3.jpeg)
+![](Charts-for-Three-or-More-Variables_images/img3.jpeg)
+
+_Scatterplot Matrix with paris()_
 
 This is a reasonable plot, but it is not information-dense: there is no indication of group membership, there are no fit lines, and the large cells with the variable names can be used for other purposes.  
 
 You can fix these problems in few steps. The first step is to augment the names on the diagonal with histograms for each variable. You can create a custom function for this with the following code example that is adapted from the code in ?pairs in R’s built-in help. It creates a new function called panel.hist. This function is saved to the workspace and can be called when you run the pairs() function again. 
 
 {%highlight r%}
+
 # FUNCTION TO PUT HISTOGRAMS ON DIAGONAL # Adapted from code in "pairs" help panel.hist <- function(x, ...) 
 
-{   usr <- par("usr")  # Copies usr parameters for plot coordinates. 
+{   
+usr <- par("usr")  # Copies usr parameters for plot coordinates. 
 
   on.exit(par(usr))  # Restores parameters on exit. 
 
   par(usr = c(usr[1:2], 0, 1.5) )  # Sets plot coordinates.   h <- hist(x, plot = FALSE)  # Creates histogram.   breaks <- h$breaks  # Reads breaks for histograms.   nB <- length(breaks)  # Reads number of breaks.   y <- h$counts  # Get raw values for the y-axis.   y <- y/max(y)  # Adjusts raw values to fit the y scale.   rect(breaks[-nB], 0, breaks[-1], y,  ...)  # Draws boxes. } 
 
-  {%endhighlight%}
+{%endhighlight%}
 
 To load the RColorBrewer package you can select a palette to indicate group membership in the plots. 
 
-{%highlight r%}
+{%highlight r%} 
+
 # SET COLOR PALETTE WITH RCOLORBREWER require("RColorBrewer")
 
-
-  {%endhighlight%}
+{%endhighlight%}
   
 After creating the panel.hist function and loading the RColorBrewer package, you can run the pairs() function again with several options specified. The pairs() function has a wide array of options, allowing you to choose, for example that function is displayed in the diagonal, the upper panel, the lower panel, etc. (See ?pairs for more information.)  
 
@@ -209,27 +226,30 @@ Also, the three species of iris are shown in different colors by calling the RCo
 
 {%highlight r%}
 
-# SCATTERPLOT MATRIX WITH OPTIONS pairs(iris[1:4],  # Reads the 
+# SCATTERPLOT MATRIX WITH OPTIONS pairs(iris[1:4],  # Reads the data.      
 
-data.       panel = panel.smooth,  # Adds an optional smoother.       
+panel = panel.smooth,  # Adds an optional smoother.       
 
 main = "Scatterplot Matrix for Iris Data Using pairs Function",      
 
- diag.panel = panel.hist,  # Calls histogram function.       pch = 
+ diag.panel = panel.hist,  # Calls histogram function.       
 
-16,  # Uses solid dots for points.       # Next line color dots by "Species" category.       col = brewer.pal(3, 
+pch = 16,  # Uses solid dots for points.       # Next line color dots by "Species" category.       col = brewer.pal(3, 
 
 "Pastel1")[unclass(iris$Species)])
 
-  {%endhighlight%}
+{%endhighlight%}
 
 The resulting chart is shown in the following screenshot.
 
-![](Charts-for-Three-or-More-Variables_images/Charts-for-Three-or-More-Variables_img4.jpeg)
+![](Charts-for-Three-or-More-Variables_images/img4.jpeg)
+
+_Scatter plot Matrix with Custom Function_
 
 The above screenshot is an improvement over scatter plot matrix with paris(), but it can still be improved. Most significantly, it is missing a legend to indicate group membership. It is also potentially troublesome to use a custom function with unknown compatibility issues. Instead, you can use the scatterplotMatrix() function from the car package. Also note in the following code example, the paste() function in the title attribute main. paste() puts separate strings together into a single string that makes it possible to write a long title in the R command but keep the code from being too wide. 
 
 {%highlight r%}
+
 # SCATTERPLOT MATRIX WITH "CAR" PACKAGE require("car") 
 
 scatterplotMatrix(~Petal.Length + Petal.Width +  
@@ -247,7 +267,9 @@ scatterplotMatrix(~Petal.Length + Petal.Width +
 
 The previous command produces the following chart as shown.
 
-![](Charts-for-Three-or-More-Variables_images/Charts-for-Three-or-More-Variables_img5.jpeg)
+![](Charts-for-Three-or-More-Variables_images/img5.jpeg)
+
+_Scatter Plot Matrix with the scatterplotmatrix() Function from the car package_
 
 The above figure accomplishes several things at once: 
 
@@ -272,7 +294,7 @@ detach("package:RColorBrewer", unload = TRUE)  # Unloads RColorBrewer detach("pa
 
 rm(list = ls())  # Remove all objects from the workspace.
 
-  {%endhighlight%}	
+{%endhighlight%}	
 
 
 

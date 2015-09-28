@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Charts-for-One-Variable
+title: Charts for One Variable | Essential Predictive Analytics | Predictive Analytics | Syncfusion
 description: charts for one variable 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -26,6 +26,7 @@ For this example, you can use chickwts from R’s datasets package. This data se
 ### Sample: sample_2_1.R 
 
 {%highlight r%}
+
 # LOAD DATA 
 
 require(“datasets”)  # Loads data sets package
@@ -46,9 +47,9 @@ The default plot() function is adaptive. It produces different charts depending 
 
 
 
-![](Charts-for-One-Variable_images/Charts-for-One-Variable_img1.png)
+![](Charts-for-One-Variable_images/img1.png)
 
-
+_Default Bar chart from the plot() function_
 
 You need to add titles, rearrange the bars, and change the margins, among other things. The default plot() function, though, does not provide much control. Instead, you need to use the barplot() function. But first, you need to calculate the frequencies for the chart. You can use the table() function for that:
 
@@ -70,15 +71,17 @@ Now you can create a new chart using barplot(). Also you can adjust a few parame
 
 barplot(feeds[order(feeds)],  # Orders the bars by descending values. 
 
-        horiz  = TRUE,  # Makes the bars horizontal.         las    = 1,  # las gives orientation of axis labels. 
+        horiz  = TRUE,  # Makes the bars horizontal. las    = 1,  # las gives orientation of axis labels. 
 
-        col    = c("beige", "blanchedalmond", "bisque1", "bisque2",                    "bisque3", "bisque4"),  # Vector of colors for bars.         border = NA,  # No borders on bars.         # Add main title and label for x-axis.         main   = "Frequencies of Different Feeds in chickwts Data set",         xlab   = "Number of Chicks")  
+        col    = c("beige", "blanchedalmond", "bisque1", "bisque2", "bisque3", "bisque4"),  # Vector of colors for bars.         border = NA,  # No borders on bars.         # Add main title and label for x-axis.         main   = "Frequencies of Different Feeds in chickwts Data set",         xlab   = "Number of Chicks")  
 
 {%endhighlight%}
 
 This series of commands produce the modified bar chart as shown in the following figure. 
 
-![](Charts-for-One-Variable_images/Charts-for-One-Variable_img2.jpeg)
+![](Charts-for-One-Variable_images/img2.jpeg)
+
+_Modified Bar Chart using barplot()_
 
 Finish by saving your work, resetting the graphics parameters, and clearing the workspace of unwanted variables, objects, and packages:
 
@@ -131,7 +134,7 @@ par(oma = c(1, 1, 1, 1))  # Sets outside margins: bottom, left, top, right. par(
 
         las    = 1,  # las gives orientation of axis labels. 
 
-        col    = c("beige", "blanchedalmond", "bisque1", "bisque2",                    "bisque3", "bisque4"),  # Vector of colors for bars         border = NA,  # No borders on bars.         # Add main title and label for x-axis.         main   = "Frequencies of Different Feeds\nin chickwts Data set",         xlab   = "Number of Chicks")   
+        col    = c("beige", "blanchedalmond", "bisque1", "bisque2", "bisque3", "bisque4"),  # Vector of colors for bars         border = NA,  # No borders on bars.         # Add main title and label for x-axis.         main   = "Frequencies of Different Feeds\nin chickwts Data set",         xlab   = "Number of Chicks")   
 
 
 {%endhighlight%}
@@ -172,7 +175,9 @@ feeds <- table(chickwts$feed)  # Create a table of feed, place in “feeds” fe
 
 The following figure shows the resulting chart.
 
-![](Charts-for-One-Variable_images/Charts-for-One-Variable_img3.jpeg)
+![](Charts-for-One-Variable_images/img3.jpeg)
+
+_Default Pie Chart_
 
 As with bar charts, it can be helpful to modify this pie chart in a few ways: 
 
@@ -188,7 +193,9 @@ As with bar charts, it can be helpful to modify this pie chart in a few ways:
 
 This produces the improved pie chart in the following figure. 
 
-![](Charts-for-One-Variable_images/Charts-for-One-Variable_img4.jpeg)
+![](Charts-for-One-Variable_images/img4.jpeg)
+
+_Modified Pie Chart_
 
 It is easy to make pie charts in R but it can be hard to read them. For example, the R Help on pie charts says this: 
 
@@ -234,24 +241,28 @@ lynx is a time series dataset with only one variable, so you can just call the d
 
 This produces the following figure. 
 
-![](Charts-for-One-Variable_images/Charts-for-One-Variable_img5.jpeg)
+![](Charts-for-One-Variable_images/img5.jpeg)
 
-Figure 15 is a respectable chart, using nothing more than the default settings. The chart has a title, the axes have labels, the number and width of bars is reasonable, and even the plain black and white is clean and easy to read. R's hist() function, though, has many options. Here are a few of them: 
+_Default Histogram_
+
+The above figure is a respectable chart, using nothing more than the default settings. The chart has a title, the axes have labels, the number and width of bars is reasonable, and even the plain black and white is clean and easy to read. R's hist() function, though, has many options. Here are a few of them: 
 
 {%highlight r%}
 
 # HISTOGRAM WITH OPTIONS hist(lynx,      breaks = 14,  # "Suggests" 14 bins. 
 
-     freq = FALSE,  # Axis shows density, not frequency.      col = "thistle1",  # Color for the histogram. 
+    freq = FALSE,  # Axis shows density, not frequency.      col = "thistle1",  # Color for the histogram. 
 
-     main = "Histogram of Annual Canadian Lynx Trappings\n1821-1934",      xlab = "Number of Lynx Trapped")  # Label X axis
+    main = "Histogram of Annual Canadian Lynx Trappings\n1821-1934",      xlab = "Number of Lynx Trapped")  # Label X axis
 
 
 {%endhighlight%}
 
 This code produces the following figure.
 
-![](Charts-for-One-Variable_images/Charts-for-One-Variable_img6.jpeg)
+![](Charts-for-One-Variable_images/img6.jpeg)
+
+_Modified Histogram_
 
 Aside from the obvious changes of color and titles, there are two modifications to explain further. The breaks attribute sets the number of bins to use, but it is more a suggestion than other attributes. This means R will look at the suggestion but use its own algorithm to calculate bin width. Used here is an argument of 14 bins in this case, which is what R did, but you would still get 14 bins if you entered 11 here. R's autonomy in this respect may be an advantage, but if you want more control, you can set the breaks by hand. You can use a regular sequence to set the breaks at a uniform distance, like this: breaks = seq(0, 7000, by = 100). You can also set each break by hand, like this: breaks = c(0, 100, 300, 500, 3000, 3500, 7000). However, it’s hard to imagine a situation where you would want to do that. 
 
@@ -270,8 +281,6 @@ In the code that follows, add four plots to the histogram:
 
 curve(dnorm(x, mean = mean(lynx), sd = sd(lynx)),  # Shape, mean, SD       col = "thistle4",  # Color of the curve.       lewd = 2,  # Line width of 2 pixels.
 
-
-
       add = TRUE)  # Superimpose on the previous graph. 
 
 
@@ -286,7 +295,9 @@ lines(density(lynx, adjust = 3), col = "darkgreen", lwd = 2)
 
 In this case, the curve() function calls for a dnorm distribution, or normal density distribution. There are many other choices; refer “?curve” for more. The first line also uses two functions as arguments: mean = mean(lynx) and sd = sd(lynx). These functions match the curve's mean and standard deviation to the histogram's. This shortcut saves effort and rounding error. The kernel density estimates work on the empirical data, so there is no need to adjust parameters other than bandwidth. Refer “?kernel” for more. The rug mirrors the distribution. The result is displayed in the following figure. 
 
-![](Charts-for-One-Variable_images/Charts-for-One-Variable_img7.png)
+![](Charts-for-One-Variable_images/img7.png)
+
+_Histogram with superimposed normal curve_
 
 Once you have saved your work, clean the workspace of unwanted variables and objects.
 
@@ -301,6 +312,7 @@ Once you have saved your work, clean the workspace of unwanted variables and obj
 The last univariate chart explained here is the boxplot. Boxplots are well suited to identifying outliers in quantitative variables. The default boxplot is simple to create: 
 
 ### Sample: sample_2_5.R 
+
 {%highlight r%}
 
 # LOAD DATA SET require(“datasets”)  # Load datasets package. data(lynx)  # Annual Canadian Lynx trappings 1821-1934. 
@@ -311,7 +323,9 @@ The last univariate chart explained here is the boxplot. Boxplots are well suite
 
 This command produces the rudimentary boxplot as displayed in the following figure. 
 
-![](Charts-for-One-Variable_images/Charts-for-One-Variable_img8.png)
+![](Charts-for-One-Variable_images/img8.png)
+
+_Default Boxplot_
 
 The above figure would be better with labels and if it were horizontal. There are also several other options for boxplots: 
 
@@ -320,13 +334,15 @@ The above figure would be better with labels and if it were horizontal. There ar
 
 # BOXPLOT WITH OPTIONS  boxplot(lynx,         horizontal = TRUE,  # Draw boxplot horizontally.         las = 1,  # Make all labels horizontal.         notch = TRUE,  # Notches for CI for median.         col = "slategray3",   # Color for the central box.         boxwex = 0.5,  # Width of box as proportion of original. </td></tr>
 
-        whisklty = 1,  # Whisker line type; 1 = solid line         staplelty = 0,  # Staple (line at end) type; 0 = none         outpch = 16,  # Symbols for outliers; 16 = filled circle         outcol = "slategray3",  # Color for outliers.         main = "Histogram of Annual Canadian Lynx Trappings\n1821-1934",         xlab = "Number of Lynx Trapped")  # Label the x-axis. </td></tr>
+        whisklty = 1,  # Whisker line type; 1 = solid line  staplelty = 0,  # Staple (line at end) type; 0 = none         outpch = 16,  # Symbols for outliers; 16 = filled circle         outcol = "slategray3",  # Color for outliers.         main = "Histogram of Annual Canadian Lynx Trappings\n1821-1934",         xlab = "Number of Lynx Trapped")  # Label the x-axis. </td></tr>
 
 {%endhighlight%}
 
 This produces the improved boxplot in the following figure. 
 
-![](Charts-for-One-Variable_images/Charts-for-One-Variable_img9.png)
+![](Charts-for-One-Variable_images/img9.png)
+
+_Modified Boxplot_
 
 The boxplot in the above figure emphasizes the asymmetry of the distribution as well as the gaps and outliers. This is important information for the statistical analyses.
 

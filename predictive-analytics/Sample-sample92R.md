@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sample-sample92R
+title: Sample sample92R | Essential Predictive Analytics | Predictive Analytics | Syncfusion
 description: sample_9_2.r 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -10,13 +10,17 @@ documentation: ug
 # Sample: sample_9_2.R 
 
 {% highlight r %}
+
 # LOAD DATA require("datasets")  # Load the datasets package. 
+
 data(warpbreaks)
+
 {% endhighlight %}
 
 There are two different ways to specify a two-factor ANOVA in R, but both use the aov() function. In the first method, the main effects and interaction are explicitly specified, as shown in the following code example. The results of that analysis can be viewed with the summary() function that you have used elsewhere. 
 
 {% highlight r %}
+
 # ANOVA: METHOD 1 
 
 aov1 <- aov(breaks ~ wool + tension + wool:tension,              data = warpbreaks) summary(aov1)  # ANOVA table 
@@ -26,19 +30,23 @@ aov1 <- aov(breaks ~ wool + tension + wool:tension,              data = warpbrea
 --- 
 
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
+
 {% endhighlight %}
 
 These results show a strong main effect of level of tension on the breakage of wool, with a smaller interaction with the kind of wool used. These results make sense, given the pattern of means you saw in the grouped bar chart back in section Statistics for Three or More Variables. Figure Grouped Bar plot for Means is reproduced as follows for your convenience: 
 
-![](Sample-sample92R_images/Sample-sample92R_img1.jpeg)
+![](Sample-sample92R_images/img1.jpeg)
 
-
+_Grouped Bar Chart of Mean_
 
 A second method for specifying the ANOVA spells out only the interaction and leaves the main effects as implicit, with the same results as the first method. 
+
 {% highlight r %}
+
 # ANOVA: METHOD 2 
 
 aov2 <- aov(breaks ~ wool*tension,              data = warpbreaks)
+
 {% endhighlight %}
 
 R is also able to provide a substantial amount of additional information via the model.tables() function. For example, the command model.tables(aov1, type = "means") gives tables of all the marginal and cell means, while the command model.tables(aov1, type = "effects") reinterprets those means as coefficients. 
@@ -48,8 +56,11 @@ Finally, when one or both of the factors has more than two levels, it may be nec
 You can complete this section by unloading and packages and clearing the workspace. 
 
 {% highlight r %}
+
 # CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads the datasets package. rm(list = ls())  # Remove all objects from workspace.
+
 {% endhighlight %}
+
 ## Cluster analysis 
 
 Cluster analysis performs a fundamental task: determining which cases are similar. This task makes it possible to place cases such as people, companies, and regions of the country, etc. into relatively homogeneous groups while distinguishing them from other groups. R has built-in functions that approach the formation of clusters in two ways. The first approach is k-means clustering with the kmeans() function. This approach requires the researcher to specify how many clusters like to form, although it is possible to try several variations. The second approach is hierarchical clustering with the hclust() function, in which each case starts by itself and then the cases are gradually joined together according to their similarity. You can learn these two procedures in turn. 
@@ -85,9 +96,9 @@ clusplot(mtcars1,        # Data frame          km$cluster,     # Cluster data   
 
 This command produces the following chart. 
 
-![](Sample-sample92R_images/Sample-sample92R_img2.jpeg)
+![](Sample-sample92R_images/img2.jpeg)
 
-
+_Cluster Plot for K-Means Clustering_
 
 The above figure shows three clusters bounded by colored circles and arranged on a grid defined by the two largest cluster components. There is good separation between the clusters, but the large separation in cluster 2 on the far left suggests that more than three clusters may be appropriate. Hierarchical clustering can be a good method for checking on the number and size of clusters. 
 
@@ -98,12 +109,14 @@ In R, hierarchical clustering is done with the hclust() function. However, this 
 
 The following screenshot shows the default dendrogram produced by plot(). In this plot, each case is listed individually at the bottom. The lines above join each case to other similar cases, while cases that are more similar are joined lower down such as the Mercedes-Benz 280 and 280C on the far right and cases that are more different are joined higher up. For example, it is clear from this diagram that the Maserati Bora on the far left is substantially different from every other car in the data set. 
 
-![](Sample-sample92R_images/Sample-sample92R_img3.jpeg)
+![](Sample-sample92R_images/img3.jpeg)
 
-
+_Hierarchical Clustering Dendrogram with Defaults_
 
 Once the hierarchical model is calculated, it is also possible to place the observations into groups using cutree() that represents a cut tree diagram, another name for  dendrogram. You must, however, tell the function how or where to cut the tree into groups. You can specify either the number of groups using k = 3, or you can specify the vertical height on the dendrogram, h = 230 that can produce the same result. For example, the following command categorizes the cases into three groups and then show the group IDs for the last three cases: 
+
 {% highlight r %}
+
 # PLACE OBSERVATIONS IN GROUPS 
 
 g3 <- cutree(c, k = 3)  # "g3" = "groups: 3" g3[30:32]  # Show groups for the last three cases. 
@@ -111,6 +124,7 @@ g3 <- cutree(c, k = 3)  # "g3" = "groups: 3" g3[30:32]  # Show groups for the la
 Ferrari Dino Maserati Bora    Volvo 142E  
 
             1             3             1
+
 {% endhighlight %}
 
 As a note, it is also possible to do several groupings at once by specifying a range of groups (k 
@@ -120,13 +134,15 @@ As a note, it is also possible to do several groupings at once by specifying a r
 A final convenient feature of R’s hierarchical clustering function is the ability to draw boxes around groups in the dendrogram using rect.hclust(). The following code example superimposes four sets of different colored boxes on the dendrogram: 
 
 {% highlight r %}
+
 # DRAW BORDERS AROUND CLUSTERS rect.hclust(c, k = 2, border = "gray") rect.hclust(c, k = 3, border = "blue") rect.hclust(c, k = 4, border = "green4") rect.hclust(c, k = 5, border = "red")
+
 {% endhighlight %}
 The result is shown in the following screenshot.
 
-![](Sample-sample92R_images/Sample-sample92R_img4.jpeg)
+![](Sample-sample92R_images/img4.jpeg)
 
-
+_Hierarchical Clustering Dendrogram with Boxes around Groups_
 
 From the above figure, it is clear that large, American cars form groups that are distinct from smaller, imported cars. It is also clear, again, that the Maserati Bora is distinct from the group, as it is placed in its own category once you request at least four groups. 
 
@@ -192,12 +208,14 @@ The function biplot() gives two dimensional plot with:
 
 With your data, biplot(pc) gives the following output.
 
-![](Sample-sample92R_images/Sample-sample92R_img5.jpeg)
+![](Sample-sample92R_images/img5.jpeg)
 
-
+_Biplot of the Principal Components Analysis_
 
 The simplest use of factor analysis (FA) within R is to determine how many factors are needed to adequately represent the variability within the data. For example, in your data, you can run several iterations of the function factanal(), where you specify different numbers of possible factors and check the probability values on the resulting chi-squared test. In this case, you are looking for a model that is not statistically significant (i.e., _p_ > .05 as opposed to _p_ < .05) because you want a model that corresponds well with the data and does not deviate substantially from it. In each of the following four analyses, different number of factors are specified and the p-value from the last line of the printout is mentioned. The complete printout for the final command is also included. 
+
 {% highlight r %}
+
 # FACTOR ANALYSIS 
 
 factanal(mtcars1, 1)  # 1 factor, p < .05 (poor fit) factanal(mtcars1, 2)  # 2 factors, p < .05 (poor fit) factanal(mtcars1, 3)  # 3 factors, p < .05 (poor fit) factanal(mtcars1, 4)  # 4 factors, First w/p > .05 (good fit) Call: 
@@ -248,6 +266,7 @@ Test of the hypothesis that 4 factors are sufficient.
 The chi square statistic is 6.06 on 6 degrees of freedom. 
 
 The p-value is 0.416
+
 {% endhighlight %}
 
 These results suggest from the pattern of factor loadings that the first factor has to do with physical size of a car (with smaller cars getting higher factor scores), the second factor has to do with power and speed (with higher scores for more powerful and quicker cars), the third factor has to do with carburetor barrels (that reduces to the Maserati Bora factor, as it is the only car with eight carburetor barrels), and the fourth factor gives some additional variance to heavier cars with larger engines. These results are compared with the biplot that came from the PCA and the cluster analysis in the previous section to provide more complete understanding of the relationships between cases and variables in this data set. 
@@ -255,8 +274,11 @@ These results suggest from the pattern of factor loadings that the first factor 
 
 
 Once you have saved your work, you should clean the workspace by removing any variables or objects you created. 
+
 {% highlight r %}
+
 # CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads the datasets package. rm(list = ls())  # Remove all objects from the workspace.
+
 {% endhighlight %}
 
 
