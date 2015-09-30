@@ -193,9 +193,13 @@ And here is the second:
 {% endhighlight %}
 
 Other arithmetic functions are possible if they are performed before creating the secondary data frame. Once you have saved your work, you can clear the workspace of unneeded variables and objects: 
+
 {% highlight r %}
+
 # CLEAN UP rm(list = ls())  # Remove all objects from workspace.
+
 {% endhighlight %}
+
 ## Missing data 
 
 Missing data can present a substantial challenge for analysis. In R, missing data are typically coded as NA, for “not available.” Certain functions in R are able to accommodate missing data but others are not. For this reason, it is helpful to know how to deal with missing data. There are generally two approaches: remove or ignore the missing data, or replace the missing values with valid values through imputation. 
