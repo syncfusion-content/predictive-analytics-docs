@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modifying-Data
+title: Modifying Data | Essential Predictive Analytics | Predictive Analytics | Syncfusion
 description: modifying data 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -27,32 +27,37 @@ The easiest way to check for outliers is with a boxplot, using R’s boxplot() f
 ### Sample: sample_4_1.R 
 
 {% highlight r %}
+
 #LOAD DATA & INITIAL CHECKS require(“datasets”) 
 
-data(islands)  # Areas (in 1k sq mi) of landmasses > 10k sq mi (n = 48) boxplot(islands, horizontal = TRUE)  # Many high outliers. boxplot.stats(islands)  # Numbers for the boxplot.
+data(islands)  # Areas (in 1k sq mi) of landmasses > 10k sq mi (n = 48) boxplot(islands, 
+horizontal = TRUE)  # Many high outliers. boxplot.stats(islands)  # Numbers for the boxplot.
+
 {% endhighlight %}
 
 
 The following figure shows that there are numerous outliers in this dataset. In fact, the outliers comprise almost the entire range of measurements.
 
-![](Modifying-Data_images/Modifying-Data_img1.png)
+![](Modifying-Data_images/img1.png)
 
-
+_Boxplot of Island Areas in 1000 square miles_
 
 The boxplot.stats() function gives the five values for the boxplot’s hinges, not including the outliers, as well as the sample size, the confidence intervals for the median, and the values for the outliers. In this dataset, the value for the upper fence is 306 and the closest outlier is 840. To delete the outliers, simply select all of the values beneath them. You can create a new dataset with those values and then check the new distribution with this code: 
 
 {% highlight r %}
+
 # DELETE OUTLIERS 
 
 islands.low <- islands[islands < 500]  # Delete 8 highest boxplot(islands.low, horizontal = TRUE) boxplot.stats(islands.low)
+
 {% endhighlight %}
 
 
 The following figure illustrates the new boxplot for the reduced dataset: 
 
-![](Modifying-Data_images/Modifying-Data_img2.png)
+![](Modifying-Data_images/img2.png)
 
-
+_Boxplot of Island Areas (8 Largest Deleted)_
 
 It may be surprising that there are five new outliers in this distribution. That is because about 16% of the previous distribution is deleted, adjusted the quartile values that are used in determining outliers. It is, of course, possible to repeat the process until there are no longer any outliers. Such an approach, though, if done without a sound theoretical justification, does damage to the analysis. Such ad hoc approaches should be avoided as a rule. 
 
@@ -62,7 +67,9 @@ Once you have saved your work, you can clear the workspace of unneeded variables
 
 {% highlight r %}
 
-# CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads data sets package. rm(list = ls())  # Remove all objects from the workspace.
+# CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads data sets package. 
+rm(list = ls())  # Remove all objects from the workspace.
+
 {% endhighlight %}
 
 ## Transformations 
@@ -72,15 +79,18 @@ When confronted with outliers in the guidelines above, they were simply deleted.
 ### Sample: sample_4_2.R # LOGARITHMIC TRANSFORMATION 
 
 {% highlight r %}
-islands.ln <- log(islands)  # Compute natural log (base = e) boxplot(islands.ln, horizontal = TRUE)  # Almost looks normal.
+
+islands.ln <- log(islands)  # Compute natural log (base = e) boxplot(islands.ln, 
+horizontal = TRUE)  # Almost looks normal.
+
 {% endhighlight %}
 
 
 The log() function calculates natural logs with base e, which is approximately 2.718. R also calculates common, base 10 logs with log10() and binary, base 2 logs with log2(), with similar results. Note that logarithms are undefined for zero. If you have zeros in your data, then you could add a small amount 0.5 or 1.0 to each score to avoid this problem. 
 
-![](Modifying-Data_images/Modifying-Data_img3.png)
+![](Modifying-Data_images/img3.png)
 
-
+_Boxplot of Log Transformed Islands Data_
 
 The boxplot of transformed values in the above figure has only a few outliers. It is also much better suited for analysis than the distribution of raw scores in Figure 21 or even the trimmed distribution in Figure 22. 
 
@@ -93,6 +103,7 @@ The first of these information-losing transformations is ranking. The scores are
 
 
 {% highlight r %}
+
 # RANK TRANSFORMATION 
 
 islands.rank <- rank(islands, ties.method = "random")  # Ranks islands
@@ -110,6 +121,7 @@ As a note, while the dichotomization can be done with a pair of if statements or
 3. The value to return if the test result is negative, 0 in this case.  
 
 The function then feeds into a new variable called continent, and assigns a 1 to all of the continents and a 0 to all of the islands. In this example, listed are all of the continents by using the command continent[continent == 1] , that says to print out all of the rows of continent where the value for continent is equal to 1. 
+
 {% highlight r %}
 
 # DICHOTOMIZATION continent <- ifelse(islands > 1000, 1, 0)  # Creates the indicator variable. 
@@ -181,15 +193,21 @@ And here is the second:
 {% endhighlight %}
 
 Other arithmetic functions are possible if they are performed before creating the secondary data frame. Once you have saved your work, you can clear the workspace of unneeded variables and objects: 
+
 {% highlight r %}
+
 # CLEAN UP rm(list = ls())  # Remove all objects from workspace.
+
 {% endhighlight %}
+
 ## Missing data 
 
 Missing data can present a substantial challenge for analysis. In R, missing data are typically coded as NA, for “not available.” Certain functions in R are able to accommodate missing data but others are not. For this reason, it is helpful to know how to deal with missing data. There are generally two approaches: remove or ignore the missing data, or replace the missing values with valid values through imputation. 
 
 ### Sample: sample_4_4.R 
+
 {% highlight r %}
+
 # DATA WITH NA 
 
 x1 <- c(1, 2, 3, NA, 5)  # Sample data with NA 
@@ -225,16 +243,21 @@ mean(x1, na.rm = TRUE)  # Removes NA from calculations 	 [1] 2.75
 {% endhighlight %}
 
 In other situations, especially multivariate analyses, it may be more helpful to replace missing values with other, valid values. This can be done with is.na() and a value to be assigned in the place of missing values, such as 0.
+
 {% highlight r %}
+
 # REPLACE NA 1: IS.NA 
 
 x2 <- x1  # Copies data to new object 
 
 x2[is.na(x2)] <- 0  # If item in x2 is NA, replace with 0 x2  # Show revised data [1] 1 2 3 0 5
+
 {% endhighlight %}
 
 A better approach to replacing missing values is to use the mean or some other value. This approach, known as imputation, can be implemented with the previous code by replacing the 0 in x2[is.na(x2)] <- 0 with mean(x2, na.rm = TRUE). This requires that the original variable be copied first. It is also possible to create a new variable and impute the mean with a single ifelse() command: 
+
 {% highlight r %}
+
 # REPLACE NA 2: IFELSE 
 
 x3 <- ifelse(is.na(x1), mean(x1, na.rm = TRUE), x1)  # Impute mean x3  # Show revised data 

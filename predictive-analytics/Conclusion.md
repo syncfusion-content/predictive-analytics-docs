@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Conclusion
+title: Conclusion | Essential Predictive Analytics | Predictive Analytics | Syncfusion
 description: conclusion 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -27,7 +27,9 @@ The growing popularity of R is mirrored in the increasing collection of books th
 * R Graphics Cookbook by Winston Chang 
 * ggplot2: Elegant Graphics for Data Analysis by Hadley Wickham 
 * Lattice: Multivariate Data Visualization with R by Deepayan Sarkar 
-* Learning RStudio for R Statistical Computing by Mark van der Loo and Edwin de Jonge ● Getting Started with RStudio by John Verzani ● Many more are listed [here](http://www.r-project.org/doc/bib/R-books.html)[.](http://www.r-project.org/doc/bib/R-books.html)
+* Learning RStudio for R Statistical Computing by Mark van der Loo and Edwin de Jonge 
+* Getting Started with RStudio by John Verzani 
+* Many more are listed [here](http://www.r-project.org/doc/bib/R-books.html)[.](http://www.r-project.org/doc/bib/R-books.html)
 
 ## Websites 
 
@@ -48,9 +50,9 @@ In addition to published books, several online resources are of great value. Sur
 
 ### For developers who are comfortable working with C++, Dirk Eddelbuettel and Romain Francois have developed Rcpp, an integration of R and C++ that can provide dramatic improvements in processing speed. 
 
-● [Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html)[ ](http://dirk.eddelbuettel.com/code/rcpp.html)by Dirk Eddelbuettel and Romain Francois  
+1. [Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html)[ ](http://dirk.eddelbuettel.com/code/rcpp.html)by Dirk Eddelbuettel and Romain Francois  
 
-1. [Tutorial](https://github.com/hadley/devtools/wiki/Rcpp)[ ](https://github.com/hadley/devtools/wiki/Rcpp)by Hadley Wickham 
+2. [Tutorial](https://github.com/hadley/devtools/wiki/Rcpp)[ ](https://github.com/hadley/devtools/wiki/Rcpp)by Hadley Wickham 
 
 ## Events 
 

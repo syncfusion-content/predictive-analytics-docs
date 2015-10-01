@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working-with-the-Data-File
+title: Working with the Data File | Essential Predictive Analytics | Predictive Analytics | Syncfusion
 description: working with the data file 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -20,7 +20,9 @@ When you are working with your data, you may want to focus on certain subgroups 
 In this example is used the mtcars data from R’s datasets package. This dataset contains road test data from a 1974 issue of Motor Trend magazine. In the code that follows, first load the package and the data, and then display the first three cases.
 
 ### Sample: sample_5_1.R 
+
 {% highlight r %}
+
 # LOAD DATA require(“datasets”)  # Load datasets package.  
 
 data(mtcars)  # 1974 road test data from Motor Trend. 
@@ -30,31 +32,43 @@ mtcars[1:3, ]  # Show all variables for the first three cars.                mpg
 Mazda RX4 Wag 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4 
 
 Datsun 710    22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+
 {% endhighlight %}
 
 Next, you get the mean horsepower for all of the cars in the dataset. The only thing to remember in this command is how to specify a single variable in a data set with the $ operator. 
 
 In this way, the horsepower variable is mtcars$hp. 
+
 {% highlight r %}
+
 # ALL CASES mean(mtcars$hp)  # Mean horsepower for all cars. [1] 146.6875
+
 {% endhighlight %}
 
 Now you can get the mean horsepower for just the eight cylinder cars. Put the name of the selection variable in square brackets and use the double equal signs, ==, indicating logical equality. 
+
 {% highlight r %}
+
 # SELECT ON SINGLE VARIABLE 
 
 # Mean horsepower (for 8-cylinder cars). mean(mtcars$hp[mtcars$cyl == 8])  # Select rows where cyl = 8 [1] 209.2143
+
 {% endhighlight %}
 
 If you plan on doing several analyses with the same subgroup, it may be helpful to create a new data frame based on that selection. In that case, make the selection and assign it to a new variable. In the following code, a data frame called v8 is created for all the eight cylinder cars. The first part of the selection in square brackets selects the rows for cars with eight cylinder engines and the blank space after the comma selects all of the variables.
+
 {% highlight r %}
+
 # CREATE NEW DATA FRAME WITH SELECTION 
 
 v8 <- mtcars[mtcars$cyl == 8, ]  # 8-cylinder cars, all variables
+
 {% endhighlight %}
 
 You can now select on two other variables: cars with 5-speed transmission and cars that weigh less than 4000 pounds. The average horsepower for this group is 299.5 that is very high for 1974, so it is followed by a list of all the cars that met these criteria and selecting a few variables to display. 
+
 {% highlight r %}
+
 # SELECT ON TWO VARIABLES 
 
 # Mean horsepower for cars with v8, 5-speed, and weigh < 4000 lbs. mean(v8$hp[v8$gear == 5 & v8$wt < 4])  # Show the mean horsepower. 
@@ -75,6 +89,7 @@ Once you have saved your work, you can clear the workspace of unneeded variables
 {% highlight r %}
 
 # CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads data sets package. rm(list = ls())  # Remove all objects from workspace.
+
 {% endhighlight %}
 
 ## Analyzing by subgroups 
@@ -86,7 +101,9 @@ In this section you can learn about the methods to include all of the cases in t
 In this example, is used the Iris dataset that was collected by botanist Edgar Anderson but made famous by statistician Ronald Fisher. This dataset consists of four measurements for three species of Iris. 
 
 ### Sample: sample_5_2.R 
+
 {% highlight r %}
+
 # LOAD DATA require(“datasets”)  # Load the data sets package. 
 
 
@@ -125,7 +142,8 @@ aggregate(iris$Petal.Width ~ iris$Species, FUN = mean)   iris$Species iris$Petal
 
 To compare the groups on more than one outcome variable, replace the single outcome variable with the column binding function cbind() and list the desired outcomes as arguments. cbind() makes it possible to combine several vectors or variables into a single, new data frame. In this case, R does not give the variable names but uses generic labels V1, V2, etc. so you must note the order in which you entered the variables.
 {% highlight r %}
-# COMPARE GROUPS ON TWO VARIABLES aggregate(cbind(iris$Petal.Width,                 iris$Petal.Length) 
+
+# COMPARE GROUPS ON TWO VARIABLES aggregate(cbind(iris$Petal.Width,  iris$Petal.Length) 
 
           ~ iris$Species,           FUN = mean)   iris$Species    V1    V2 1       setosa 0.246 1.462 
 
@@ -141,6 +159,7 @@ Once you have saved your work, you can clean the workspace by removing any varia
 {% highlight r %}
 
 # CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads data sets package. rm(list = ls())  # Remove all objects from workspace.
+
 {% endhighlight %}
 
 ## Merging files 
@@ -148,7 +167,9 @@ Once you have saved your work, you can clean the workspace by removing any varia
 Analyses are often much more powerful if data from different sources are combined. For example, joining data on Internet search trends with data on demographics can give important insights for marketing researchers. In this section, you can examine the longley data from R’s datasets package. This is a data frame with seven economic variables, observed yearly from 1947 to 1962. After loading the data and displaying a few cases, you can then split the data set into three parts and then join them again to demonstrate the process. 
 
 ### Sample: sample_5_3.R 
+
 {% highlight r %}
+
 # LOAD DATA require(“datasets”)  # Load the data sets package. 
 
 # DISPLAY DATA longley[1:3, ]  # Display the first three rows, all variables. 
@@ -160,6 +181,7 @@ Analyses are often much more powerful if data from different sources are combine
 1948	88.5 259.426      232.5        145.6    108.632 1948   61.122 
 
 1949	88.2 258.054      368.2        161.6    109.773 1949   60.171
+
 {% endhighlight %}
 
 Now split the data into three data sets. First, create a dataset called a1 with the first six of seven variables for the first 14 of 16 cases. Second, create another dataset called a2 that has the last two of seven variables for the same 14 cases. This means that datasets a1 and a2 share one variable: year. This variable will serve as the index variable that makes it possible to line up cases when adding variables. The third dataset, called b, has all seven variables but adds two new cases. 
@@ -170,6 +192,7 @@ Although it is not necessary to first save the datasets as new objects in the wo
 
 
 {% highlight r %}
+
 # SPLIT & EXPORT DATA a1 <- longley[1:14, 1:6]  # First 14 cases, first 6 variables. a2 <- longley[1:14, 6:7]  # First 14 cases, last 2 variables. b <- longley[15:16, ]     # Last 2 cases, all variables. write.table(a1, "~/Desktop/longley.a1.txt", sep = "\t") write.table(a2, "~/Desktop/longley.a2.txt", sep = "\t") write.table(b, "~/Desktop/longley.b.txt", sep = "\t") 
 
 # On PC, use "c:/longley.a1.txt" 
@@ -216,6 +239,7 @@ To add the new cases from the data set b, first import the dataset with read.tab
 
 
 {% highlight r %}
+
 # IMPORT & COMBINE LAST DATA SET # Add two more cases at the bottom. b <- read.table("~/Desktop/longley.b.txt", sep = "\t") all.data <- rbind(a.1.2, b)  # "Row Bind" all.data[12:16, ]  # Check last four rows, all variables. 
 
      Year GNP.deflator     GNP Unemployed Armed.Forces Population Employed 
@@ -252,7 +276,8 @@ At this point, the three datasets have been successfully joined and you can proc
 
 {% highlight r %}
 
-# CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads data sets package. rm(list = ls())  # Remove all objects from workspace.
+# CLEAN UP detach("package:datasets", unload = TRUE)  # Unloads data sets package. 
+rm(list = ls())  # Remove all objects from workspace.
 
 {% endhighlight %}
 

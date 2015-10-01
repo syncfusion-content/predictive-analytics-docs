@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started
+title: Getting Started | PMML Execution Engine | Predictive Analytics | Syncfusion
 description: getting started
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -28,6 +28,7 @@ The following extract shows the creation of PMML in the Cars sample included wit
 PMML generation code is as follows.
 
 {% highlight r%}
+
 # Load pmml package
 
 library(pmml) 
@@ -47,6 +48,7 @@ pmmlFile<-pmml(cars_Regression,data=trainData)
 write(toString(pmmlFile),file="Cars.pmml")
 
 saveXML(pmmlFile,file="Cars.pmml")
+
 {% endhighlight %}
 
 
@@ -203,6 +205,7 @@ The generated PMML file for the simple regression model illustrated in the sampl
  </RegressionModel>
 
 </PMML>
+
 {% endhighlight %}
 
 
@@ -212,119 +215,111 @@ The following code demonstrates predicting car prices using independent predicto
 
 {% highlight r %}
 
-
-
 public Table PredictResult(string inputDataCSVPath, string pmmlPath)
+
+{
+
+    //Load input csv
+
+    inputTable = new Table(inputDataCSVPath, true, ',');
+
+
+
+    //Get PMML Evaluator instance
+
+    PMMLEvaluator evaluator = new PMMLEvaluatorFactory().
+
+    GetPMMLEvaluatorInstance(pmmlPath);
+
+
+
+    string[] predictedCategories = null;
+
+
+
+    //Predict the value for each record using the PMML Evaluator instance
+
+    for (int i = 0; i < inputTable.RowCount; i++)
+
+    {
+
+        var cars = GetDataObject(inputTable, i);
+
+
+        //Get result
+
+        PredictedResult predictedResult = evaluator.GetResult(cars, null);
+
+		if (i == 0)
 
         {
 
-            //Load input csv
+            //Get the predicted propability fields
 
-            inputTable = new Table(inputDataCSVPath, true, ',');
+            predictedCategories = predictedResult.GetPredictedCategories();
 
+            //Initialize the output table
 
+            InitializeTable(inputTable.RowCount, predictedCategories);
 
-            //Get PMML Evaluator instance
-
-            PMMLEvaluator evaluator = new PMMLEvaluatorFactory().
-
-              GetPMMLEvaluatorInstance(pmmlPath);
+        }
 
 
+        //Add predicted value
 
-            string[] predictedCategories = null;
+        outputTable[i, 0] = predictedResult.PredictedValue;
 
+    }
 
+    return outputTable;
 
-            //Predict the value for each record using the PMML Evaluator instance
-
-            for (int i = 0; i < inputTable.RowCount; i++)
-
-            {
-
-                var cars = GetDataObject(inputTable, i);
-
-
-
-                //Get result
-
-                PredictedResult predictedResult = evaluator.GetResult(cars, null);
-
-
-
-                if (i == 0)
-
-                {
-
-                    //Get the predicted propability fields
-
-                    predictedCategories = predictedResult.GetPredictedCategories();
-
-                    //Initialize the output table
-
-                    InitializeTable(inputTable.RowCount, predictedCategories);
-
-                }
-
-
-
-                //Add predicted value
-
-                outputTable[i, 0] = predictedResult.PredictedValue;
-
-            }
-
-
-
-            return outputTable;
-
-        }  
+    }  
 
 public object GetDataObject(Table inputTable, int row)
 
+    {
+
+        var cars = new
+
         {
 
-            var cars = new
+            Price = inputTable[row, "Price"],
 
-            {
+            Mileage = inputTable[row, "Mileage"],
 
-                Price = inputTable[row, "Price"],
+            Cylinder = inputTable[row, "Cylinder"],
 
-                Mileage = inputTable[row, "Mileage"],
+            Doors = inputTable[row, "Doors"],
 
-                Cylinder = inputTable[row, "Cylinder"],
+            Cruise = inputTable[row, "Cruise"],
 
-                Doors = inputTable[row, "Doors"],
+            Sound = inputTable[row, "Sound"],
 
-                Cruise = inputTable[row, "Cruise"],
+            Leather = inputTable[row, "Leather"],
 
-                Sound = inputTable[row, "Sound"],
+            Buick = inputTable[row, "Buick"],
 
-                Leather = inputTable[row, "Leather"],
+            Cadillac = inputTable[row, "Cadillac"],
 
-                Buick = inputTable[row, "Buick"],
+            Chevy = inputTable[row, "Chevy"],
 
-                Cadillac = inputTable[row, "Cadillac"],
+            Pontiac = inputTable[row, "Pontiac"],
 
-                Chevy = inputTable[row, "Chevy"],
+            Saab = inputTable[row, "Saab"],
 
-                Pontiac = inputTable[row, "Pontiac"],
+            Saturn = inputTable[row, "Saturn"],
 
-                Saab = inputTable[row, "Saab"],
+            convertible = inputTable[row, "convertible"],
 
-                Saturn = inputTable[row, "Saturn"],
+            coupe = inputTable[row, "coupe"],
 
-                convertible = inputTable[row, "convertible"],
+            hatchback = inputTable[row, "hatchback"],
 
-                coupe = inputTable[row, "coupe"],
+            sedan = inputTable[row, "sedan"],
 
-                hatchback = inputTable[row, "hatchback"],
+            wagon = inputTable[row, "wagon"]
 
-                sedan = inputTable[row, "sedan"],
-
-                wagon = inputTable[row, "wagon"]
-
-            };
+        };
 
             return cars;
 
@@ -336,7 +331,7 @@ The output as it appears in the sample, is displayed in the following image.
 
 
 
-![](Getting-Started_images/Getting-Started_img1.png)
+![](Getting-Started_images/img1.png)
 
-
+_Output_
 

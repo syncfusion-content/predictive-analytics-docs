@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Charts-for-Associations
+title: Charts for Associations | Essential Predictive Analytics | Predictive Analytics | Syncfusion
 description: charts for associations 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -68,7 +68,9 @@ fill = c("steelblue3", "thistle3"))
 
 The resulting grouped bar plot is shown in the following figure. 
 
-![](Charts-for-Associations_images/Charts-for-Associations_img1.png)
+![](Charts-for-Associations_images/img1.png)
+
+_Grouped Bar Chart for Frequencies_
 
 As usual, once you have saved your work, you should clean the workspace by removing any variables or objects you created with rm(list = ls()). 
 
@@ -121,7 +123,9 @@ It is, however, useful to add some options to barplot(), especially to add title
 
 This produces the chart shown in the following figure. 
 
-![](Charts-for-Associations_images/Charts-for-Associations_img2.png)
+![](Charts-for-Associations_images/img2.png)
+
+_Bar Chart of Group Means_
 
 Finish by cleaning the workspace and removing any variables or objects you created. 
 
@@ -169,7 +173,9 @@ The dataset is well formatted and ready for use with R’s boxplot() function. A
 
 The default boxplot produced by this code is displayed in the following figure.
 
-![](Charts-for-Associations_images/Charts-for-Associations_img3.png)
+![](Charts-for-Associations_images/img3.png)
+
+_Grouped Boxplots- Default Chart_
 
 As a chart, the above figure has one glaring omission: the groups do not have meaningful labels. Instead, they are categorized as A, B, C, and so on. This defeats the purpose of the chart. Consequently, it is important to add those labels using the names() attribute. It is also a good idea to add titles, axis labels, and other changes to make the chart both more informative and more attractive. Part of this change involves using the RColorBrewer package to set colors for the boxplots. 
 
@@ -196,7 +202,9 @@ As a chart, the above figure has one glaring omission: the groups do not have me
 
 Note that there is no + or other line break in main for the title; R observes the break in the code as a typographic instruction. The improved boxplots are shown in the following figure. 
 
-![](Charts-for-Associations_images/Charts-for-Associations_img4.png)
+![](Charts-for-Associations_images/img4.png)
+
+_Grouped Boxplots with Labels and Options_
 
 Once you have saved your work, you should clean the workspace by removing any variables or objects you created. 
 
@@ -236,7 +244,9 @@ Because the cars dataset contains only two variables speed and dist (i.e., dista
  
 This produces the scatter plot as shown in the following screenshot.
 
-![](Charts-for-Associations_images/Charts-for-Associations_img5.png)
+![](Charts-for-Associations_images/img5.png)
+
+_Default Scatter Plot with plot()_
 
 The above Default Scatter Plot with plot() is adequate, plot() also provides several options for labels and design. 
 
@@ -254,7 +264,9 @@ The above Default Scatter Plot with plot() is adequate, plot() also provides sev
 	 
 The revised scatter plot is shown in the following screenshot. 
 
-![](Charts-for-Associations_images/Charts-for-Associations_img6.png)
+![](Charts-for-Associations_images/img6.png)
+
+_Revised Sctter plot with plot()_
 
 The upward pattern that indicates a positive association between the two variables in the above figure is easy to see. However, the relationship can be even clearer when fit lines are added. In the following code example, a linear regression line is overlaid with the abline() function that takes a linear regression model from the lm() function as its argument. In addition, a lowess line locally weighted scatter plot smoothing can be added with the lines() function that takes the lowess() function as its argument. See    ?abline, ?lines, and ?lowess for more information on these functions. 
 
@@ -272,9 +284,9 @@ The upward pattern that indicates a positive association between the two variabl
 
 The scatter plot with the added fit lines is shown in the following screenshot. 
 
-![](Charts-for-Associations_images/Charts-for-Associations_img7.png)
+![](Charts-for-Associations_images/img7.png)
 
-Scatter Plot with Linear Regression and Lowess Fit Lines
+_Scatter Plot with Linear Regression and Lowess Fit Lines_
 
 For a final variation on the bivariate scatter plot, you can use the scatterplot() or sp() functions from the coincidentally named car package (that in this case, stands for "Companion to Applied Regression"). This package has many variations on scatter plots. You ca use the package that has marginal boxplots, smoothers, and quantile regression intervals. See help(package = "car") for more information. 
 
@@ -303,12 +315,14 @@ Next, you can call the scatter plot function that can be called with scatterplot
            1920s from \"cars\" Data set",    xlab = "Speed (MPH)", 
 
    ylab = "Stopping Distance (feet)") 
+   
 {%endhighlight%}
 
 The following screenshot shows the resulting chart. The marginal boxplots, smoothers, and quantile regression intervals that are included by default, make this a very information-dense graphic.
 
-![](Charts-for-Associations_images/Charts-for-Associations_img8.png)
+![](Charts-for-Associations_images/img8.png)
 
+_Scatter Plot created with car Package_ 
 
   Once you have saved your work, clean the workspace by removing any variables or objects you created. 
 

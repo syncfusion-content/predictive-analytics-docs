@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting-Started-with-R
+title: Getting Started with R | Essential Predictive Analytics | Predictive Analytics | Syncfusion
 description: getting started with r
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -25,9 +25,9 @@ You should now have a functional copy of R on your computer. When you double-cli
 
 
 
-![](Getting-Started-with-R_images/Getting-Started-with-R_img1.png)
+![](Getting-Started-with-R_images/img1.png)
 
-
+_Default Startup Window for R_
 
 For those who are comfortable working with the command-line, it is also possible to access R
 
@@ -35,9 +35,9 @@ that way. For example, opening Terminal on Mac and typing R at the prompt, gives
 
 
 
-![](Getting-Started-with-R_images/Getting-Started-with-R_img2.png)
+![](Getting-Started-with-R_images/img2.png)
 
-
+_Calling R from Command-line_
 
 You can see that the exact same boilerplate text that appeared in R’s IDE appears in the terminal.
 
@@ -59,9 +59,9 @@ When you double-click the RStudio icon, you can see something like the following
 
 
 
-![](Getting-Started-with-R_images/Getting-Started-with-R_img3.png)
+![](Getting-Started-with-R_images/img3.png)
 
-
+_Studio Startup Window_
 
 RStudio organizes the separate windows of R into a single panel. It also provides links to functions that can otherwise be difficult to find. RStudio has a few other advantages as well, such as:
 
@@ -94,9 +94,10 @@ The first line contains the command you entered. In this case it is 9 + 11. Note
 [1] 20 
 
 {%endhighlight%}
+
 The second line does not have a command prompt because it has the program’s output. The “1” in square brackets, [1], requires some explanation. R uses vectors to do math and that’s it how it returns the responses. The number in brackets is the index number for the first item in the vector on this line of output. Many other programs begin with an index number of 0, but R begins at 1. After the index number, R prints the output, the sum “20” in this case.
 
-N> For more information on good form in R, see Google's style guide at  http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml
+N> For more information on good form in R, see Google's style guide at  <http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml>
 
 The contents of the console scroll up as new information comes in. You can also clear the console by selecting Edit > Clear console or by pressing Ctrl+L (a lower-case L) on a Mac or PC. Note that this only clears the displayed data, it does not purge the data from the memory or lose the history of commands.
 
@@ -132,8 +133,11 @@ If you run the third line of text, print("Hello World!"), you get this output.
 
 
 {%highlight r%}
+
 [1] "Hello World!" 
+
 {%endhighlight%}
+
 The output "Hello World!" is a character vector of length 1. This is the same as a string in C or other languages. 
 
 ## Comments 
@@ -439,9 +443,9 @@ UCBAdmissions  # Prints six tables; one for each department.
 
 This code produces the following figure, an unusual 3-way bar plot. When you want a simple bar chart of the number of people who applied to each of the six departments, this doesn't work. 
 
-![](Getting-Started-with-R_images/Getting-Started-with-R_img4.jpeg)
+![](Getting-Started-with-R_images/img4.jpeg)
 
-Figure: Default Plot of UCBAdmissions
+_Default Plot of UCBAdmissions_
 
 The next step is to get the marginal frequencies from the 3-way table. At this point, the frequencies are just displayed in the console.
 
@@ -521,9 +525,9 @@ Default barplot
 {%endhighlight%}
 
 
-![](Getting-Started-with-R_images/Getting-Started-with-R_img5.png)
+![](Getting-Started-with-R_images/img5.png)
 
-
+_Bar Chart with default colors_
 
 You can improve the above figure by changing the colors of the bars using the col attribute in the barplot function. R gives you several methods to specify colors. 
 
@@ -551,7 +555,9 @@ barplot(x, col = rgb(159, 182, 205, max = 255))  # RGB 0-255 barplot(x, col = rg
 
 Any of the previous commands produce the chart in the following figure.
 
-![](Getting-Started-with-R_images/Getting-Started-with-R_img6.png)
+![](Getting-Started-with-R_images/img6.png)
+
+_Colored Bar Chart_
 
 When you want the bars to be of different colors, then you can either specify the colors one at a time or you can use a color palette. To specify the individual colors, just use the concatenate function c() in the col attribute, like this: col = c("red", "blue"). You can use any of the color specification methods in the section. Then the colors cycle through for each of the bars. 
 
@@ -575,7 +581,9 @@ To use the topo.colors palette for the six bars, enter the following:
 
 The output of the previous code is shown in the following figure.
 
-![](Getting-Started-with-R_images/Getting-Started-with-R_img7.png)
+![](Getting-Started-with-R_images/img7.png)
+
+_Bar Chart with R palette "topo.colors"_
 
 An attractive alternative to R's palettes is the package RColorBrewer. This package derives from the excellent website [ColorBrewer 2.0](http://colorbrewer2.org/)[.](http://colorbrewer2.org/) RColorBrewer provides several palettes of sequential, diverging, and qualitative colors. To use RColorBrewer, you must first install it and load it in R: 
 
@@ -591,11 +599,15 @@ I encourage you to explore the help information for RColorBrewer by entering hel
 
 This produces the following figure. The overlapping labels are due to the landscape aspect ratio.
 
-![](Getting-Started-with-R_images/Getting-Started-with-R_img8.png)
+![](Getting-Started-with-R_images/img8.png)
+
+_All RColorBrewer Palettes_
 
 You can get a better view of an individual palette by specifying the palette and the number of colors desired, like this: display.brewer.pal(8, "Accent"). The following figure illustrates this palette. 
 
-![](Getting-Started-with-R_images/Getting-Started-with-R_img9.png)
+![](Getting-Started-with-R_images/img9.png)
+
+_Preview of the RColorBrewer Palette “Accent”_ 
 
 To apply an RColorBrewer palette to a bar chart, call brewer.pal in the col attribute. Also specify the palette and the number of colors desired. 
 
@@ -609,7 +621,9 @@ barplot(x, col = brewer.pal(6, "Blues"))
 
 This command produces the following figure. 
 
-![](Getting-Started-with-R_images/Getting-Started-with-R_img10.png)
+![](Getting-Started-with-R_images/img10.png)
+
+_Bar Chart with RColorBrewer Palette_
 
 When you finish, it is a good idea to restore the default palette and clean up: 
 
