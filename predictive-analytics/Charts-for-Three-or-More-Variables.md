@@ -193,7 +193,7 @@ The resulting plot is shown in the following screenshot.
 
 ![](Charts-for-Three-or-More-Variables_images/img3.jpeg)
 
-_Scatterplot Matrix with paris()_
+_Scatterplot Matrix with pairs()_
 
 This is a reasonable plot, but it is not information-dense: there is no indication of group membership, there are no fit lines, and the large cells with the variable names can be used for other purposes.  
 
@@ -246,7 +246,7 @@ The resulting chart is shown in the following screenshot.
 
 _Scatter plot Matrix with Custom Function_
 
-The above screenshot is an improvement over scatter plot matrix with paris(), but it can still be improved. Most significantly, it is missing a legend to indicate group membership. It is also potentially troublesome to use a custom function with unknown compatibility issues. Instead, you can use the scatterplotMatrix() function from the car package. Also note in the following code example, the paste() function in the title attribute main. paste() puts separate strings together into a single string that makes it possible to write a long title in the R command but keep the code from being too wide. 
+The above screenshot is an improvement over scatter plot matrix with pairs(), but it can still be improved. Most significantly, it is missing a legend to indicate group membership. It is also potentially troublesome to use a custom function with unknown compatibility issues. Instead, you can use the scatterplotMatrix() function from the car package. Also note in the following code example, the paste() function in the title attribute main. paste() puts separate strings together into a single string that makes it possible to write a long title in the R command but keep the code from being too wide. 
 
 {%highlight r%}
 
@@ -278,7 +278,7 @@ The above figure accomplishes several things at once:
 * It provides a legend to the group variable. 
 * It provides a linear regression line for each plot. 
 * It provides a smoother with confidence intervals for each plot. 
-* It provides kernel density estimators with rugplots for each variable. 
+* It provides kernel density estimators with rug plots for each variable. 
 
 These factors make the above figure the most information-dense chart you have created in the guidelines. This chart also serves as an example of the extraordinary flexibility and power of R, especially with the help of any of the thousands of external packages. 
 
