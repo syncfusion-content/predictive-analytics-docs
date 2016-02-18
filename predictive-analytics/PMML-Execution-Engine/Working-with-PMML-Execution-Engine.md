@@ -27,7 +27,7 @@ Description</th></tr>
 <tr>
 <td>
 GetPMMLEvaluatorInstance(string)</td><td>
-Returns the respective PMMLEvaluatorinstance for the given string PMML file path</td></tr>
+Returns the respective PMMLEvaluator instance for the given string PMML file path</td></tr>
 <tr>
 <td>
 GetPMMLEvaluatorInstance(PMMLDocument)</td><td>
@@ -250,11 +250,11 @@ Output: 1Here the predicted output value 1 represents the Iris category “Versi
 
 {% endtabs %}  
 
-### Naïve Bayes Model Evaluator
+### Naive Bayes Model Evaluator
 
-Naïve Bayes Model Evaluator represents the evaluator for the Naïve Bayes model and it inherits all the properties and methods of PMMLEvaluator.
+Naive Bayes Model Evaluator represents the evaluator for the Naive Bayes model and it inherits all the properties and methods of PMMLEvaluator.
 
-#### Naïve Bayes Model
+#### Naive Bayes Model
 
 Naive Bayes classifier is a simple probabilistic classifier based on applying Bayes' theorem with strong and naive independence assumptions between the features. Naive Bayes is a popular method for text categorization. With appropriate pre-processing, it is competitive in this domain with more advanced methods including support vector machines. 
 
@@ -270,21 +270,21 @@ Description</th></tr>
 <tr>
 <td>
 NaiveBayesModelEvaluator(PMMLDocument)</td><td>
-Creates Instance for Naïve Bayes model evaluator for the given PMML document object.</td></tr>
+Creates Instance for Naive Bayes model evaluator for the given PMML document object.</td></tr>
 <tr>
 <td>
 GetResult(object,IModelOptions)</td><td>
-Evaluates the given input against the scoring procedure of the Naïve Bayes model and returns the PredictedResult. Currently NaiveBayes options available to specify whether there is a need to apply Laplace smoothing or not. We can apply Laplace smoothing by setting ApplyLaplace to true.</td></tr>
+Evaluates the given input against the scoring procedure of the Naive Bayes model and returns the PredictedResult. Currently NaiveBayes options available to specify whether there is a need to apply Laplace smoothing or not. We can apply Laplace smoothing by setting ApplyLaplace to true.</td></tr>
 </table>
 
 
-Consider the Iris dataset taken from the "datasets" R package. A Naïve Bayes model is created here, based on it and saved in PMML. PMML files, input dataset and a complete C# sample illustrating this model is shipped with the installer.
+Consider the Iris dataset taken from the "datasets" R package. A Naive Bayes model is created here, based on it and saved in PMML. PMML files, input dataset and a complete C# sample illustrating this model is shipped with the installer.
 
 #### Samples location:
 
 %LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics\Naive Bayes\Iris
 
-The following code example illustrates the procedure to call Naïve Bayes model evaluator directly without the help of PMMLEvaluatorFactory.
+The following code example illustrates the procedure to call Naive Bayes model evaluator directly without the help of PMMLEvaluatorFactory.
 
 {% tabs %}  
 
@@ -336,7 +336,7 @@ Property/Method</th><th>
 Description</th></tr>
 <tr>
 <td>
-TeeeModelEvaluator(PMMLDocument)</td><td>
+TreeModelEvaluator(PMMLDocument)</td><td>
 Creates Instance for Tree model evaluator for the given PMML document object.</td></tr>
 <tr>
 <td>
@@ -396,7 +396,7 @@ Support Vector Machine Model Evaluator represents the evaluator for support vect
 
 #### Support Vector Machines 
 
-Support Vector Machines (SVM) model is a set of related supervised learning model with associated learning algorithms that analyse data and recognize patterns, used for both classification and regression analysis. It has gained popularity due to its potential for high accuracy.
+Support Vector Machines (SVM) model is a set of related supervised learning model with associated learning algorithms that analyze data and recognize patterns, used for both classification and regression analysis. It has gained popularity due to its potential for high accuracy.
 
 Table11: SupportVectorMachine Model Public Properties/Methods
 
@@ -554,7 +554,7 @@ Property/Method</th><th>
 Description</th></tr>
 <tr>
 <td>
-NeuralNetwokModelEvaluator (PMMLDocument)</td><td>
+NeuralNetworkModelEvaluator (PMMLDocument)</td><td>
 Creates Instance for NeuralNetworkModel evaluator for the given input PMML document object.</td></tr>
 <tr>
 <td>
@@ -959,10 +959,10 @@ Gets the array of Rules associated items.(This method should be used only for As
 Binary classification is used to classify cases into two categories/groups. You are provided the option to increase or decrease the sensitivity of the binary prediction in the following models.
 
 1. General Regression model
-2. Naïve Bayes model
+2. Naive Bayes model
 3. Neural Networks model
 
-Using BinomialThreshold property in Model options of General Regression, that is GeneralRegressionOptions, and Naïve Bayes, that is NaiveBayesOptions, and Neural Networks, that is NeuralNetworkOptions you can change the threshold value between 0 to 1 as a threshold to increase or decrease the sensitivity of the binary prediction.
+Using BinomialThreshold property in Model options of General Regression, that is GeneralRegressionOptions, and Naive Bayes, that is NaiveBayesOptions, and Neural Networks, that is NeuralNetworkOptions you can change the threshold value between 0 to 1 as a threshold to increase or decrease the sensitivity of the binary prediction.
 
 Based on the value, probability (0 - 1) is split into two boundary regions.
 

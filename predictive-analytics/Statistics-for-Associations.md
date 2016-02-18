@@ -13,7 +13,7 @@ In the previous section, you have learnt to explore methods for visualizing the 
 
 ## Correlations 
 
-Correlations are a mainstay of statistical analysis. R provides several approaches to correlations and the external packages provide an almost unlimited choice of procedures. In this section, you can start with cor(), the default correlation function in R. You can use the swiss data from R’s datasets package. This data contains fertility and socio-economic variables for 47 Frenchspeaking provinces of Switzerland in 1888. 
+Correlations are a mainstay of statistical analysis. R provides several approaches to correlations and the external packages provide an almost unlimited choice of procedures. In this section, you can start with cor(), the default correlation function in R. You can use the swiss data from R’s datasets package. This data contains fertility and socio-economic variables for 47 French speaking provinces of Switzerland in 1888. 
 
 
 
@@ -284,7 +284,7 @@ alternative hypothesis: true difference in means is less than 0 80 percent confi
 mean in group 1 mean in group 2             0.75            2.33 
 {% endhighlight %}
 
-As expected, when a one-tailed or directional hypothesis test is applied to the same data, the results are statistically significant with a p-value of .04 (exactly half of the p-value for the twotailed test). 
+As expected, when a one-tailed or directional hypothesis test is applied to the same data, the results are statistically significant with a p-value of .04 (exactly half of the p-value for the two-tailed test). 
 
 In the previous examples with the sleep data, the outcome variable is in one column and the grouping variable is in a second column. It is, however, also possible to have the data for each group in separate columns. In the following example, you can create simulated data using R’s rnorm() function that draws data from a normal distribution. One advantage of using simulated data is that it is possible to specify the differences between the groups exactly. It is also important to note that the data in this example is slightly different every time the code is ran, so your results should not match these exactly. 
 
@@ -369,7 +369,7 @@ alternative hypothesis: true difference in means is greater than 6 99 percent co
 
 mean of the differences                 5.816891 
 {% endhighlight %}
-In this case the difference is not statistically significant, but that is primarily due to different null value used 6 vs. 0 and not to the variations in the datat. 
+In this case the difference is not statistically significant, but that is primarily due to different null value used 6 vs. 0 and not to the variations in the data. 
 
 You can complete by clearing the workspace. 
 {% highlight r %}
@@ -514,7 +514,7 @@ workspace.
 
 ## Cross-tabulations 
 
-The final bivariate procedure that you can see in this section is the chi-squared inferential test for crosstabulated data. In this example you can use the Titanic data from R’s datasets package. This data contains the survival data from the wreck of the Titanic, broken down by sex, age (child or adult), and class of passenger (1st, 2nd, 3rd, or crew). See ?Titanic for more information. The data is in a tabular format that, when displayed, consists of four 4 x 2 tables, although it is also possible to display it as a “flat” contingency table with the ftable() function.  
+The final bivariate procedure that you can see in this section is the chi-squared inferential test for cross-tabulated data. In this example you can use the Titanic data from R’s datasets package. This data contains the survival data from the wreck of the Titanic, broken down by sex, age (child or adult), and class of passenger (1st, 2nd, 3rd, or crew). See ?Titanic for more information. The data is in a tabular format that, when displayed, consists of four 4 x 2 tables, although it is also possible to display it as a “flat” contingency table with the ftable() function.  
 
 ### Sample: sample_7_7.R 
 {% highlight r %}
