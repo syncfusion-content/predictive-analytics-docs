@@ -266,7 +266,7 @@ The revised scatter plot is shown in the following screenshot.
 
 ![](Charts-for-Associations_images/img6.png)
 
-_Revised Sctter plot with plot()_
+_Revised Scatter plot with plot()_
 
 The upward pattern that indicates a positive association between the two variables in the above figure is easy to see. However, the relationship can be even clearer when fit lines are added. In the following code example, a linear regression line is overlaid with the abline() function that takes a linear regression model from the lm() function as its argument. In addition, a lowess line locally weighted scatter plot smoothing can be added with the lines() function that takes the lowess() function as its argument. See    ?abline, ?lines, and ?lowess for more information on these functions. 
 

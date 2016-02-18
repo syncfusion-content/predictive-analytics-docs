@@ -79,7 +79,7 @@ round(prop.table(groups.t2), 2)  # Round to 2 decimal places.
 
 {% endhighlight %}
 
-That’s an improvement but we can take it further. The leading zeroes and decimals are repetitive. We can remove them by multiplying the results by 100: 
+That’s an improvement but we can take it further. The leading zeros and decimals are repetitive. We can remove them by multiplying the results by 100: 
 
 {% highlight r %}
 

@@ -51,7 +51,7 @@ aov2 <- aov(breaks ~ wool*tension,              data = warpbreaks)
 
 R is also able to provide a substantial amount of additional information via the model.tables() function. For example, the command model.tables(aov1, type = "means") gives tables of all the marginal and cell means, while the command model.tables(aov1, type = "effects") reinterprets those means as coefficients. 
 
-Finally, when one or both of the factors has more than two levels, it may be necessary to do a posthoc test. As with the one-factor ANOVA discussed in the section Statistics for Associations, a good choice is Tukey’s HSD (Honestly Significant Difference) test, with the R command TukeyHSD(). 
+Finally, when one or both of the factors has more than two levels, it may be necessary to do a post hoc test. As with the one-factor ANOVA discussed in the section Statistics for Associations, a good choice is Tukey’s HSD (Honestly Significant Difference) test, with the R command TukeyHSD(). 
 
 You can complete this section by unloading and packages and clearing the workspace. 
 
