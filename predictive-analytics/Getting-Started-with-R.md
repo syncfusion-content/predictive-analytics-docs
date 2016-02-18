@@ -238,7 +238,7 @@ Shows packages that are currently loaded.
 
 {%endhighlight%}
 
-library() brings up a text list of functions. The same information is available in hyperlinked format under the Packages tab in RStudio. search() displays the names of the active packages in the console. These are the same packages that have checks in RStudio's Package tab. 
+library() brings up a text list of functions. The same information is available in hyperlink format under the Packages tab in RStudio. search() displays the names of the active packages in the console. These are the same packages that have checks in RStudio's Package tab. 
 
 To install new packages, you have several options in RStudio. First, you can use the menus under Tools > Install Packages. Second, you can click "Install Packages" at the top of the Packages tab. Third, you can use the function install.packages(). Just put the name of the desired package in quotes and remember that, like most programming languages, R is case sensitive. The last option is best when you want to save the command as part of a script. 
 

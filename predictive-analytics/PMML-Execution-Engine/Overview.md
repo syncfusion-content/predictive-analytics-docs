@@ -51,7 +51,7 @@ regression/classification</td><td>
 logit/cloglog/log/identity/inverse/sqrt/probit/coxph</td></tr>
 <tr>
 <td>
-Naïve Bayes Model</td><td>
+Naive Bayes Model</td><td>
 classification</td><td>
 naive bayes</td></tr>
 <tr>
