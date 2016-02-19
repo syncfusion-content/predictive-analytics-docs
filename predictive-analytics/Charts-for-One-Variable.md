@@ -344,7 +344,7 @@ This produces the improved boxplot in the following figure.
 
 _Modified Boxplot_
 
-The boxplot in the above figure emphasizes the asymmetry of the distribution as well as the gaps and outliers. This is important information for the statistical analyses.
+The boxplot in the above figure emphasizes the asymmetry of the distribution as well as the gaps and outliers. This is important information for the statistical analysis.
 
 Once you have saved your work, you should clear the workspace of unwanted variables, objects, or packages.
 
