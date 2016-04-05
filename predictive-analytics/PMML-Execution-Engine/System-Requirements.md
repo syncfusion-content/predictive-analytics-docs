@@ -21,11 +21,11 @@ Table3: Prerequisites
 <tr>
 <td>
 Supported IDEs</td><td>
-<br>Visual Studio 2013<br>Visual Studio 2012<br>Visual Studio 2010<br> Visual Studio 2008 </td></tr>
+<br>Visual Studio 2015<br>Visual Studio 2013<br>Visual Studio 2012<br>Visual Studio 2010<br> Visual Studio 2008 </td></tr>
 <tr>
 <td>
 .NET Framework versions</td><td>
-<br>.NET 4.5.1<br>.NET 4.5<br>.NET 4.0<br>.NET 3.5</td></tr>
+<br>.NET 4.6<br>.NET 4.5.1<br>.NET 4.5<br>.NET 4.0<br>.NET 3.5</td></tr>
 </table>
 
 

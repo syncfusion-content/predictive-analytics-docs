@@ -11,8 +11,23 @@ documentation: ug
 
 ## Assemblies
 
-The following assembly is referenced in your application for the usage of PMML Execution Engine.
+The following assemblies need to be referenced in your application for the usage of PMML Execution Engine based on the platform.
 
-PMML Execution Engine– WPF, ASP. NET, ASP. NET MVC, Windows Forms, WinRT
-
-* Syncfusion.PMML.Base.dll
+<table>
+<tr>
+<td> Platform(s)<br/></td>
+<td> Assembly<br/></td>
+</tr>
+<tr>
+<td> WPF, ASP. NET, ASP. NET MVC, Windows Forms<br/></td>
+<td> Syncfusion.PMML.Base</td>
+</tr>
+<tr>
+<td> WinRT<br/></td>
+<td> Syncfusion.PMML.WinRT</td>
+</tr>
+<tr>
+<td> Universal Windows Platform<br/></td>
+<td> Syncfusion.PMML.UWP</td>
+</tr>
+</table>
