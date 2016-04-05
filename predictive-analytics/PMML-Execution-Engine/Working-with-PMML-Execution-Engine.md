@@ -27,7 +27,27 @@ Description</th></tr>
 <tr>
 <td>
 GetPMMLEvaluatorInstance(string)</td><td>
-Returns the respective PMMLEvaluator instance for the given string PMML file path</td></tr>
+Returns the respective PMMLEvaluator instance for the given PMML file path</td></tr>
+<tr>
+<td>
+GetPMMLEvaluatorInstance(string, PMMLValidationType)</td><td>
+Returns the PMMLEvaluator instance based on the specified PMML file path and the given PMMLValidationType</td></tr>
+<tr>
+<td>
+GetPMMLEvaluatorInstance(Stream)</td><td>
+Returns the respective PMMLEvaluator instance for the given PMML file stream</td></tr>
+<tr>
+<td>
+GetPMMLEvaluatorInstance(Stream, PMMLValidationType)</td><td>
+Returns the PMMLEvaluator instance based on the specified PMML file stream and the given PMMLValidationType</td></tr>
+<tr>
+<td>
+GetPMMLEvaluatorInstance(TextReader)</td><td>
+Returns the respective PMMLEvaluator instance for the given PMML file as text reader object</td></tr>
+<tr>
+<td>
+GetPMMLEvaluatorInstance(TextReader, PMMLValidationType)</td><td>
+Returns the PMMLEvaluator instance based on the specified PMML file as text reader object and the given PMMLValidationType</td></tr>
 <tr>
 <td>
 GetPMMLEvaluatorInstance(PMMLDocument)</td><td>
@@ -52,6 +72,9 @@ The following code example illustrates you the PMMLEvaluatorFactory that renders
  //Create instance for PMML             
  PMMLEvaluator PMMLEvaluator = new PMMLEvaluatorFactory().GetPMMLEvaluatorInstance(PmmlFilePath);            
  
+ //Create PMMLEvaluator instance for the specified PMML file path after validating against its schema.  
+ PMMLEvaluator PMMLEvaluator = new PMMLEvaluatorFactory().GetPMMLEvaluatorInstance(PmmlFilePath, PMMLValidationType.Schema);      
+ 
  //Gets the predicted result            
  PredictedResult predictedResult = PMMLEvaluator.GetResult(anonymousType, null);            
  
@@ -62,13 +85,14 @@ The following code example illustrates you the PMMLEvaluatorFactory that renders
 
 {% highlight text %}
 
-Output: SetosaThe predicted output (Setosa) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal - width and length, the iris species is more likely to be Setosa.
+Output: Setosa
+The predicted output (Setosa) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal - width and length, the iris species is more likely to be Setosa.
 
 {% endhighlight %}
 
 {% endtabs %}  
 
-N> The above code example uses PMMLEvaluator instance. In case when the model to be evaluated is known before, then you can call the model evaluator directly.
+N> The above code example uses PMMLEvaluator instance. In case when the model to be evaluated is known before, then you can call the model evaluator directly. PMMLValidation types are "Schema" and "None".
 
 ## PMMLEvaluator
 
@@ -94,7 +118,15 @@ Gets the PMMLModel</td></tr>
 <tr>
 <td>
 GetResult(object, IModelOptions)</td><td>
-Evaluates the given input against the scoring procedure of the PMML model and returns the PredictedResult.</td></tr>
+Evaluates the given anonymous object as input against the scoring procedure of the PMML model and returns the PredictedResult.</td></tr>
+<tr>
+<td>
+GetResult(Dictionary<string, object>, IModelOptions)</td><td>
+Evaluates the given Dictionary object as input against the scoring procedure of the PMML model and returns the PredictedResult.</td></tr>
+<tr>
+<td>
+GetResult(ExpandoObject, IModelOptions)</td><td>
+Evaluates the given ExpandoObject as input against the scoring procedure of the PMML model and returns the PredictedResult.</td></tr>
 <tr>
 <td>
 Dispose</td><td>
@@ -169,7 +201,8 @@ PredictedResult predictedResult = regressionModel.GetResult(anonymousType, null)
 
 {% highlight text %}
 
-Output: 3.50716866881611The predicted output (3.5) obtained from PMML Execution engine gives us a clear picture that based on given information (independant variables), the waiter may get a tip of 3.5$.In Regression Model Evaluator the term regression usually refers to the prediction of numeric values based on the Scoring procedure used in Regression Model.Here we considered the independent variables(total_bill,sex,smoker,day,time,size) and by using these independent variables we can find the result of dependent variable (tip) which is mentioned above .
+Output: 3.50716866881611
+The predicted output (3.5) obtained from PMML Execution engine gives us a clear picture that based on given information (independant variables), the waiter may get a tip of 3.5$.In Regression Model Evaluator the term regression usually refers to the prediction of numeric values based on the Scoring procedure used in Regression Model.Here we considered the independent variables(total_bill,sex,smoker,day,time,size) and by using these independent variables we can find the result of dependent variable (tip) which is mentioned above .
 
 {% endhighlight %}
 
@@ -244,7 +277,8 @@ Console.WriteLine(predictedResult.PredictedValue);
 
 {% highlight text %}
 
-Output: 1Here the predicted output value 1 represents the Iris category “Versicolor”. (i.e.) In Iris Datset we have considered the target value as Versicolor and if the Predicted Probability value of target is above 0.5 then by Binary Classification it is predicted as 1 (Versicolor) and the value below 0.5 is predicted as 0 (Not Versicolor).
+Output: 1
+Here the predicted output value 1 represents the Iris category “Versicolor”. (i.e.) In Iris Datset we have considered the target value as Versicolor and if the Predicted Probability value of target is above 0.5 then by Binary Classification it is predicted as 1 (Versicolor) and the value below 0.5 is predicted as 0 (Not Versicolor).
 
 {% endhighlight %}
 
@@ -317,7 +351,8 @@ The following code example illustrates the procedure to call Naive Bayes model e
 
 {% highlight text %}
 
-Output: VirginicaThe predicted output (Virginica) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal - width and length, the iris species is more likely to be Virginica.
+Output: Virginica
+The predicted output (Virginica) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal - width and length, the iris species is more likely to be Virginica.
 
 {% endhighlight %}
 
@@ -384,7 +419,8 @@ Console.WriteLine(predictedResult.PredictedValue);
 
 {% highlight text %}
 
-Output: VersicolorThe predicted output (Versicolor) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal width and length, the iris species is more likely to be Versicolor.
+Output: Versicolor
+The predicted output (Versicolor) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal width and length, the iris species is more likely to be Versicolor.
 
 {% endhighlight %}
 
@@ -456,7 +492,8 @@ var anonymousType = new
 
 {% highlight text %}
 
-Output: SetosaThe predicted output (Setosa) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal - width and length, the iris species is more likely to be Setosa.
+Output: Setosa
+The predicted output (Setosa) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal - width and length, the iris species is more likely to be Setosa.
 
 {% endhighlight %}
 
@@ -531,7 +568,8 @@ The following code example illustrates the procedure to call Mining Model Evalua
 
 {% highlight text %}
 
-Output: VirginicaThe predicted output (Virginica) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal width and length, the iris species is more likely to be Virginica.
+Output: Virginica
+The predicted output (Virginica) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal width and length, the iris species is more likely to be Virginica.
 
 {% endhighlight %}
 
@@ -603,7 +641,8 @@ Console.WriteLine(predictedResult.PredictedValue);
 
 {% highlight text %}
 
- Output: VersicolorThe predicted output (Versicolor) obtained from PMML Execution engine provides a clear picture that is based on given sepal and petal width and length, the iris species is more likely to be Versicolor.
+ Output: Versicolor
+ The predicted output (Versicolor) obtained from PMML Execution engine provides a clear picture that is based on given sepal and petal width and length, the iris species is more likely to be Versicolor.
 
 {% endhighlight %}
 
@@ -675,7 +714,8 @@ string pmmlFilePath = "../../Iris.pmml";
 
 {% highlight text %}
 
-Output: 2The predicted output (2) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal width and length, the iris species is more likely belongs to the Cluster 2.
+Output: 2
+The predicted output (2) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal width and length, the iris species is more likely belongs to the Cluster 2.
 
 {% endhighlight %}
 
@@ -828,12 +868,32 @@ PMMLDocument(Stream)</td><td>
 Initializes PMMLDocument with stream parameter</td></tr>
 <tr>
 <td>
+PMMLDocument(TextReader)</td><td>
+Initializes PMMLDocument with text reader parameter</td></tr>
+<tr>
+<td>
 OpenPMMLDocument(string)</td><td>
 Opens the input PMML string file path</td></tr>
 <tr>
 <td>
+OpenPMMLDocument(string, PMMLValidationType)</td><td>
+Opens the input PMML string file path and performs schema validation based on the specified validation type</td></tr>
+<tr>
+<td>
 OpenPMMLDocument(Stream)</td><td>
-Opens the input PMML stream  file path </td></tr>
+Opens the input PMML stream  file path</td></tr>
+<tr>
+<td>
+OpenPMMLDocument(Stream, PMMLValidationType)</td><td>
+Opens the input PMML stream file and performs schema validation based on the specified validation type</td></tr>
+<tr>
+<td>
+OpenPMMLDocument(TextReader)</td><td>
+Opens the input PMML as text reader object</td></tr>
+<tr>
+<td>
+OpenPMMLDocument(TextReader, PMMLValidationType)</td><td>
+Opens the input PMML as text reader object and performs schema validation based on the specified validation type</td></tr>
 <tr>
 <td>
 Dispose()</td><td>
@@ -895,13 +955,43 @@ The following code example illustrates you the same method OpenPMMLDocument but 
 	
 {% endhighlight %}
 
+
+The following code example illustrates you the same method OpenPMMLDocument but the file is in text reader type.
+
+{% highlight r %}
+
+
+// Gets the text of the PMML file 
+
+    string PmmlFilePath = "../../Iris.pmml";
+
+    PMMLDocument pmmlDocument = new PMMLDocument();
+
+    TextReader pmmlText = new StringReader(File.ReadAllText(PmmlFilePath));
+
+    pmmlDocument.OpenPMMLDocument(pmmlText);
+
+
+
+    //TextReader directly passed to the Instance of PMMLDocument
+
+    string PmmlFilePath = "../../Iris.pmml";
+
+    TextReader pmmlText = new StringReader(File.ReadAllText(PmmlFilePath));
+
+    PMMLDocument pmmlDocument = new PMMLDocument(pmmlText);
+
+	pmmlDocument.Dispose();
+	
+{% endhighlight %}
+
 ## PredictedResult
 
 The PredictedResult class is used to represent the predicted output for all PMMLEvaluator.
 
 ### Properties and Methods
 
-Table13: PredictedResult Properties
+Table16: PredictedResult Properties
 
 <table>
 <tr>
@@ -954,6 +1044,138 @@ GetRuleAssociations</td><td>
 Gets the array of Rules associated items.(This method should be used only for AssociationRules Model)</td></tr>
 </table>
 
+### TreeModelResult
+
+The TreeModelResult class is used to represent the predicted output of Tree Model with the following extended properties,
+
+Table17: TreeModelResult Properties
+
+<table>
+<tr>
+<th>
+Properties/Methods</th><th>
+Description</th></tr>
+<tr>
+<td>
+PredictedNodeID</td><td>
+Gets the predicted node ID</td></tr>
+<tr>
+<td>
+Path</td><td>
+Gets the traverse path (node IDs) of predicted node</td></tr>
+</table>
+
+The following code example illustrates you on how to retrieve the predicted node ID from the predicted result,
+
+{% tabs %} 
+
+{% highlight r %}
+
+//Sample values are passed as anonymous type            
+var anonymousType = new            
+{                
+SepalLength = 6.2,                
+SepalWidth = 2.9,                
+PetalLength = 4.3,                
+PetalWidth = 1.3            
+};            
+string pmmlFilePath = "../../Iris.pmml";  
+          
+//Create instance for PMMLDocument            
+PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath); 
+           
+//Create instance for TreeModel Evaluator            
+TreeModelEvaluator treeEvaluator = new TreeModelEvaluator(pmmlDocument);
+           
+//Gets the predicted result            
+PredictedResult predictedResult = treeEvaluator.GetResult(anonymousType, null);   
+
+// Gets the tree model result
+TreeModelResult treeModelResult = ((TreeModelResult)predictedResult);
+         
+treeEvaluator.Dispose();            
+
+//Displays the predicted node ID 
+Console.WriteLine("Predicted Node: " +treeModelResult.PredictedNodeID);
+
+//Displays the traverse path of predicted node
+Console.WriteLine("Traverse Path: " +treeModelResult.Path);      
+
+{% endhighlight %}
+
+{% highlight text %}
+
+Output: Predicted Node: 6  Traverse Path: 1,3,6
+
+{% endhighlight %}
+
+{% endtabs %}  
+
+### AssociationModelResult
+
+The AssociationModelResult class is used to represent the predicted output of Association Rules Model with the following extended properties/method,
+
+Table18: AssociationModelResult Properties
+
+<table>
+<tr>
+<th>
+Properties/Methods</th><th>
+Description</th></tr>
+<tr>
+<td>
+GetConfidences(RecommendationType)</td><td>
+Get the recommended items and its confidence values</td></tr>
+</table>
+
+The following code example illustrates you on how to retrieve the confidence values from the predicted result,
+
+{% tabs %}  
+
+{% highlight r %}
+           
+//Sample input items is passed as list of string            
+List<string> input = new List<string>();            
+input.Add("citrus fruit");            
+input.Add("semi-finished bread");            
+input.Add("margarine");            
+input.Add("ready soups");            
+string pmmlFilePath = "../../Groceries.pmml";           
+
+//Create instance for PMMLDocument            
+PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);            
+ 
+//Create instance for AssociationRulesModelEvaluator            
+AssociationRulesModelEvaluator associationRules = new AssociationRulesModelEvaluator(pmmlDocument);            
+ 
+//Gets the predicted result            
+PredictedResult predictedResult = associationRules.GetResult(input, null); 
+
+// Gets the Assocaition rule model result
+AssociationModelResult associationModelResult = (AssociationModelResult)predictedResult;
+ 
+associationRules.Dispose();            
+Dictionary<string, decimal> recommendationConfidences = associationModelResult.GetConfidences(RecommendationType.Recommendation);
+Dictionary<string, decimal> exclusiveRecommendationConfidences = associationModelResult.GetConfidences(RecommendationType.ExclusiveRecommendation);
+Dictionary<string, decimal> ruleAssociationConfidences = associationModelResult.GetConfidences(RecommendationType.RuleAssociation);  
+
+//Displays the recommended results            
+Console.WriteLine(“Recommendations: [” + string.Join(", ", recommendationConfidences.Select(m => m.Key + ":" + m.Value).ToArray()) + “]”);            
+Console.WriteLine(“ExclusiveRecommendations: [” + string.Join(", ", exclusiveRecommendationConfidences.Select(m => m.Key + ":" + m.Value).ToArray()) + “]”);           
+Console.WriteLine(“RuleAssociations: [” + string.Join(", ", ruleAssociationConfidences.Select(m => m.Key + ":" + m.Value).ToArray()) + “]”);
+
+{% endhighlight %}
+
+{% highlight text %}
+
+Output: Recommendations: [whole milk:0.413194444444444, rolls/buns:0.251736111111111, other vegetables:0.348894348894349, yogurt:0.261670761670762]
+ExclusiveRecommendations: [whole milk:0.413194444444444, rolls/buns:0.251736111111111, other vegetables:0.348894348894349, yogurt:0.261670761670762]
+RuleAssociations: [] 
+
+{% endhighlight %}
+
+{% endtabs %}  
+
 ## Prediction Sensitivity in Binomial Classification
 
 Binary classification is used to classify cases into two categories/groups. You are provided the option to increase or decrease the sensitivity of the binary prediction in the following models.
@@ -966,7 +1188,7 @@ Using BinomialThreshold property in Model options of General Regression, that is
 
 Based on the value, probability (0 - 1) is split into two boundary regions.
 
-Table16: Binary Prediction
+Table19: Binary Prediction
 
 <table>
 <tr>
