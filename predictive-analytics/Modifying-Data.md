@@ -40,7 +40,8 @@ The following figure shows that there are numerous outliers in this dataset. In 
 
 ![](Modifying-Data_images/img1.png)
 
-_Boxplot of Island Areas in 1000 square miles_
+Boxplot of Island Areas in 1000 square miles
+{:.caption}
 
 The boxplot.stats() function gives the five values for the boxplot’s hinges, not including the outliers, as well as the sample size, the confidence intervals for the median, and the values for the outliers. In this dataset, the value for the upper fence is 306 and the closest outlier is 840. To delete the outliers, simply select all of the values beneath them. You can create a new dataset with those values and then check the new distribution with this code: 
 
@@ -57,7 +58,8 @@ The following figure illustrates the new boxplot for the reduced dataset:
 
 ![](Modifying-Data_images/img2.png)
 
-_Boxplot of Island Areas (8 Largest Deleted)_
+Boxplot of Island Areas (8 Largest Deleted)
+{:.caption}
 
 It may be surprising that there are five new outliers in this distribution. That is because about 16% of the previous distribution is deleted, adjusted the quartile values that are used in determining outliers. It is, of course, possible to repeat the process until there are no longer any outliers. Such an approach, though, if done without a sound theoretical justification, does damage to the analysis. Such ad hoc approaches should be avoided as a rule. 
 
@@ -90,7 +92,8 @@ The log() function calculates natural logs with base e, which is approximately 2
 
 ![](Modifying-Data_images/img3.png)
 
-_Boxplot of Log Transformed Islands Data_
+Boxplot of Log Transformed Islands Data
+{:.caption}
 
 The boxplot of transformed values in the above figure has only a few outliers. It is also much better suited for analysis than the distribution of raw scores in Figure 21 or even the trimmed distribution in Figure 22. 
 

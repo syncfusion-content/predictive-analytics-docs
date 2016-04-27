@@ -49,7 +49,8 @@ The default plot() function is adaptive. It produces different charts depending 
 
 ![](Charts-for-One-Variable_images/img1.png)
 
-_Default Bar chart from the plot() function_
+Default Bar chart from the plot() function
+{:.caption}
 
 You need to add titles, rearrange the bars, and change the margins, among other things. The default plot() function, though, does not provide much control. Instead, you need to use the barplot() function. But first, you need to calculate the frequencies for the chart. You can use the table() function for that:
 
@@ -81,7 +82,8 @@ This series of commands produce the modified bar chart as shown in the following
 
 ![](Charts-for-One-Variable_images/img2.jpeg)
 
-_Modified Bar Chart using barplot()_
+Modified Bar Chart using barplot()
+{:.caption}
 
 Finish by saving your work, resetting the graphics parameters, and clearing the workspace of unwanted variables, objects, and packages:
 
@@ -177,7 +179,8 @@ The following figure shows the resulting chart.
 
 ![](Charts-for-One-Variable_images/img3.jpeg)
 
-_Default Pie Chart_
+Default Pie Chart
+{:.caption}
 
 As with bar charts, it can be helpful to modify this pie chart in a few ways: 
 
@@ -195,7 +198,8 @@ This produces the improved pie chart in the following figure.
 
 ![](Charts-for-One-Variable_images/img4.jpeg)
 
-_Modified Pie Chart_
+Modified Pie Chart
+{:.caption}
 
 It is easy to make pie charts in R but it can be hard to read them. For example, the R Help on pie charts says this: 
 
@@ -243,7 +247,8 @@ This produces the following figure.
 
 ![](Charts-for-One-Variable_images/img5.jpeg)
 
-_Default Histogram_
+Default Histogram
+{:.caption}
 
 The above figure is a respectable chart, using nothing more than the default settings. The chart has a title, the axes have labels, the number and width of bars is reasonable, and even the plain black and white is clean and easy to read. R's hist() function, though, has many options. Here are a few of them: 
 
@@ -262,7 +267,8 @@ This code produces the following figure.
 
 ![](Charts-for-One-Variable_images/img6.jpeg)
 
-_Modified Histogram_
+Modified Histogram
+{:.caption}
 
 Aside from the obvious changes of color and titles, there are two modifications to explain further. The breaks attribute sets the number of bins to use, but it is more a suggestion than other attributes. This means R will look at the suggestion but use its own algorithm to calculate bin width. Used here is an argument of 14 bins in this case, which is what R did, but you would still get 14 bins if you entered 11 here. R's autonomy in this respect may be an advantage, but if you want more control, you can set the breaks by hand. You can use a regular sequence to set the breaks at a uniform distance, like this: breaks = seq(0, 7000, by = 100). You can also set each break by hand, like this: breaks = c(0, 100, 300, 500, 3000, 3500, 7000). However, it’s hard to imagine a situation where you would want to do that. 
 
@@ -297,7 +303,8 @@ In this case, the curve() function calls for a dnorm distribution, or normal den
 
 ![](Charts-for-One-Variable_images/img7.png)
 
-_Histogram with superimposed normal curve_
+Histogram with superimposed normal curve
+{:.caption}
 
 Once you have saved your work, clean the workspace of unwanted variables and objects.
 
@@ -325,7 +332,8 @@ This command produces the rudimentary boxplot as displayed in the following figu
 
 ![](Charts-for-One-Variable_images/img8.png)
 
-_Default Boxplot_
+Default Boxplot
+{:.caption}
 
 The above figure would be better with labels and if it were horizontal. There are also several other options for boxplots: 
 
@@ -342,7 +350,8 @@ This produces the improved boxplot in the following figure.
 
 ![](Charts-for-One-Variable_images/img9.png)
 
-_Modified Boxplot_
+Modified Boxplot
+{:.caption}
 
 The boxplot in the above figure emphasizes the asymmetry of the distribution as well as the gaps and outliers. This is important information for the statistical analysis.
 

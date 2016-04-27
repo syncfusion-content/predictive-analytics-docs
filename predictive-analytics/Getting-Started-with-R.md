@@ -27,7 +27,8 @@ You should now have a functional copy of R on your computer. When you double-cli
 
 ![](Getting-Started-with-R_images/img1.png)
 
-_Default Startup Window for R_
+Default Startup Window for R
+{:.caption}
 
 For those who are comfortable working with the command-line, it is also possible to access R
 
@@ -37,7 +38,8 @@ that way. For example, opening Terminal on Mac and typing R at the prompt, gives
 
 ![](Getting-Started-with-R_images/img2.png)
 
-_Calling R from Command-line_
+Calling R from Command-line
+{:.caption}
 
 You can see that the exact same boilerplate text that appeared in R’s IDE appears in the terminal.
 
@@ -61,7 +63,8 @@ When you double-click the RStudio icon, you can see something like the following
 
 ![](Getting-Started-with-R_images/img3.png)
 
-_Studio Startup Window_
+Studio Startup Window
+{:.caption}
 
 RStudio organizes the separate windows of R into a single panel. It also provides links to functions that can otherwise be difficult to find. RStudio has a few other advantages as well, such as:
 
@@ -445,7 +448,8 @@ This code produces the following figure, an unusual 3-way bar plot. When you wan
 
 ![](Getting-Started-with-R_images/img4.jpeg)
 
-_Default Plot of UCBAdmissions_
+Default Plot of UCBAdmissions
+{:.caption}
 
 The next step is to get the marginal frequencies from the 3-way table. At this point, the frequencies are just displayed in the console.
 
@@ -527,7 +531,8 @@ Default barplot
 
 ![](Getting-Started-with-R_images/img5.png)
 
-_Bar Chart with default colors_
+Bar Chart with default colors
+{:.caption}
 
 You can improve the above figure by changing the colors of the bars using the col attribute in the barplot function. R gives you several methods to specify colors. 
 
@@ -557,7 +562,8 @@ Any of the previous commands produce the chart in the following figure.
 
 ![](Getting-Started-with-R_images/img6.png)
 
-_Colored Bar Chart_
+Colored Bar Chart
+{:.caption}
 
 When you want the bars to be of different colors, then you can either specify the colors one at a time or you can use a color palette. To specify the individual colors, just use the concatenate function c() in the col attribute, like this: col = c("red", "blue"). You can use any of the color specification methods in the section. Then the colors cycle through for each of the bars. 
 
@@ -583,7 +589,8 @@ The output of the previous code is shown in the following figure.
 
 ![](Getting-Started-with-R_images/img7.png)
 
-_Bar Chart with R palette "topo.colors"_
+Bar Chart with R palette "topo.colors"
+{:.caption}
 
 An attractive alternative to R's palettes is the package RColorBrewer. This package derives from the excellent website [ColorBrewer 2.0](http://colorbrewer2.org/)[.](http://colorbrewer2.org/) RColorBrewer provides several palettes of sequential, diverging, and qualitative colors. To use RColorBrewer, you must first install it and load it in R: 
 
@@ -601,13 +608,15 @@ This produces the following figure. The overlapping labels are due to the landsc
 
 ![](Getting-Started-with-R_images/img8.png)
 
-_All RColorBrewer Palettes_
+All RColorBrewer Palettes
+{:.caption}
 
 You can get a better view of an individual palette by specifying the palette and the number of colors desired, like this: display.brewer.pal(8, "Accent"). The following figure illustrates this palette. 
 
 ![](Getting-Started-with-R_images/img9.png)
 
-_Preview of the RColorBrewer Palette “Accent”_ 
+Preview of the RColorBrewer Palette “Accent” 
+{:.caption}
 
 To apply an RColorBrewer palette to a bar chart, call brewer.pal in the col attribute. Also specify the palette and the number of colors desired. 
 
@@ -623,7 +632,8 @@ This command produces the following figure.
 
 ![](Getting-Started-with-R_images/img10.png)
 
-_Bar Chart with RColorBrewer Palette_
+Bar Chart with RColorBrewer Palette
+{:.caption}
 
 When you finish, it is a good idea to restore the default palette and clean up: 
 

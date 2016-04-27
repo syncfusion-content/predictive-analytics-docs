@@ -17,7 +17,7 @@ The PMMLEvaluatorFactory is a class that represents methods to instantiate respe
 
 ### Properties and Methods
 
-Table5: Property Table
+Property Table
 
 <table>
 <tr>
@@ -100,7 +100,7 @@ The PMMLEvaluator is an abstract class and it represents the base methods and pr
 
 ### Properties and Methods
 
-Table6: PMMLEvaluator Public Properties/Methods
+PMMLEvaluator Public Properties/Methods
 
 <table>
 <tr>
@@ -141,7 +141,7 @@ Regression Model Evaluator represents the evaluator for Regression models. It in
 
 The general purpose of regression model is to learn more about the relationship between several independent or predictor variables and a dependent variable. In the social and natural sciences multiple regression procedures are very widely used in research. 
 
-Table7: Property Table
+Property Table
 
 <table>
 <tr>
@@ -219,8 +219,7 @@ General Regression Model is a supervised learning model used for both classifica
 #### Properties and Methods
 
 
-
-Table8: General Regression Model Public Properties or Methods
+General Regression Model Public Properties or Methods
 
 <table>
 <tr>
@@ -294,7 +293,7 @@ Naive Bayes classifier is a simple probabilistic classifier based on applying Ba
 
 Bayesian classifiers have been used for text classification, such as junk email filtering such as spam, author identification, topic categorization and intrusion detection or anomaly detection in computer networks.
 
-Table9: NaiveBayes Model Public Properties or Methods
+NaiveBayes Model Public Properties or Methods
 
 <table>
 <tr>
@@ -362,7 +361,7 @@ The predicted output (Virginica) obtained from PMML Execution engine gives us a 
 
 Tree Model Evaluator represents the evaluator for tree models and it inherits all the properties and methods of PMMLEvaluator.
 
-Table10: Tree Model Public Properties or Methods
+Tree Model Public Properties or Methods
 
 <table>
 <tr>
@@ -434,7 +433,7 @@ Support Vector Machine Model Evaluator represents the evaluator for support vect
 
 Support Vector Machines (SVM) model is a set of related supervised learning model with associated learning algorithms that analyze data and recognize patterns, used for both classification and regression analysis. It has gained popularity due to its potential for high accuracy.
 
-Table11: SupportVectorMachine Model Public Properties/Methods
+SupportVectorMachine Model Public Properties/Methods
 
 <table>
 <tr>
@@ -507,7 +506,7 @@ Mining Model Evaluator represents the evaluator for mining models and it inherit
 
 Mining model operates by constructing multiple decision trees. It draws random samples from the original data and for each random sample it grows a tree. It is used in both classification and regression cases.
 
-Table12: Mining Model Public Properties or Methods
+Mining Model Public Properties or Methods
 
 <table>
 <tr>
@@ -583,7 +582,7 @@ Neural Network Model Evaluator represents the evaluator for neural network model
 
 A Neural network also called an ANN or an Artificial Neural Network is an artificial system made of artificial neuron cells. It is modeled after the way the human brain works through imitating how the brain's neurons are fired or activated. The idea of neural networks is that, they are able to learn by themselves, an ability that makes them remarkably distinctive in comparison to normal computers, that cannot do anything for that they are not programmed. It is used in both classification and regression cases.
 
-Table13: Neural Network Model Public Properties or Methods
+Neural Network Model Public Properties or Methods
 
 <table>
 <tr>
@@ -657,7 +656,7 @@ Clustering Model Evaluator represents the evaluator for clustering models and it
 
 Clustering is the task of grouping a set of objects in such a way that objects in the same group called a cluster are more similar in some sense or another to each other than to those in other groups (clusters). For each cluster a center vector can be provided. In center-based models a cluster is defined by a vector of center coordinates. Some distance measure is used to determine the nearest center that is the nearest cluster for a given input record.
 
-Table14: Clustering Model Public Properties or Methods
+Clustering Model Public Properties or Methods
 
 <table>
 <tr>
@@ -729,7 +728,7 @@ Association Rules Model Evaluator represents the evaluator for the Association r
 
 Association rule mining finds elements or attributes that frequently occur together—for example, products that are often bought together during a shopping session. Such information can be used to recommend products to shoppers, to place frequently bundled items together on store shelves. Machine learning methods for identifying associations among items in transactional data called market basket analysis in retail stores.
 
-Table9: Association Rules Model Public Properties or Methods
+Association Rules Model Public Properties or Methods
 
 <table>
 <tr>
@@ -803,7 +802,7 @@ The PMMLDocument class is used to represent the object model for PMML document. 
 
 The PMMLDocument contains properties with read only option. 
 
-Table15: PMMLDocument Properties
+PMMLDocument Properties
 
 <table>
 <tr>
@@ -991,7 +990,7 @@ The PredictedResult class is used to represent the predicted output for all PMML
 
 ### Properties and Methods
 
-Table16: PredictedResult Properties
+PredictedResult Properties
 
 <table>
 <tr>
@@ -1048,7 +1047,7 @@ Gets the array of Rules associated items.(This method should be used only for As
 
 The TreeModelResult class is used to represent the predicted output of Tree Model with the following extended properties,
 
-Table17: TreeModelResult Properties
+TreeModelResult Properties
 
 <table>
 <tr>
@@ -1115,7 +1114,7 @@ Output: Predicted Node: 6  Traverse Path: 1,3,6
 
 The AssociationModelResult class is used to represent the predicted output of Association Rules Model with the following extended properties/method,
 
-Table18: AssociationModelResult Properties
+AssociationModelResult Properties
 
 <table>
 <tr>
@@ -1188,7 +1187,7 @@ Using BinomialThreshold property in Model options of General Regression, that is
 
 Based on the value, probability (0 - 1) is split into two boundary regions.
 
-Table19: Binary Prediction
+Binary Prediction
 
 <table>
 <tr>
