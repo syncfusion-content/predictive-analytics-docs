@@ -70,7 +70,8 @@ The resulting grouped bar plot is shown in the following figure.
 
 ![](Charts-for-Associations_images/img1.png)
 
-_Grouped Bar Chart for Frequencies_
+Grouped Bar Chart for Frequencies
+{:.caption}
 
 As usual, once you have saved your work, you should clean the workspace by removing any variables or objects you created with rm(list = ls()). 
 
@@ -125,7 +126,8 @@ This produces the chart shown in the following figure.
 
 ![](Charts-for-Associations_images/img2.png)
 
-_Bar Chart of Group Means_
+Bar Chart of Group Means
+{:.caption}
 
 Finish by cleaning the workspace and removing any variables or objects you created. 
 
@@ -175,7 +177,8 @@ The default boxplot produced by this code is displayed in the following figure.
 
 ![](Charts-for-Associations_images/img3.png)
 
-_Grouped Boxplots- Default Chart_
+Grouped Boxplots- Default Chart
+{:.caption}
 
 As a chart, the above figure has one glaring omission: the groups do not have meaningful labels. Instead, they are categorized as A, B, C, and so on. This defeats the purpose of the chart. Consequently, it is important to add those labels using the names() attribute. It is also a good idea to add titles, axis labels, and other changes to make the chart both more informative and more attractive. Part of this change involves using the RColorBrewer package to set colors for the boxplots. 
 
@@ -204,7 +207,8 @@ Note that there is no + or other line break in main for the title; R observes th
 
 ![](Charts-for-Associations_images/img4.png)
 
-_Grouped Boxplots with Labels and Options_
+Grouped Boxplots with Labels and Options
+{:.caption}
 
 Once you have saved your work, you should clean the workspace by removing any variables or objects you created. 
 
@@ -246,7 +250,8 @@ This produces the scatter plot as shown in the following screenshot.
 
 ![](Charts-for-Associations_images/img5.png)
 
-_Default Scatter Plot with plot()_
+Default Scatter Plot with plot()
+{:.caption}
 
 The above Default Scatter Plot with plot() is adequate, plot() also provides several options for labels and design. 
 
@@ -266,7 +271,8 @@ The revised scatter plot is shown in the following screenshot.
 
 ![](Charts-for-Associations_images/img6.png)
 
-_Revised Scatter plot with plot()_
+Revised Scatter plot with plot()
+{:.caption}
 
 The upward pattern that indicates a positive association between the two variables in the above figure is easy to see. However, the relationship can be even clearer when fit lines are added. In the following code example, a linear regression line is overlaid with the abline() function that takes a linear regression model from the lm() function as its argument. In addition, a lowess line locally weighted scatter plot smoothing can be added with the lines() function that takes the lowess() function as its argument. See    ?abline, ?lines, and ?lowess for more information on these functions. 
 
@@ -286,7 +292,8 @@ The scatter plot with the added fit lines is shown in the following screenshot.
 
 ![](Charts-for-Associations_images/img7.png)
 
-_Scatter Plot with Linear Regression and Lowess Fit Lines_
+Scatter Plot with Linear Regression and Lowess Fit Lines
+{:.caption}
 
 For a final variation on the bivariate scatter plot, you can use the scatterplot() or sp() functions from the coincidentally named car package (that in this case, stands for "Companion to Applied Regression"). This package has many variations on scatter plots. You ca use the package that has marginal boxplots, smoothers, and quantile regression intervals. See help(package = "car") for more information. 
 
@@ -322,9 +329,10 @@ The following screenshot shows the resulting chart. The marginal boxplots, smoot
 
 ![](Charts-for-Associations_images/img8.png)
 
-_Scatter Plot created with car Package_ 
+Scatter Plot created with car Package 
+{:.caption}
 
-  Once you have saved your work, clean the workspace by removing any variables or objects you created. 
+Once you have saved your work, clean the workspace by removing any variables or objects you created. 
 
 {%highlight r%}
   

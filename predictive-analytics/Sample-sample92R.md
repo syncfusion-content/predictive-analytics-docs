@@ -37,7 +37,8 @@ These results show a strong main effect of level of tension on the breakage of w
 
 ![](Sample-sample92R_images/img1.jpeg)
 
-_Grouped Bar Chart of Mean_
+Grouped Bar Chart of Mean
+{:.caption}
 
 A second method for specifying the ANOVA spells out only the interaction and leaves the main effects as implicit, with the same results as the first method. 
 
@@ -98,7 +99,8 @@ This command produces the following chart.
 
 ![](Sample-sample92R_images/img2.jpeg)
 
-_Cluster Plot for K-Means Clustering_
+Cluster Plot for K-Means Clustering
+{:.caption}
 
 The above figure shows three clusters bounded by colored circles and arranged on a grid defined by the two largest cluster components. There is good separation between the clusters, but the large separation in cluster 2 on the far left suggests that more than three clusters may be appropriate. Hierarchical clustering can be a good method for checking on the number and size of clusters. 
 
@@ -111,7 +113,8 @@ The following screenshot shows the default dendrogram produced by plot(). In thi
 
 ![](Sample-sample92R_images/img3.jpeg)
 
-_Hierarchical Clustering Dendrogram with Defaults_
+Hierarchical Clustering Dendrogram with Defaults
+{:.caption}
 
 Once the hierarchical model is calculated, it is also possible to place the observations into groups using cutree() that represents a cut tree diagram, another name for  dendrogram. You must, however, tell the function how or where to cut the tree into groups. You can specify either the number of groups using k = 3, or you can specify the vertical height on the dendrogram, h = 230 that can produce the same result. For example, the following command categorizes the cases into three groups and then show the group IDs for the last three cases: 
 
@@ -142,7 +145,8 @@ The result is shown in the following screenshot.
 
 ![](Sample-sample92R_images/img4.jpeg)
 
-_Hierarchical Clustering Dendrogram with Boxes around Groups_
+Hierarchical Clustering Dendrogram with Boxes around Groups
+{:.caption}
 
 From the above figure, it is clear that large, American cars form groups that are distinct from smaller, imported cars. It is also clear, again, that the Maserati Bora is distinct from the group, as it is placed in its own category once you request at least four groups. 
 
@@ -210,7 +214,8 @@ With your data, biplot(pc) gives the following output.
 
 ![](Sample-sample92R_images/img5.jpeg)
 
-_Biplot of the Principal Components Analysis_
+Biplot of the Principal Components Analysis
+{:.caption}
 
 The simplest use of factor analysis (FA) within R is to determine how many factors are needed to adequately represent the variability within the data. For example, in your data, you can run several iterations of the function factanal(), where you specify different numbers of possible factors and check the probability values on the resulting chi-squared test. In this case, you are looking for a model that is not statistically significant (i.e., _p_ > .05 as opposed to _p_ < .05) because you want a model that corresponds well with the data and does not deviate substantially from it. In each of the following four analyses, different number of factors are specified and the p-value from the last line of the printout is mentioned. The complete printout for the final command is also included. 
 

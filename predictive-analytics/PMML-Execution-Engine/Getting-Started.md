@@ -333,5 +333,5 @@ The output as it appears in the sample, is displayed in the following image.
 
 ![](Getting-Started_images/img1.png)
 
-_Output_
-
+Output
+{:.caption}
