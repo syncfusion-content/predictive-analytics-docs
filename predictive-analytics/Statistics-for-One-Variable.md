@@ -261,8 +261,8 @@ The histogram in the following figure shows that the distribution has a strong, 
 
 ![](Statistics-for-One-Variable_images/img1.png)
 
-_Histogram of Earthquake Magnitudes_
-
+Histogram of Earthquake Magnitudes
+{:.caption}
 
 The basic summary statistics for mag are: 
 

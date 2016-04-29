@@ -75,7 +75,8 @@ The resulting chart is shown in the following screenshot.
 
 ![](Charts-for-Three-or-More-Variables_images/img1.jpeg)
 
-_Grouped Bar Plot for Means_
+Grouped Bar Plot for Means
+{:.caption}
 
 You can complete by cleaning up the workspace. 
 
@@ -140,7 +141,8 @@ The resulting chart is shown in the following screenshot.
 
 ![](Charts-for-Three-or-More-Variables_images/img2.jpeg)
 
-_Scatter Plot by group_
+Scatter Plot by group
+{:.caption}
 
 The car package uses both colors and shapes to indicate group membership. By default, it also superimposes a linear regression line and a lowess smoother for each group, matched by color. 
 
@@ -193,7 +195,8 @@ The resulting plot is shown in the following screenshot.
 
 ![](Charts-for-Three-or-More-Variables_images/img3.jpeg)
 
-_Scatterplot Matrix with pairs()_
+Scatterplot Matrix with pairs()
+{:.caption}
 
 This is a reasonable plot, but it is not information-dense: there is no indication of group membership, there are no fit lines, and the large cells with the variable names can be used for other purposes.  
 
@@ -244,7 +247,8 @@ The resulting chart is shown in the following screenshot.
 
 ![](Charts-for-Three-or-More-Variables_images/img4.jpeg)
 
-_Scatter plot Matrix with Custom Function_
+Scatter plot Matrix with Custom Function
+{:.caption}
 
 The above screenshot is an improvement over scatter plot matrix with pairs(), but it can still be improved. Most significantly, it is missing a legend to indicate group membership. It is also potentially troublesome to use a custom function with unknown compatibility issues. Instead, you can use the scatterplotMatrix() function from the car package. Also note in the following code example, the paste() function in the title attribute main. paste() puts separate strings together into a single string that makes it possible to write a long title in the R command but keep the code from being too wide. 
 
@@ -269,7 +273,8 @@ The previous command produces the following chart as shown.
 
 ![](Charts-for-Three-or-More-Variables_images/img5.jpeg)
 
-_Scatter Plot Matrix with the scatterplotmatrix() Function from the car package_
+Scatter Plot Matrix with the scatterplotmatrix() Function from the car package
+{:.caption}
 
 The above figure accomplishes several things at once: 
 
