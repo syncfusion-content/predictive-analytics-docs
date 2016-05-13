@@ -100,7 +100,7 @@ The first line contains the command you entered. In this case it is 9 + 11. Note
 
 The second line does not have a command prompt because it has the program’s output. The “1” in square brackets, [1], requires some explanation. R uses vectors to do math and that’s it how it returns the responses. The number in brackets is the index number for the first item in the vector on this line of output. Many other programs begin with an index number of 0, but R begins at 1. After the index number, R prints the output, the sum “20” in this case.
 
-N> For more information on good form in R, see Google's style guide at  <http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml>
+N> For more information on good form in R, see Google's style guide at  <https://github.com/google/styleguide/blob/gh-pages/Rguide.xml>
 
 The contents of the console scroll up as new information comes in. You can also clear the console by selecting Edit > Clear console or by pressing Ctrl+L (a lower-case L) on a Mac or PC. Note that this only clears the displayed data, it does not purge the data from the memory or lose the history of commands.
 
