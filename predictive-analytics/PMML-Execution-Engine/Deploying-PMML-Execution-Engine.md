@@ -15,8 +15,8 @@ The following assemblies need to be referenced in your application for the usage
 
 <table>
 <tr>
-<td> Platform(s)<br/></td>
-<td> Assembly<br/></td>
+<th> Platform(s)</th>
+<th> Assembly</th>
 </tr>
 <tr>
 <td> WPF, ASP. NET, ASP. NET MVC, Windows Forms<br/></td>

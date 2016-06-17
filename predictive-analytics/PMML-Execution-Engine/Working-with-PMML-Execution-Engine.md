@@ -1031,6 +1031,10 @@ GetPredictedCategories</td><td>
 Gets the predicted categories</td></tr>
 <tr>
 <td>
+GetOutputFieldResults</td><td>
+Gets the Output field evaluation results.</td></tr>
+<tr>
+<td>
 GetRecommendations</td><td>
 Gets the array of recommended items.(This method should be used only for AssociationRules Model)</td></tr>
 <tr>
