@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains you the PMML Execution Engine with its key features, prerequisites to use the API, its compatibilities with Visual Studio Frameworks and finally the documentation details complimentary with the product.
 
-## Introduction toPMML Execution Engine
+## Introduction to PMML Execution Engine
 
 PMML Execution Engine is a C# library developed for predicting results based on predicted modelling done in PMML over the input data and you can run on the following .Net platforms – Windows forms, WinRT, WPF, UWP, ASP.NET and ASP.NET MVC. PMML stands for Predictive Model Markup Language. It is an XML-based file format developed by the [Data Mining Group](http://www.dmg.org) to provide a way for applications to describe and exchange models produced by data mining and machine learning algorithms.
 
@@ -89,6 +89,11 @@ regression</td><td>
 Association Rules Model</td><td>
 </td><td>
 arules</td></tr>
+<tr>
+<td>
+K-Nearest Neighbors Model</td><td>
+regression/classification</td><td>
+</td></tr>
 </table>
 
 ## User Guide Organization

@@ -794,6 +794,73 @@ Output: Recommendations: [whole milk,rolls/buns,other vegetables,yogurt]Exclusiv
 
 {% endtabs %}  
 
+### K-Nearest Neighbors Model Evaluator
+
+K-Nearest Neighbors Model Evaluator represents the evaluator for the K-Nearest Neighbors model and it inherits all the properties and methods of PMMLEvaluator.
+
+#### K-Nearest Neighbors Model
+
+K-Nearest Neighbors Model is a type of instance-based learning or lazy learning used for both classification and regression.
+
+<table>
+<tr>
+<th>
+Property/Method</th><th>
+Description</th></tr>
+<tr>
+<td>
+NearestNeighborModelEvaluator(PMMLDocument)</td><td>
+Creates Instance for K-Nearest Neighbors model evaluator for the given PMML document object.</td></tr>
+<tr>
+<td>
+GetResult(object,IModelOptions)</td><td>
+Evaluates the given input items against the scoring procedure of the NearestNeighborModel and returns the PredictedResult. Currently there is no Model options available for K-Nearest Neighbors Model.</td></tr>
+</table>
+
+Consider the Tips dataset taken from the “reshape2” R package that has information about each tip received by a waiter over a period of few months.
+
+The following code example illustrates the procedure to call K-Nearest Neighbor model evaluator directly without the help of PMMLEvaluatorFactory.
+
+{% tabs %}  
+
+{% highlight r %}
+           
+//Sample values are passed as anonymous type          
+var anonymousType = new
+{		
+total_bill = 16.99,
+sex = "Female",
+smoker = "No",
+day = "Sun",
+timing = "Dinner",
+size = 2
+};
+string pmmlFilePath = "../../Tips.pmml";
+
+//Create instance for PMML Document            
+PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);
+
+//Create instance for K-Nearest Neighbor model            
+NearestNeighborModelEvaluator knnModel = new NearestNeighborModelEvaluator(pmmlDocument);
+
+//Gets the predicted result            
+PredictedResult predictedResult = knnModel.GetResult(anonymousType, null);
+knnModel.Dispose();
+
+//Displays the predicted result            
+Console.WriteLine(predictedResult.PredictedValue);
+
+{% endhighlight %}
+
+{% highlight text %}
+
+Output: 2.67
+The predicted output (2.67) obtained from PMML Execution engine gives us a clear picture that based on given information (independant variables), the waiter may get a tip of $2.67. Here we considered the independent variables(total_bill,sex,smoker,day,time,size) and by using these independent variables we can find the result of dependent variable (tip) which is mentioned above.
+
+{% endhighlight %}
+
+{% endtabs %}  
+
 ## PMMLDocument
 
 The PMMLDocument class is used to represent the object model for PMML document. We can load the input PMML file in both constructor as well as the open methods. Currently all properties provided with the object model are read only and allows us to check the values represented in the input PMML (XML) file.
@@ -853,6 +920,10 @@ Gets the ClusteringModel values</td></tr>
 <td>
 AssociationRulesModel</td><td>
 Gets the AssociationRulesModel values</td></tr>
+<tr>
+<td>
+NearestNeighborModel</td><td>
+Gets the NearestNeighborModel values</td></tr>
 <tr>
 <td>
 PMMLDocument</td><td>
