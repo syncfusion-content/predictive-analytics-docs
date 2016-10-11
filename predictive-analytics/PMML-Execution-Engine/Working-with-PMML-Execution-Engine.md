@@ -55,42 +55,37 @@ Returns the respective PMMLevaluator for the given PMMLDocument.</td></tr>
 </table>
 The following code example illustrates you the PMMLEvaluatorFactory that renders PMML file path using the GetPMMLEvaluatorInstance() method and passes it to PMMLEvaluator instance. Here a record from Iris dataset is passed as anonymous type and the predicted result is obtained.
 
-{% tabs %}  
-
-{% highlight r %}
+{% highlight c# %}
        
 //Sample record passed as anonymous type            
- var anonymousType = new           
- {                
- Sepal_Length = 4.3,                
- Sepal_Width = 3.2,               
- Petal_Length = 0.4,               
- Petal_Width = 1.1            
- };            
- string PmmlFilePath = "../../Iris.pmml";  
- 
- //Create instance for PMML             
- PMMLEvaluator PMMLEvaluator = new PMMLEvaluatorFactory().GetPMMLEvaluatorInstance(PmmlFilePath);            
- 
- //Create PMMLEvaluator instance for the specified PMML file path after validating against its schema.  
- PMMLEvaluator PMMLEvaluator = new PMMLEvaluatorFactory().GetPMMLEvaluatorInstance(PmmlFilePath, PMMLValidationType.Schema);      
- 
- //Gets the predicted result            
- PredictedResult predictedResult = PMMLEvaluator.GetResult(anonymousType, null);            
- 
- //Displays the predicted result            
- Console.WriteLine(predictedResult.PredictedValue);
- 
-{% endhighlight %}
+var anonymousType = new           
+{                
+Sepal_Length = 4.3,                
+Sepal_Width = 3.2,               
+Petal_Length = 0.4,               
+Petal_Width = 1.1            
+};            
+string PmmlFilePath = "../../Iris.pmml";  
 
-{% highlight text %}
+//Create instance for PMML             
+PMMLEvaluator PMMLEvaluator = new PMMLEvaluatorFactory().GetPMMLEvaluatorInstance(PmmlFilePath);            
+
+//Create PMMLEvaluator instance for the specified PMML file path after validating against its schema.  
+PMMLEvaluator PMMLEvaluator = new PMMLEvaluatorFactory().GetPMMLEvaluatorInstance(PmmlFilePath, PMMLValidationType.Schema);      
+ 
+//Gets the predicted result            
+PredictedResult predictedResult = PMMLEvaluator.GetResult(anonymousType, null);            
+ 
+//Displays the predicted result            
+Console.WriteLine(predictedResult.PredictedValue);
+
+
+//Output
 
 Output: Setosa
 The predicted output (Setosa) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal - width and length, the iris species is more likely to be Setosa.
 
 {% endhighlight %}
-
-{% endtabs %}  
 
 N> The above code example uses PMMLEvaluator instance. In case when the model to be evaluated is known before, then you can call the model evaluator directly. PMMLValidation types are "Schema" and "None".
 
@@ -166,10 +161,7 @@ Consider the Tips dataset taken from the “reshape2” R package that has infor
 
 The following code example illustrates the procedure to call Regression Model Evaluator directly without the help of PMMLEvaluatorFactory.
 
-{% tabs %} 
-
-{% highlight r %}
-
+{% highlight c# %}
  
 //Sample data is passed as anonymous type            
 var anonymousType = new            
@@ -190,23 +182,19 @@ PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);
 RegressionModelEvaluator regressionModel = new RegressionModelEvaluator(pmmlDocument);            
 
 //Gets the predicted result            
-PredictedResult predictedResult = regressionModel.GetResult(anonymousType, null);           
+PredictedResult predictedResult = regressionModel.GetResult(anonymousType, null); 
+regressionModel.Dispose();            
 
- regressionModel.Dispose();            
- //Displays the predicted result    
- 
- Console.WriteLine(predictedResult.PredictedValue);
- 
-{% endhighlight %}
+//Displays the predicted result    
+Console.WriteLine(predictedResult.PredictedValue);
 
-{% highlight text %}
+
+//Output
 
 Output: 3.50716866881611
 The predicted output (3.5) obtained from PMML Execution engine gives us a clear picture that based on given information (independant variables), the waiter may get a tip of 3.5$.In Regression Model Evaluator the term regression usually refers to the prediction of numeric values based on the Scoring procedure used in Regression Model.Here we considered the independent variables(total_bill,sex,smoker,day,time,size) and by using these independent variables we can find the result of dependent variable (tip) which is mentioned above .
 
 {% endhighlight %}
-
-{% endtabs %}  
 
 ### General Regression Model Evaluator
 
@@ -245,9 +233,7 @@ Consider the Iris dataset taken from the "datasets" R package. A General regress
 
 The following code example illustrates the procedure to call General Regression Model Evaluator directly without the help of PMMLEvaluatorFactory.
 
-{% tabs %} 
-
-{% highlight r %}
+{% highlight c# %}
 
 //Sample record is passed as anonymous type           
 var anonymousType = new            
@@ -272,16 +258,13 @@ generalRegression.Dispose();
 //Displays the predicted result            
 Console.WriteLine(predictedResult.PredictedValue);
 
-{% endhighlight %}
 
-{% highlight text %}
+//Output
 
 Output: 1
 Here the predicted output value 1 represents the Iris category “Versicolor”. (i.e.) In Iris Datset we have considered the target value as Versicolor and if the Predicted Probability value of target is above 0.5 then by Binary Classification it is predicted as 1 (Versicolor) and the value below 0.5 is predicted as 0 (Not Versicolor).
 
 {% endhighlight %}
-
-{% endtabs %}  
 
 ### Naive Bayes Model Evaluator
 
@@ -319,43 +302,38 @@ Consider the Iris dataset taken from the "datasets" R package. A Naive Bayes mod
 
 The following code example illustrates the procedure to call Naive Bayes model evaluator directly without the help of PMMLEvaluatorFactory.
 
-{% tabs %}  
-
-{% highlight r %}
+{% highlight c# %}
     
 //Sample record is passed as anonymous type           
- var anonymousType = new            
- {                
- SepalLength = 7.2,               
- SepalWidth = 3.6,                
- PetalLength = 6.1,               
- PetalWidth = 2.5            
- };            
- string pmmlFilePath = "../../Iris.pmml";            
+var anonymousType = new            
+{                
+SepalLength = 7.2,               
+SepalWidth = 3.6,                
+PetalLength = 6.1,               
+PetalWidth = 2.5            
+};            
+string pmmlFilePath = "../../Iris.pmml";            
  
- //Create instance for PMMLDocument            
- PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);            
+//Create instance for PMMLDocument            
+PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);            
  
- //Create instance for NaiveBayesModelEvaluator            
- NaiveBayesModelEvaluator naiveBayes = new NaiveBayesModelEvaluator(pmmlDocument);            
+//Create instance for NaiveBayesModelEvaluator            
+NaiveBayesModelEvaluator naiveBayes = new NaiveBayesModelEvaluator(pmmlDocument);            
  
- //Gets the predicted result            
- PredictedResult predictedResult = naiveBayes.GetResult(anonymousType, null);            
- naiveBayes.Dispose();            
+//Gets the predicted result            
+PredictedResult predictedResult = naiveBayes.GetResult(anonymousType, null);            
+naiveBayes.Dispose();            
  
- //Displays the predicted result            
- Console.WriteLine(predictedResult.PredictedValue);
- 
-{% endhighlight %}
+//Displays the predicted result            
+Console.WriteLine(predictedResult.PredictedValue);
 
-{% highlight text %}
+
+//Output
 
 Output: Virginica
 The predicted output (Virginica) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal - width and length, the iris species is more likely to be Virginica.
 
 {% endhighlight %}
-
-{% endtabs %}  
 
 ### Classification and Regression Tree Model Evaluator
 
@@ -387,9 +365,7 @@ Consider the Iris dataset taken from the "datasets" R package. Created here is a
 
 The following code example illustrates the procedure to call TreeModel evaluator directly without the help of PMMLEvaluatorFactory.
 
-{% tabs %} 
-
-{% highlight r %}
+{% highlight c# %}
 
 //Sample values are passed as anonymous type            
 var anonymousType = new            
@@ -414,16 +390,13 @@ treeEvaluator.Dispose();
 //Displays the predicted result            
 Console.WriteLine(predictedResult.PredictedValue);           
 
-{% endhighlight %}
 
-{% highlight text %}
+//Output
 
 Output: Versicolor
 The predicted output (Versicolor) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal width and length, the iris species is more likely to be Versicolor.
 
 {% endhighlight %}
-
-{% endtabs %}  
 
 ### Support Vector Machine Model Evaluator
 
@@ -459,44 +432,38 @@ Consider the Iris dataset taken from the "datasets" R package. Created here is a
 
 The following code example illustrates the procedure to call Support Vector Machine model evaluator directly without the help of PMMLEvaluatorFactory.
 
-
-{% tabs %}  
-
-{% highlight r %}
+{% highlight c# %}
 
 //Sample values are passed as anonymous type            
 var anonymousType = new            
 {               
- SepalLength = 5.1,               
- SepalWidth = 3.8,                
- PetalLength = 1.6,                
- PetalWidth = 0.2            
- };            
- string pmmlFilePath = "../../Iris Sigmoid.pmml";           
+SepalLength = 5.1,               
+SepalWidth = 3.8,                
+PetalLength = 1.6,                
+PetalWidth = 0.2            
+};            
+string pmmlFilePath = "../../Iris Sigmoid.pmml";           
 
- //Create instance for PMML Document            
- PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);           
+//Create instance for PMML Document            
+PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);           
 
- //Create instance for SupportVectorMachine model            
- SupportVectorMachineModelEvaluator supportVector = new SupportVectorMachineModelEvaluator(pmmlDocument);            
+//Create instance for SupportVectorMachine model            
+SupportVectorMachineModelEvaluator supportVector = new SupportVectorMachineModelEvaluator(pmmlDocument);            
  
- //Gets the predicted result           
- PredictedResult predictedResult = supportVector.GetResult(anonymousType, null);           
- supportVector.Dispose();            
+//Gets the predicted result           
+PredictedResult predictedResult = supportVector.GetResult(anonymousType, null);           
+supportVector.Dispose();            
  
- //Displays the predicted result            
- Console.WriteLine(predictedResult.PredictedValue);
- 
-{% endhighlight %}
+//Displays the predicted result            
+Console.WriteLine(predictedResult.PredictedValue);
 
-{% highlight text %}
+
+//Output
 
 Output: Setosa
 The predicted output (Setosa) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal - width and length, the iris species is more likely to be Setosa.
 
 {% endhighlight %}
-
-{% endtabs %}  
 
 ### Mining Model or Random Forest Evaluator
 
@@ -536,43 +503,38 @@ Consider the Iris dataset taken from the "datasets" R package. Created here is a
 
 The following code example illustrates the procedure to call Mining Model Evaluator directly without the help of PMMLEvaluatorFactory.
 
-{% tabs %}  
-
-{% highlight r %}
+{% highlight c# %}
 
 //Sample values are passed as anonymous type           
- var anonymousType = new            
- {                
- SepalLength = 6.8,                
- SepalWidth = 3,               
- PetalLength = 5.5,               
- PetalWidth = 2.1            
- };            
- string pmmlFilePath = "../../Iris.pmml";            
+var anonymousType = new            
+{                
+SepalLength = 6.8,                
+SepalWidth = 3,               
+PetalLength = 5.5,               
+PetalWidth = 2.1            
+};            
+string pmmlFilePath = "../../Iris.pmml";            
  
- //Create instance for PMML Document            
- PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);            
+//Create instance for PMML Document            
+PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);            
  
- //Create instance for Mining model            
- MiningModelEvaluator miningModel = new MiningModelEvaluator(pmmlDocument);            
+//Create instance for Mining model            
+MiningModelEvaluator miningModel = new MiningModelEvaluator(pmmlDocument);            
  
- //Gets the predicted result            
- PredictedResult predictedResult = miningModel.GetResult(anonymousType, null);
- miningModel.Dispose();            
+//Gets the predicted result            
+PredictedResult predictedResult = miningModel.GetResult(anonymousType, null);
+miningModel.Dispose();            
  
- //Displays the predicted result            
- Console.WriteLine(predictedResult.PredictedValue);
- 
-{% endhighlight %}
+//Displays the predicted result            
+Console.WriteLine(predictedResult.PredictedValue);
 
-{% highlight text %}
+
+//Output
 
 Output: Virginica
 The predicted output (Virginica) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal width and length, the iris species is more likely to be Virginica.
 
 {% endhighlight %}
-
-{% endtabs %}  
 
 ### Neural Network Model Evaluator
 
@@ -608,10 +570,7 @@ Consider the Iris dataset taken from the "datasets" R package. Created here is a
 
 The following code example illustrates the procedure to call Neural Network Model Evaluator directly without the help of PMMLEvaluatorFactory.
 
-{% tabs %} 
-
-{% highlight r %}
-
+{% highlight c# %}
 
 //Sample values are passed as anonymous type            
 var anonymousType = new            
@@ -636,16 +595,13 @@ neuralNetworkModel.Dispose();
 //Displays the predicted result            
 Console.WriteLine(predictedResult.PredictedValue);
 
+
+//Output
+
+Output: Versicolor
+The predicted output (Versicolor) obtained from PMML Execution engine provides a clear picture that is based on given sepal and petal width and length, the iris species is more likely to be Versicolor.
+
 {% endhighlight %}
-
-{% highlight text %}
-
- Output: Versicolor
- The predicted output (Versicolor) obtained from PMML Execution engine provides a clear picture that is based on given sepal and petal width and length, the iris species is more likely to be Versicolor.
-
-{% endhighlight %}
-
-{% endtabs %}  
  
  
 ### Clustering Model Evaluator
@@ -682,9 +638,7 @@ Consider the Iris dataset taken from the "datasets" R package. Created here is a
 
 The following code example illustrates the procedure to call Clustering Model Evaluator directly without the help of PMMLEvaluatorFactory.
 
-{% tabs %}    
-
-{% highlight r %}
+{% highlight c# %}
 
 //Sample values are passed as anonymous type            
 var anonymousType = new            
@@ -696,29 +650,26 @@ PetalWidth = 1.8
 };            
 string pmmlFilePath = "../../Iris.pmml";           
 
- //Create instance for PMML Document            
- PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);            
+//Create instance for PMML Document            
+PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);            
  
- //Create instance for Mining model            
- ClusteringModelEvaluator clusteringModel = new ClusteringModelEvaluator (pmmlDocument);            
+//Create instance for Mining model            
+ClusteringModelEvaluator clusteringModel = new ClusteringModelEvaluator (pmmlDocument);            
  
- //Gets the predicted result            
- PredictedResult predictedResult = clusteringModel.GetResult(anonymousType, null);
- clusteringModel.Dispose();           
+//Gets the predicted result            
+PredictedResult predictedResult = clusteringModel.GetResult(anonymousType, null);
+clusteringModel.Dispose();           
 
- //Displays the predicted result            
- Console.WriteLine(predictedResult.PredictedValue);
- 
-{% endhighlight %}
+//Displays the predicted result            
+Console.WriteLine(predictedResult.PredictedValue);
 
-{% highlight text %}
+
+//Output
 
 Output: 2
 The predicted output (2) obtained from PMML Execution engine gives us a clear picture that based on given sepal and petal width and length, the iris species is more likely belongs to the Cluster 2.
 
 {% endhighlight %}
-
-{% endtabs %}
 
 ### Association Rules Model Evaluator
 
@@ -754,9 +705,7 @@ Consider the Groceries dataset taken from the "arules" R package. An Association
 
 The following code example illustrates the procedure to call Association rules model evaluator directly without the help of PMMLEvaluatorFactory.
 
-{% tabs %}  
-
-{% highlight r %}
+{% highlight c# %}
            
 //Sample input items is passed as list of string            
 List<string> input = null;            
@@ -766,33 +715,34 @@ input.Add(“margarine”);
 input.Add(“ready soups”);            
 string pmmlFilePath = "../../Groceries.pmml";           
 
- //Create instance for PMMLDocument            
- PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);            
+//Create instance for PMMLDocument            
+PMMLDocument pmmlDocument = new PMMLDocument(pmmlFilePath);            
  
- //Create instance for AssociationRulesModelEvaluator            
- AssociationRulesModelEvaluator associationRules = new AssociationRulesModelEvaluator(pmmlDocument);            
+//Create instance for AssociationRulesModelEvaluator            
+AssociationRulesModelEvaluator associationRules = new AssociationRulesModelEvaluator(pmmlDocument);            
  
- //Gets the predicted result            
- PredictedResult predictedResult = associationRules.GetResult(input, null);            
- associationRules.Dispose();            
- string[] recommendations = predictedResult.GetRecommendations();            
- string[] exclusiveRecommendations = predictedResult.GetExclusiveRecommendations();            
- string[] ruleAssociations = predictedResult.GetRuleAssociations();            
+//Gets the predicted result            
+PredictedResult predictedResult = associationRules.GetResult(input, null);            
+associationRules.Dispose();            
+string[] recommendations = predictedResult.GetRecommendations();            
+string[] exclusiveRecommendations = predictedResult.GetExclusiveRecommendations();            
+string[] ruleAssociations = predictedResult.GetRuleAssociations();            
  
- //Displays the recommended results            
- Console.WriteLine(“Recommendations: [” + string.Join(“,”,recommendations) + “]”);            
- Console.WriteLine(“ExclusiveRecommendations: [” + string.Join(“,”,exclusiveRecommendations) + “]”);           
- Console.WriteLine(“RuleAssociations: [” + string.Join(“,”,ruleAssociations) + “]”);
+//Displays the recommended results            
+Console.WriteLine(“Recommendations: [” + string.Join(“,”,recommendations) + “]”);            
+Console.WriteLine(“ExclusiveRecommendations: [” + string.Join(“,”,exclusiveRecommendations) + “]”);           
+Console.WriteLine(“RuleAssociations: [” + string.Join(“,”,ruleAssociations) + “]”);
 
- {% endhighlight %}
 
-{% highlight text %}
+//Output
 
-Output: Recommendations: [whole milk,rolls/buns,other vegetables,yogurt]ExclusiveRecommendations: [whole milk,rolls/buns,other vegetables,yogurt]RuleAssociations: []The Recommendations, ExclusiveRecommendations and RuleAssociations above obtained from PMML Execution engine gives us a clear picture that based on given input items association rules suggests the recommendations that are often bought together during a shopping session.
+Output: Recommendations: [whole milk,rolls/buns,other vegetables,yogurt]
+ExclusiveRecommendations: [whole milk,rolls/buns,other vegetables,yogurt]
+RuleAssociations: []
+The Recommendations, ExclusiveRecommendations and RuleAssociations above obtained from PMML Execution engine gives us a clear picture that based on given input items association rules suggests the recommendations that are often bought together during a shopping session.
 
 {% endhighlight %}
-
-{% endtabs %}  
+ 
 
 ### K-Nearest Neighbors Model Evaluator
 
@@ -821,9 +771,7 @@ Consider the Tips dataset taken from the “reshape2” R package that has infor
 
 The following code example illustrates the procedure to call K-Nearest Neighbor model evaluator directly without the help of PMMLEvaluatorFactory.
 
-{% tabs %}  
-
-{% highlight r %}
+{% highlight c# %}
            
 //Sample values are passed as anonymous type          
 var anonymousType = new
@@ -850,16 +798,13 @@ knnModel.Dispose();
 //Displays the predicted result            
 Console.WriteLine(predictedResult.PredictedValue);
 
-{% endhighlight %}
 
-{% highlight text %}
+//Output
 
 Output: 2.67
 The predicted output (2.67) obtained from PMML Execution engine gives us a clear picture that based on given information (independant variables), the waiter may get a tip of $2.67. Here we considered the independent variables(total_bill,sex,smoker,day,time,size) and by using these independent variables we can find the result of dependent variable (tip) which is mentioned above.
 
 {% endhighlight %}
-
-{% endtabs %}  
 
 ## PMMLDocument
 
@@ -973,23 +918,22 @@ Releases the memory occupied by objects</td></tr>
 The following code example illustrates you on how the PMML file is loaded. Here the input file path is read in string format.
 
 
-{% highlight r %}
+{% highlight c# %}
 
 //Gets the filepath of the PMML file as String
 
-    string PmmlFilePath = "../../Iris.pmml";
+string PmmlFilePath = "../../Iris.pmml";
 
-    PMMLDocument pmmlDocument = new PMMLDocument();
+PMMLDocument pmmlDocument = new PMMLDocument();
 
-    pmmlDocument.OpenPMMLDocument(PmmlFilePath);
+pmmlDocument.OpenPMMLDocument(PmmlFilePath);
 
 
+//Filepath directly passed to its instance 
 
-    //Filepath directly passed to its instance 
+string PmmlFilePath = "../../Iris.pmml";
 
-    string PmmlFilePath = "../../Iris.pmml";
-
-    PMMLDocument pmmlDocument = new PMMLDocument(PmmlFilePath);
+PMMLDocument pmmlDocument = new PMMLDocument(PmmlFilePath);
 
 pmmlDocument.Dispose();
 
@@ -998,60 +942,58 @@ pmmlDocument.Dispose();
 
 The following code example illustrates you the same method OpenPMMLDocument but the file path is in stream type.
 
-{% highlight r %}
+{% highlight c# %}
 
 
-// Gets the Stream filepath of the PMML file 
+//Gets the Stream filepath of the PMML file 
 
-    string PmmlFilePath = "../../Iris.pmml";
+string PmmlFilePath = "../../Iris.pmml";
 
-    PMMLDocument pmmlDocument = new PMMLDocument();
+PMMLDocument pmmlDocument = new PMMLDocument();
 
-    FileStream pmmlStream = File.Open(PmmlFilePath, FileMode.Open, FileAccess.Read);
+FileStream pmmlStream = File.Open(PmmlFilePath, FileMode.Open, FileAccess.Read);
 
-    pmmlDocument.OpenPMMLDocument(pmmlStream);
+pmmlDocument.OpenPMMLDocument(pmmlStream);
 
 
+//Filestream directly passed to the Instance of PMMLDocument
 
-    //Filestream directly passed to the Instance of PMMLDocument
+string PmmlFilePath = "../../Iris.pmml";
 
-    string PmmlFilePath = "../../Iris.pmml";
+FileStream pmmlStream = File.Open(PmmlFilePath, FileMode.Open, FileAccess.Read);
 
-    FileStream pmmlStream = File.Open(PmmlFilePath, FileMode.Open, FileAccess.Read);
+PMMLDocument pmmlDocument = new PMMLDocument(pmmlStream);
 
-    PMMLDocument pmmlDocument = new PMMLDocument(pmmlStream);
-
-	pmmlDocument.Dispose();
+pmmlDocument.Dispose();
 	
 {% endhighlight %}
 
 
 The following code example illustrates you the same method OpenPMMLDocument but the file is in text reader type.
 
-{% highlight r %}
+{% highlight c# %}
 
 
-// Gets the text of the PMML file 
+//Gets the text of the PMML file 
 
-    string PmmlFilePath = "../../Iris.pmml";
+string PmmlFilePath = "../../Iris.pmml";
 
-    PMMLDocument pmmlDocument = new PMMLDocument();
+PMMLDocument pmmlDocument = new PMMLDocument();
 
-    TextReader pmmlText = new StringReader(File.ReadAllText(PmmlFilePath));
+TextReader pmmlText = new StringReader(File.ReadAllText(PmmlFilePath));
 
-    pmmlDocument.OpenPMMLDocument(pmmlText);
+pmmlDocument.OpenPMMLDocument(pmmlText);
 
 
+//TextReader directly passed to the Instance of PMMLDocument
 
-    //TextReader directly passed to the Instance of PMMLDocument
+string PmmlFilePath = "../../Iris.pmml";
 
-    string PmmlFilePath = "../../Iris.pmml";
+TextReader pmmlText = new StringReader(File.ReadAllText(PmmlFilePath));
 
-    TextReader pmmlText = new StringReader(File.ReadAllText(PmmlFilePath));
+PMMLDocument pmmlDocument = new PMMLDocument(pmmlText);
 
-    PMMLDocument pmmlDocument = new PMMLDocument(pmmlText);
-
-	pmmlDocument.Dispose();
+pmmlDocument.Dispose();
 	
 {% endhighlight %}
 
@@ -1141,9 +1083,7 @@ Gets the traverse path (node IDs) of predicted node</td></tr>
 
 The following code example illustrates you on how to retrieve the predicted node ID from the predicted result,
 
-{% tabs %} 
-
-{% highlight r %}
+{% highlight c# %}
 
 //Sample values are passed as anonymous type            
 var anonymousType = new            
@@ -1165,8 +1105,7 @@ TreeModelEvaluator treeEvaluator = new TreeModelEvaluator(pmmlDocument);
 PredictedResult predictedResult = treeEvaluator.GetResult(anonymousType, null);   
 
 // Gets the tree model result
-TreeModelResult treeModelResult = ((TreeModelResult)predictedResult);
-         
+TreeModelResult treeModelResult = ((TreeModelResult)predictedResult);         
 treeEvaluator.Dispose();            
 
 //Displays the predicted node ID 
@@ -1175,15 +1114,12 @@ Console.WriteLine("Predicted Node: " +treeModelResult.PredictedNodeID);
 //Displays the traverse path of predicted node
 Console.WriteLine("Traverse Path: " +treeModelResult.Path);      
 
+
+//Output
+
+Output: Predicted Node: 6, Traverse Path: 1,3,6
+
 {% endhighlight %}
-
-{% highlight text %}
-
-Output: Predicted Node: 6  Traverse Path: 1,3,6
-
-{% endhighlight %}
-
-{% endtabs %}  
 
 ### AssociationModelResult
 
@@ -1204,9 +1140,7 @@ Get the recommended items and its confidence values</td></tr>
 
 The following code example illustrates you on how to retrieve the confidence values from the predicted result,
 
-{% tabs %}  
-
-{% highlight r %}
+{% highlight c# %}
            
 //Sample input items is passed as list of string            
 List<string> input = new List<string>();            
@@ -1225,10 +1159,10 @@ AssociationRulesModelEvaluator associationRules = new AssociationRulesModelEvalu
 //Gets the predicted result            
 PredictedResult predictedResult = associationRules.GetResult(input, null); 
 
-// Gets the Assocaition rule model result
-AssociationModelResult associationModelResult = (AssociationModelResult)predictedResult;
- 
+//Gets the Assocaition rule model result
+AssociationModelResult associationModelResult = (AssociationModelResult)predictedResult; 
 associationRules.Dispose();            
+
 Dictionary<string, decimal> recommendationConfidences = associationModelResult.GetConfidences(RecommendationType.Recommendation);
 Dictionary<string, decimal> exclusiveRecommendationConfidences = associationModelResult.GetConfidences(RecommendationType.ExclusiveRecommendation);
 Dictionary<string, decimal> ruleAssociationConfidences = associationModelResult.GetConfidences(RecommendationType.RuleAssociation);  
@@ -1238,17 +1172,14 @@ Console.WriteLine(“Recommendations: [” + string.Join(", ", recommendationCon
 Console.WriteLine(“ExclusiveRecommendations: [” + string.Join(", ", exclusiveRecommendationConfidences.Select(m => m.Key + ":" + m.Value).ToArray()) + “]”);           
 Console.WriteLine(“RuleAssociations: [” + string.Join(", ", ruleAssociationConfidences.Select(m => m.Key + ":" + m.Value).ToArray()) + “]”);
 
-{% endhighlight %}
 
-{% highlight text %}
+//Output
 
 Output: Recommendations: [whole milk:0.413194444444444, rolls/buns:0.251736111111111, other vegetables:0.348894348894349, yogurt:0.261670761670762]
 ExclusiveRecommendations: [whole milk:0.413194444444444, rolls/buns:0.251736111111111, other vegetables:0.348894348894349, yogurt:0.261670761670762]
 RuleAssociations: [] 
 
 {% endhighlight %}
-
-{% endtabs %}  
 
 ## Prediction Sensitivity in Binomial Classification
 
@@ -1277,9 +1208,7 @@ BinomialThreshold to 1</td></tr>
 
 The following code example illustrates the procedure to call General Regression Model Evaluator by passing the binomial threshold value in GeneralRegressionOptions.
 
-{% tabs %}  
-
-{% highlight r %}
+{% highlight c# %}
 
 var iris = new            
 {                
@@ -1293,27 +1222,28 @@ generalRegressionOptions.BinomialThreshold = 0.8;
 
 //Get predicted result with Binomial Threshold = 0.8            
 PredictedResult predictedResult = PMMLEvaluator.GetResult(iris, generalRegressionOptions);           
- string[] fieldNames = predictedResult.GetPredictedCategories();            
- for (int i = 0; i < fieldNames.Length; i++)            
- {               
- Console.WriteLine(string.Format("The probability of {0}({1}) is {2}",  fieldNames[i], fieldNames[i] == "0" ? "not versicolor" : "versicolor",
- predictedResult.GetPredictedProbability(fieldNames[i])));     
- }            
- Console.WriteLine(string.Format("The PredictedResult with Binomial threshold value (0.8) is {0} ({1})",               
- predictedResult.PredictedValue, predictedResult.PredictedValue.ToString() == "0" ? "not versicolor" : "versicolor"));           
- generalRegressionOptions.BinomialThreshold = 0.2;            
+string[] fieldNames = predictedResult.GetPredictedCategories();            
+for (int i = 0; i < fieldNames.Length; i++)            
+{               
+Console.WriteLine(string.Format("The probability of {0}({1}) is {2}",  fieldNames[i], fieldNames[i] == "0" ? "not versicolor" : "versicolor",
+predictedResult.GetPredictedProbability(fieldNames[i])));     
+}            
+Console.WriteLine(string.Format("The PredictedResult with Binomial threshold value (0.8) is {0} ({1})",               
+predictedResult.PredictedValue, predictedResult.PredictedValue.ToString() == "0" ? "not versicolor" : "versicolor"));           
+generalRegressionOptions.BinomialThreshold = 0.2;            
  
- //Get predicted result with Binomial Threshold = 0.2            
- predictedResult = PMMLEvaluator.GetResult(iris, generalRegressionOptions);            
- Console.WriteLine(string.Format("The PredictedResult with Binomial threshold value (0.2) is {0} ({1})",               
- predictedResult.PredictedValue, predictedResult.PredictedValue.ToString() == "0" ? "not versicolor" : "versicolor"));
+//Get predicted result with Binomial Threshold = 0.2            
+predictedResult = PMMLEvaluator.GetResult(iris, generalRegressionOptions);            
+Console.WriteLine(string.Format("The PredictedResult with Binomial threshold value (0.2) is {0} ({1})",               
+predictedResult.PredictedValue, predictedResult.PredictedValue.ToString() == "0" ? "not versicolor" : "versicolor"));
 
- {% endhighlight %}
 
-{% highlight text %}
+//Output
 
-Output:The probability of 0 (not versicolor) is 0.424140583239206The probability of 1 (versicolor) is 0.575859416760794The PredictedResult with Binomial threshold value (0.8) is 0 (not versicolor)The PredictedResult with Binomial threshold value (0.2) is 1 (versicolor)When Threshold value = 0.8Here the probability value of 1 (versicolor) is 0.5758 which is less than our binomial threshold value (0.8) so the predicted result with binomial threshold value 0.8 is 0 (i.e.) not versicolor.When Threshold value = 0.2Here the probability value of 1 (versicolor)  is 0.5758 which is greater than our binomial threshold value (0.2) so the predicted result with binomial threshold value 0.2 is 1 (i.e.) versicolor.
+Output: The probability of 0 (not versicolor) is 0.424140583239206
+The probability of 1 (versicolor) is 0.575859416760794
+The PredictedResult with Binomial threshold value (0.8) is 0 (not versicolor) and the PredictedResult with Binomial threshold value (0.2) is 1 (versicolor).
+When threshold value = 0.8, the probability value of 1 (versicolor) is 0.5758 which is less than our binomial threshold value (0.8) so the predicted result with binomial threshold value 0.8 is 0 (i.e.) not versicolor.
+When threshold value = 0.2, the probability value of 1 (versicolor) is 0.5758 which is greater than our binomial threshold value (0.2) so the predicted result with binomial threshold value 0.2 is 1 (i.e.) versicolor.
 
 {% endhighlight %}
-
-{% endtabs %}  
