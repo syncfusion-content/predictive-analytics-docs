@@ -19,7 +19,7 @@ The following assemblies need to be referenced in your application for the usage
 <th> Assembly</th>
 </tr>
 <tr>
-<td> WPF, ASP. NET, ASP. NET MVC, Windows Forms<br/></td>
+<td> WPF, ASP.NET, ASP.NET MVC, ASP.NET Core, Windows Forms<br/></td>
 <td> Syncfusion.PMML.Base</td>
 </tr>
 <tr>
