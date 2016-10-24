@@ -11,7 +11,7 @@ documentation: ug
 
 This section provides you the basic information about getting started with predictive analytics, that is, how to create a model in R, generate a PMML file and finally, how to deploy it in a .NET application using the PMML Execution Engine.
 
-Several samples are included with the product. Each sample contains R code that builds models from training data and serializes the model to PMML. The PMML file is also included for runtime use. C# code demonstrates consuming the PMML file using the PMML engine. The samples can be run by using the sample browser interface provided for several platforms including ASP.NET, MVC,  Windows Forms, UWP, WinRT and WPF. The individual samples can also be directly accessed from the following location, assuming it is the default install location. _%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics (assuming default install location)._
+Several samples are included with the product. Each sample contains R code that builds models from training data and serializes the model to PMML. The PMML file is also included for runtime use. C# code demonstrates consuming the PMML file using the PMML engine. The samples can be run by using the sample browser interface provided for several platforms including ASP.NET, ASP.NET Core, ASP.NET MVC, Windows Forms, UWP, WinRT and WPF. The individual samples can also be directly accessed from the following location, assuming it is the default install location. _%LOCALAPPDATA%\Syncfusion\EssentialStudio\%version%\Common\Analytics (assuming default install location)._
 
 ## Getting Started with R
 
