@@ -142,11 +142,7 @@ The first step is to create a full regression model, just like you did for simul
 21. See the Regression Modeling Strategies package rms for one excellent example. 
 22. That line is from page 185 of Norman Cliff’s 1987 book, _Analyzing Multivariate Data_. Similar sentiments are expressed by Bruce Thompson in his 1998 talk “Five Methodology Errors in Educational Research: The Pantheon of Statistical Significance and Other Faux Pas,” that lists stepwise methods as Error #1 (see 
 
-[http://people.cehd.tamu.edu/~bthompson/aeraaddr.htm](http://people.cehd.tamu.edu/~bthompson/aeraaddr.htm)[)](http://people.cehd.tamu.edu/~bthompson/aeraaddr.htm), or his 1989 journal editorial entitled “Why won't stepwise 
-
-methods die?” in _Measurement and Evaluation in Counseling and Development_ (see 
-
-[http://myweb.brooklyn.liu.edu/cortiz/PDF%20Files/Why%20Wont%20Stepwise%20Methods%20Die.pdf)](http://myweb.brooklyn.liu.edu/cortiz/PDF%20Files/Why%20Wont%20Stepwise%20Methods%20Die.pdf). In simpler terms: analysts beware. 
+[http://people.cehd.tamu.edu/~bthompson/aeraaddr.htm](http://people.cehd.tamu.edu/~bthompson/aeraaddr.htm)[)](http://people.cehd.tamu.edu/~bthompson/aeraaddr.htm). In simpler terms: analysts beware. 
 
 
 
