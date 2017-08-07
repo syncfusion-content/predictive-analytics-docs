@@ -40,7 +40,7 @@ Operating Systems</td><td>
 <tr>
 <td>
 PMML Versions</td><td>
-<br>PMML version 4.1<br>PMML version 4.2<br>PMML version 4.2.1</td></tr>
+<br>PMML version 4.1<br>PMML version 4.2<br>PMML version 4.2.1<br>PMML version 4.3</td></tr>
 </table>
 
 
