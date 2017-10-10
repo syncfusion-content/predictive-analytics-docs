@@ -1,6 +1,6 @@
 node('content')
 { 
-String platform='';
+String platform='Predictive Analytics';
    try
 	{   
 		//Clone scm repository in Workspace source directory
