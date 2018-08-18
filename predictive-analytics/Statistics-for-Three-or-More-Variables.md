@@ -142,7 +142,7 @@ The first step is to create a full regression model, just like you did for simul
 21. See the Regression Modeling Strategies package rms for one excellent example. 
 22. That line is from page 185 of Norman Cliff’s 1987 book, _Analyzing Multivariate Data_. Similar sentiments are expressed by Bruce Thompson in his 1998 talk “Five Methodology Errors in Educational Research: The Pantheon of Statistical Significance and Other Faux Pas,” that lists stepwise methods as Error #1 (see 
 
-[http://people.cehd.tamu.edu/~bthompson/aeraaddr.htm](http://people.cehd.tamu.edu/~bthompson/aeraaddr.htm)[)](http://people.cehd.tamu.edu/~bthompson/aeraaddr.htm). In simpler terms: analysts beware. 
+[https://eric.ed.gov/?id=ED419023](https://eric.ed.gov/?id=ED419023)[)](https://eric.ed.gov/?id=ED419023). In simpler terms: analysts beware. 
 
 
 
@@ -172,6 +172,7 @@ Multiple R-squared:  0.9909, Adjusted R-squared:  0.9897
 
 F-statistic: 806.1 on 5 and 37 DF,  p-value: < 2.2e-16 
 {% endhighlight %}
+
 Using a stepwise regression model with backwards removal, the predictive ability or R2 is still 99%. Only five variables remained in the model and, as with the simultaneous entry model, physical ability is still the single biggest contributor. 
 
 A more common approach to stepwise regression is forward selection that starts with no variables and then adds them one at a time when they make statistically significant contributions to predictive ability. This approach is slightly more complicated in R because it requires the creation of a “minimal” model with nothing more than the intercept that is the mean score on the outcome variable. This model is created by using the number 1 as the only predictor variable in the equation. Then the step() function is called again, with the minimal model as the starting point and direction = "forward" as one of the attributes. The possible variables to include are listed in scope. Finally, trace = 0 prevents the intermediate steps from being printed. 
