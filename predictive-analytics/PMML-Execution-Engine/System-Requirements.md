@@ -11,7 +11,7 @@ documentation: ug
 
 The following topic describes the system requirements needed by Syncfusion PMML Execution Engine.
 
-## Supported Operating Systems
+## Operating Systems
 
 Syncfusion PMML Execution Engine can be installed on any of the following operating systems:
 

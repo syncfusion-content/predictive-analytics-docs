@@ -9,7 +9,7 @@ documentation: ug
 
 # Installation and Upgrade
 
-You can refer to the following topics in the Common UG for step-by-step installation procedure and upgrade from one version to another version or upgrade from major version to service pack version of PMML Execution Engine. 
+You can refer to the following topics in the Common UG for step-by-step installation procedure, upgrade from one version to another version and upgrade from major version to service pack version of PMML Execution Engine. 
 
 [Installation](https://help.syncfusion.com/common/essential-studio/installation/)
 
