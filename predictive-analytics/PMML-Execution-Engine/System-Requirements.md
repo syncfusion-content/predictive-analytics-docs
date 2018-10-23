@@ -9,7 +9,7 @@ documentation: ug
 
 # System Requirements
 
-This section explains you the requirements that are mandatory for using PMML Execution Engine. It also lists operating systems and IDEâ€™s compatible with the product.
+This section explains you the requirements that are mandatory for using PMML Execution Engine. It also lists operating systems and IDE’s compatible with the product.
 
 ## Prerequisites
 
