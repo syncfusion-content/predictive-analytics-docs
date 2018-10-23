@@ -27,8 +27,8 @@ Supported IDEs</td><td>
 <br>.NET 4.6<br>.NET 4.5.1<br>.NET 4.5<br>.NET 4.0<br>.NET 3.5</td></tr>
 <tr>
 <td>
-.NET Core SDK</td><td>
-<br>.NET Core SDK - 1.0.1 or above</td></tr>
+.NET Core</td><td>
+<br>You can find the prerequisites for .NET Core [here](https://help.syncfusion.com/common/essential-studio/system-requirements#aspnet-core-essential-js1)</td></tr>
 </table>
 
 
