@@ -35,3 +35,14 @@ The following assemblies need to be referenced in your application for the usage
 <td> Syncfusion.PMML.UWP</td>
 </tr>
 </table>
+
+## PMML Compatibility
+
+The compatibility details of PMML are as follows:
+
+<table>
+<tr>
+<td>
+PMML Versions</td><td>
+PMML version 4.1<br>PMML version 4.2<br>PMML version 4.2.1<br>PMML version 4.3</td></tr>
+</table>
