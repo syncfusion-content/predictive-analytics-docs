@@ -38,11 +38,9 @@ The following assemblies need to be referenced in your application for the usage
 
 ## PMML Compatibility
 
-The compatibility details of PMML are as follows:
+The compatible PMML versions are as follows:
 
-<table>
-<tr>
-<td>
-PMML Versions</td><td>
-PMML version 4.1<br>PMML version 4.2<br>PMML version 4.2.1<br>PMML version 4.3</td></tr>
-</table>
+* PMML version 4.1
+* PMML version 4.2
+* PMML version 4.2.1
+* PMML version 4.3
