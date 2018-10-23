@@ -28,7 +28,7 @@ Visual Studio 2017<br>Visual Studio 2015<br>Visual Studio 2013<br>Visual Studio 
 <tr>
 <td>
 .NET Core</td><td>
-You can find the prerequisites for .NET Core [here](https://help.syncfusion.com/common/essential-studio/system-requirements#aspnet-core-essential-js1)</td></tr>
+https://help.syncfusion.com/common/essential-studio/system-requirements#aspnet-core-essential-js1</td></tr>
 </table>
 
 
