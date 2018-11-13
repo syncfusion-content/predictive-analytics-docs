@@ -587,7 +587,7 @@ To use the topo.colors palette for the six bars, enter the following:
 
 The output of the previous code is shown in the following figure.
 
-![Bar Chart with R palette: topo.colors](Getting-Started-with-R_images/img7.png)
+![Bar Chart with R palette - topo.colors](Getting-Started-with-R_images/img7.png)
 
 Bar Chart with R palette "topo.colors"
 {:.caption}
@@ -613,7 +613,7 @@ All RColorBrewer Palettes
 
 You can get a better view of an individual palette by specifying the palette and the number of colors desired, like this: display.brewer.pal(8, "Accent"). The following figure illustrates this palette. 
 
-![Preview of the RColorBrewer Palette: Accent](Getting-Started-with-R_images/img9.png)
+![Preview of the RColorBrewer Palette - Accent](Getting-Started-with-R_images/img9.png)
 
 Preview of the RColorBrewer Palette “Accent” 
 {:.caption}
