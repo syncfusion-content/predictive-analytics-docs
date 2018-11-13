@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with R | Essential Predictive Analytics | Predictive Analytics | Syncfusion
-description: getting started with r
+title: Getting Started with R | Predictive Analytics | Syncfusion
+description: getting started with r programming language
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug
