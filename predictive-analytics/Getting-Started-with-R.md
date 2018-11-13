@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with R | Essential Predictive Analytics | Predictive Analytics | Syncfusion
-description: getting started with r
+title: Getting Started with R | Predictive Analytics | Syncfusion
+description: getting started with r programming language
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with R
 
-R is a free, open-source statistical programming language. Its utility and popularity show the same explosive growth that characterizes the increasing availability and variety of data. And while the command-line interface of R can be intimidating at first, the strengths of this approach, such as increased ability to share and reproduce analyses, soon become apparent. The following guidelines serve as an introduction to R for those who are intrigued by its possibilities. Chapter 1 lays out the steps for installing R and a companion product, RStudio, for working with variables and data sets, and for discovering the power of the third-party packages that supplement R’s functionality.
+R is a free, open-source statistical programming language. Its utility and popularity show the same explosive growth that characterizes the increasing availability and variety of data. And while the command-line interface of R can be intimidating at first, the strengths of this approach, such as increased ability to share and reproduce analysis, soon become apparent. The following guidelines serve as an introduction to R for those who are intrigued by its possibilities. Chapter 1 lays out the steps for installing R and a companion product, RStudio, for working with variables and data sets, and for discovering the power of the third-party packages that supplement R’s functionality.
 
 ## Installing R 
 
@@ -25,7 +25,7 @@ You should now have a functional copy of R on your computer. When you double-cli
 
 
 
-![](Getting-Started-with-R_images/img1.png)
+![Default Startup Window for R](Getting-Started-with-R_images/img1.png)
 
 Default Startup Window for R
 {:.caption}
@@ -36,7 +36,7 @@ that way. For example, opening Terminal on Mac and typing R at the prompt, gives
 
 
 
-![](Getting-Started-with-R_images/img2.png)
+![Calling R from Command-line](Getting-Started-with-R_images/img2.png)
 
 Calling R from Command-line
 {:.caption}
@@ -61,7 +61,7 @@ When you double-click the RStudio icon, you can see something like the following
 
 
 
-![](Getting-Started-with-R_images/img3.png)
+![Studio Startup Window](Getting-Started-with-R_images/img3.png)
 
 Studio Startup Window
 {:.caption}
@@ -417,7 +417,7 @@ R and its available packages offer a variety of ways to get data into the progra
 
 ## Converting tabular data to row data 
 
-One important question to ask right away is whether your data is in the right format for your analyses. This is most important for categorical data, because it is possible to collapse the data into frequency counts. An excellent example is the built-in R dataset UCBAdmissions. This dataset describes outcomes for graduate admissions at UC Berkeley in 1973. These data are important because they formed the basis of a major discrimination lawsuit. They are also a perfect example of Simpson's Paradox in statistics. Before you take a look at the code, you must know two things.  
+One important question to ask right away is whether your data is in the right format for your analysis. This is most important for categorical data, because it is possible to collapse the data into frequency counts. An excellent example is the built-in R dataset UCBAdmissions. This dataset describes outcomes for graduate admissions at UC Berkeley in 1973. These data are important because they formed the basis of a major discrimination lawsuit. They are also a perfect example of Simpson's Paradox in statistics. Before you take a look at the code, you must know two things.  
 
 First, tabular data are data that can be organized into tables with rows and columns of frequencies. For example, you could create a table that showed the popularity of several Internet browsers. That table would have just one dimension or factor: which browser was installed. You could then add a second dimension that broke down the data by operating system. The browsers would be listed in the columns and the operating systems would be listed in the rows. This would be a two-way table, or cross-tabulation. The numbers in each cell of the table would give you the number of cases that matched that combination of categories, such as the number of Windows PCs running IE or the number of Android tablets running Chrome. It is, of course, possible to add more variables, that would usually be shown as separate panels or tables, each of which would have the same rows and columns. This is also the case in the UCBAdmissions data that is used in this example. The data are arranged in rows and columns, or simply panels, to get “marginal” totals, that are more often just called “marginals.” These marginals are the totals for one or more variables summed across other variables. So, for example, in your hypothetical table of browsers and operating systems, the marginal for browsers would be the total number of installations of each browser, ignoring the operating systems. In a similar manner, the marginals for the operating system give the total number of installations for each OS, ignoring the browser. The marginals are important because they are often of greater interest than the data at maximum dimensionality, that is., where all of the dimensions or factors are broken down to their most detailed level). 
 
@@ -446,7 +446,7 @@ UCBAdmissions  # Prints six tables; one for each department.
 
 This code produces the following figure, an unusual 3-way bar plot. When you want a simple bar chart of the number of people who applied to each of the six departments, this doesn't work. 
 
-![](Getting-Started-with-R_images/img4.jpeg)
+![Default Plot of UCBAdmissions](Getting-Started-with-R_images/img4.jpeg)
 
 Default Plot of UCBAdmissions
 {:.caption}
@@ -479,7 +479,7 @@ round(prop.table(admit.dept), 2)  # Show as proportions w/2 digits round(prop.ta
 
 {%endhighlight%}
 
-However, further analyses need the data to be structured as one row per person. You can do that by converting from a table to a data frame to a list to a data frame.
+However, further analysis need the data to be structured as one row per person. You can do that by converting from a table to a data frame to a list to a data frame.
 
 {%highlight r%}
 
@@ -529,7 +529,7 @@ Default barplot
 {%endhighlight%}
 
 
-![](Getting-Started-with-R_images/img5.png)
+![Bar Chart with default colors](Getting-Started-with-R_images/img5.png)
 
 Bar Chart with default colors
 {:.caption}
@@ -560,7 +560,7 @@ barplot(x, col = rgb(159, 182, 205, max = 255))  # RGB 0-255 barplot(x, col = rg
 
 Any of the previous commands produce the chart in the following figure.
 
-![](Getting-Started-with-R_images/img6.png)
+![Colored Bar Chart](Getting-Started-with-R_images/img6.png)
 
 Colored Bar Chart
 {:.caption}
@@ -587,7 +587,7 @@ To use the topo.colors palette for the six bars, enter the following:
 
 The output of the previous code is shown in the following figure.
 
-![](Getting-Started-with-R_images/img7.png)
+![Bar Chart with R palette - topo.colors](Getting-Started-with-R_images/img7.png)
 
 Bar Chart with R palette "topo.colors"
 {:.caption}
@@ -606,14 +606,14 @@ I encourage you to explore the help information for RColorBrewer by entering hel
 
 This produces the following figure. The overlapping labels are due to the landscape aspect ratio.
 
-![](Getting-Started-with-R_images/img8.png)
+![All RColorBrewer Palettes](Getting-Started-with-R_images/img8.png)
 
 All RColorBrewer Palettes
 {:.caption}
 
 You can get a better view of an individual palette by specifying the palette and the number of colors desired, like this: display.brewer.pal(8, "Accent"). The following figure illustrates this palette. 
 
-![](Getting-Started-with-R_images/img9.png)
+![Preview of the RColorBrewer Palette - Accent](Getting-Started-with-R_images/img9.png)
 
 Preview of the RColorBrewer Palette “Accent” 
 {:.caption}
@@ -630,7 +630,7 @@ barplot(x, col = brewer.pal(6, "Blues"))
 
 This command produces the following figure. 
 
-![](Getting-Started-with-R_images/img10.png)
+![Bar Chart with RColorBrewer Palette](Getting-Started-with-R_images/img10.png)
 
 Bar Chart with RColorBrewer Palette
 {:.caption}
