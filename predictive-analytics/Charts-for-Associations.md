@@ -9,7 +9,7 @@ documentation: ug
 
 # Charts for Associations 
 
-Graphics can provide vital context and insight to the analyses that could be easily lost if the statistical procedures came first. Accordingly, in the guidelines on univariate analyses, you learnt about charts for one variable and then statistics for one variable. Following that pattern, you can learn about bivariate associations, with charts for association, and statistics for association. 
+Graphics can provide vital context and insight to the analysis that could be easily lost if the statistical procedures came first. Accordingly, in the guidelines on univariate analysis, you learnt about charts for one variable and then statistics for one variable. Following that pattern, you can learn about bivariate associations, with charts for association, and statistics for association. 
 
 ## Grouped Bar Charts of Frequencies 
 
@@ -162,7 +162,7 @@ Del Piombo           8      13     16          7      A
 
 {%endhighlight%}
 
-The dataset is well formatted and ready for use with R’s boxplot() function. All that is necessary is to specify the outcome variable and categorizing variable. In this case, these are painters$Expression and painters$School, respectively. 
+The dataset is well formatted and ready for use with R’s box plot() function. All that is necessary is to specify the outcome variable and categorizing variable. In this case, these are painters$Expression and painters$School, respectively. 
 
 {%highlight r%}
 
@@ -173,14 +173,14 @@ The dataset is well formatted and ready for use with R’s boxplot() function. A
 
 {%endhighlight%}
 
-The default boxplot produced by this code is displayed in the following figure.
+The default box plot produced by this code is displayed in the following figure.
 
 ![](Charts-for-Associations_images/img3.png)
 
-Grouped Boxplots- Default Chart
+Grouped Box plots- Default Chart
 {:.caption}
 
-As a chart, the above figure has one glaring omission: the groups do not have meaningful labels. Instead, they are categorized as A, B, C, and so on. This defeats the purpose of the chart. Consequently, it is important to add those labels using the names() attribute. It is also a good idea to add titles, axis labels, and other changes to make the chart both more informative and more attractive. Part of this change involves using the RColorBrewer package to set colors for the boxplots. 
+As a chart, the above figure has one glaring omission: the groups do not have meaningful labels. Instead, they are categorized as A, B, C, and so on. This defeats the purpose of the chart. Consequently, it is important to add those labels using the names() attribute. It is also a good idea to add titles, axis labels, and other changes to make the chart both more informative and more attractive. Part of this change involves using the RColorBrewer package to set colors for the box plots.
 
 {%highlight r%}
 
@@ -203,11 +203,11 @@ As a chart, the above figure has one glaring omission: the groups do not have me
         whisklty = 1,  # Whisker line type; 1 = solid line         staplelty = 0,  # Staple (line at end) type; 0 = none.         outpch = 16,  # Symbols for outliers; 16 = filled circle.         outcol = brewer.pal(8, "Pastel2"),  # Color for outliers.         main = "Expression Ratings of Painters by School                from \"painters\" Data set in \"MASS\" Package",         xlab = "Painter's School",         ylab = "Expression Ratings")
 {%endhighlight%}
 
-Note that there is no + or other line break in main for the title; R observes the break in the code as a typographic instruction. The improved boxplots are shown in the following figure. 
+Note that there is no + or other line break in main for the title; R observes the break in the code as a typographic instruction. The improved box plots are shown in the following figure. 
 
 ![](Charts-for-Associations_images/img4.png)
 
-Grouped Boxplots with Labels and Options
+Grouped Box plots with Labels and Options
 {:.caption}
 
 Once you have saved your work, you should clean the workspace by removing any variables or objects you created. 
@@ -295,7 +295,7 @@ The scatter plot with the added fit lines is shown in the following screenshot.
 Scatter Plot with Linear Regression and Lowess Fit Lines
 {:.caption}
 
-For a final variation on the bivariate scatter plot, you can use the scatterplot() or sp() functions from the coincidentally named car package (that in this case, stands for "Companion to Applied Regression"). This package has many variations on scatter plots. You ca use the package that has marginal boxplots, smoothers, and quantile regression intervals. See help(package = "car") for more information. 
+For a final variation on the bivariate scatter plot, you can use the scatter plot() or sp() functions from the coincidentally named car package (that in this case, stands for "Companion to Applied Regression"). This package has many variations on scatter plots. You ca use the package that has marginal box plots, smoothers, and quantile regression intervals. See help(package = "car") for more information. 
 
 First you can install and load the car package. 
 
@@ -307,7 +307,7 @@ First you can install and load the car package.
  
 {%endhighlight%}
 
-Next, you can call the scatter plot function that can be called with scatterplot() or sp()— with a few attribute arguments to alter the dots and provide titles and labels. Otherwise, the code is closed to the default setup. 
+Next, you can call the scatter plot function that can be called with scatter plot() or sp()— with a few attribute arguments to alter the dots and provide titles and labels. Otherwise, the code is closed to the default setup. 
 
 {%highlight r%}
 
@@ -325,7 +325,7 @@ Next, you can call the scatter plot function that can be called with scatterplot
    
 {%endhighlight%}
 
-The following screenshot shows the resulting chart. The marginal boxplots, smoothers, and quantile regression intervals that are included by default, make this a very information-dense graphic.
+The following screenshot shows the resulting chart. The marginal box plots, smoothers, and quantile regression intervals that are included by default, make this a very information-dense graphic.
 
 ![](Charts-for-Associations_images/img8.png)
 

@@ -832,7 +832,7 @@ Gets the DataDictionary values</td></tr>
 <tr>
 <td>
 SupportVectorMachineModel</td><td>
-Gets the SupportVectorMachineModelelements values</td></tr>
+Gets the SupportVectorMachineModel elements values</td></tr>
 <tr>
 <td>
 TreeModel</td><td>
