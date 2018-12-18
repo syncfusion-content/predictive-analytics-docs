@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Charts for Associations | Essential Predictive Analytics | Predictive Analytics | Syncfusion
+title: Charts for Associations | Predictive Analytics | Syncfusion
 description: charts for associations 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -18,6 +18,7 @@ When a dataset consists of joint categorizations based on two variables, grouped
 ### Sample: sample_6_1.R 
 
 {%highlight r%}
+
 # ENTER DATA  
 
 data1 <- as.matrix(read.table(   # Save as matrix          header = TRUE,  # First row is the header.          row.names = 1,  # First column is row names. 
@@ -41,7 +42,7 @@ The next step is to create the barplot using R’s barplot() function. The most 
 
 # CREATE BARPLOT barplot(data1,  # Use a new summary table.         beside = TRUE,  # Bars side-by-side vs. stacked. 
 
-        col = c("steelblue3", "thistle3"),  # Colors         main = "Side by Side Barplots",         xlab = "Groups",         ylab = "frequency")
+        col = c("steelblue3", "thistle3"),  # Colors         main = "Side by Side Bar plots",         xlab = "Groups",         ylab = "frequency")
 		
 		
 		 
@@ -68,7 +69,7 @@ fill = c("steelblue3", "thistle3"))
 
 The resulting grouped bar plot is shown in the following figure. 
 
-![Bar Chart of Group Means](Charts-for-Associations_images/img1.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img1.png)
 
 Grouped Bar Chart for Frequencies
 {:.caption}
@@ -124,7 +125,7 @@ It is, however, useful to add some options to barplot(), especially to add title
 
 This produces the chart shown in the following figure. 
 
-![Bar Chart of Group Means](Charts-for-Associations_images/img2.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img2.png)
 
 Bar Chart of Group Means
 {:.caption}
@@ -152,7 +153,7 @@ Seventeenth Century; "H": French. These classifications form the basis of the an
 
 # LOAD DATA 
 
-# Use data set "painters" from the package "MASS" require("MASS") data(painters) painters[1:3, ]            Composition Drawing Colour Expression School 
+# Use data set "painters" from the package "MASS" require("MASS") data(painters) painters[1:3, ]            Composition Drawing Color Expression School 
 
 Da Udine            10       8     16          3      A 
 
@@ -162,7 +163,7 @@ Del Piombo           8      13     16          7      A
 
 {%endhighlight%}
 
-The dataset is well formatted and ready for use with R’s box plot() function. All that is necessary is to specify the outcome variable and categorizing variable. In this case, these are painters$Expression and painters$School, respectively. 
+The dataset is well formatted and ready for use with R’s boxplot() function. All that is necessary is to specify the outcome variable and categorizing variable. In this case, these are painters$Expression and painters$School, respectively. 
 
 {%highlight r%}
 
@@ -175,7 +176,7 @@ The dataset is well formatted and ready for use with R’s box plot() function. 
 
 The default box plot produced by this code is displayed in the following figure.
 
-![Bar Chart of Group Means](Charts-for-Associations_images/img3.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img3.png)
 
 Grouped Box plots- Default Chart
 {:.caption}
@@ -205,7 +206,7 @@ As a chart, the above figure has one glaring omission: the groups do not have me
 
 Note that there is no + or other line break in main for the title; R observes the break in the code as a typographic instruction. The improved box plots are shown in the following figure. 
 
-![Bar Chart of Group Means](Charts-for-Associations_images/img4.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img4.png)
 
 Grouped Box plots with Labels and Options
 {:.caption}
@@ -248,7 +249,7 @@ Because the cars dataset contains only two variables speed and dist (i.e., dista
  
 This produces the scatter plot as shown in the following screenshot.
 
-![Bar Chart of Group Means](Charts-for-Associations_images/img5.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img5.png)
 
 Default Scatter Plot with plot()
 {:.caption}
@@ -269,7 +270,7 @@ The above Default Scatter Plot with plot() is adequate, plot() also provides sev
 	 
 The revised scatter plot is shown in the following screenshot. 
 
-![Bar Chart of Group Means](Charts-for-Associations_images/img6.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img6.png)
 
 Revised Scatter plot with plot()
 {:.caption}
@@ -290,7 +291,7 @@ The upward pattern that indicates a positive association between the two variabl
 
 The scatter plot with the added fit lines is shown in the following screenshot. 
 
-![Bar Chart of Group Means](Charts-for-Associations_images/img7.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img7.png)
 
 Scatter Plot with Linear Regression and Lowess Fit Lines
 {:.caption}
@@ -327,7 +328,7 @@ Next, you can call the scatter plot function that can be called with scatter plo
 
 The following screenshot shows the resulting chart. The marginal box plots, smoothers, and quantile regression intervals that are included by default, make this a very information-dense graphic.
 
-![Bar Chart of Group Means](Charts-for-Associations_images/img8.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img8.png)
 
 Scatter Plot created with car Package 
 {:.caption}
