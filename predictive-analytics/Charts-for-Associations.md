@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Charts for Associations | Essential Predictive Analytics | Predictive Analytics | Syncfusion
+title: Charts for Associations | Predictive Analytics | Syncfusion
 description: charts for associations 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -9,7 +9,7 @@ documentation: ug
 
 # Charts for Associations 
 
-Graphics can provide vital context and insight to the analyses that could be easily lost if the statistical procedures came first. Accordingly, in the guidelines on univariate analyses, you learnt about charts for one variable and then statistics for one variable. Following that pattern, you can learn about bivariate associations, with charts for association, and statistics for association. 
+Graphics can provide vital context and insight to the analysis that could be easily lost if the statistical procedures came first. Accordingly, in the guidelines on univariate analysis, you learnt about charts for one variable and then statistics for one variable. Following that pattern, you can learn about bivariate associations, with charts for association, and statistics for association. 
 
 ## Grouped Bar Charts of Frequencies 
 
@@ -18,6 +18,7 @@ When a dataset consists of joint categorizations based on two variables, grouped
 ### Sample: sample_6_1.R 
 
 {%highlight r%}
+
 # ENTER DATA  
 
 data1 <- as.matrix(read.table(   # Save as matrix          header = TRUE,  # First row is the header.          row.names = 1,  # First column is row names. 
@@ -41,7 +42,7 @@ The next step is to create the barplot using R’s barplot() function. The most 
 
 # CREATE BARPLOT barplot(data1,  # Use a new summary table.         beside = TRUE,  # Bars side-by-side vs. stacked. 
 
-        col = c("steelblue3", "thistle3"),  # Colors         main = "Side by Side Barplots",         xlab = "Groups",         ylab = "frequency")
+        col = c("steelblue3", "thistle3"),  # Colors         main = "Side by Side Bar plots",         xlab = "Groups",         ylab = "frequency")
 		
 		
 		 
@@ -68,7 +69,7 @@ fill = c("steelblue3", "thistle3"))
 
 The resulting grouped bar plot is shown in the following figure. 
 
-![](Charts-for-Associations_images/img1.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img1.png)
 
 Grouped Bar Chart for Frequencies
 {:.caption}
@@ -124,7 +125,7 @@ It is, however, useful to add some options to barplot(), especially to add title
 
 This produces the chart shown in the following figure. 
 
-![](Charts-for-Associations_images/img2.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img2.png)
 
 Bar Chart of Group Means
 {:.caption}
@@ -152,7 +153,7 @@ Seventeenth Century; "H": French. These classifications form the basis of the an
 
 # LOAD DATA 
 
-# Use data set "painters" from the package "MASS" require("MASS") data(painters) painters[1:3, ]            Composition Drawing Colour Expression School 
+# Use data set "painters" from the package "MASS" require("MASS") data(painters) painters[1:3, ]            Composition Drawing Color Expression School 
 
 Da Udine            10       8     16          3      A 
 
@@ -173,14 +174,14 @@ The dataset is well formatted and ready for use with R’s boxplot() function. A
 
 {%endhighlight%}
 
-The default boxplot produced by this code is displayed in the following figure.
+The default box plot produced by this code is displayed in the following figure.
 
-![](Charts-for-Associations_images/img3.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img3.png)
 
-Grouped Boxplots- Default Chart
+Grouped Box plots- Default Chart
 {:.caption}
 
-As a chart, the above figure has one glaring omission: the groups do not have meaningful labels. Instead, they are categorized as A, B, C, and so on. This defeats the purpose of the chart. Consequently, it is important to add those labels using the names() attribute. It is also a good idea to add titles, axis labels, and other changes to make the chart both more informative and more attractive. Part of this change involves using the RColorBrewer package to set colors for the boxplots. 
+As a chart, the above figure has one glaring omission: the groups do not have meaningful labels. Instead, they are categorized as A, B, C, and so on. This defeats the purpose of the chart. Consequently, it is important to add those labels using the names() attribute. It is also a good idea to add titles, axis labels, and other changes to make the chart both more informative and more attractive. Part of this change involves using the RColorBrewer package to set colors for the box plots.
 
 {%highlight r%}
 
@@ -203,11 +204,11 @@ As a chart, the above figure has one glaring omission: the groups do not have me
         whisklty = 1,  # Whisker line type; 1 = solid line         staplelty = 0,  # Staple (line at end) type; 0 = none.         outpch = 16,  # Symbols for outliers; 16 = filled circle.         outcol = brewer.pal(8, "Pastel2"),  # Color for outliers.         main = "Expression Ratings of Painters by School                from \"painters\" Data set in \"MASS\" Package",         xlab = "Painter's School",         ylab = "Expression Ratings")
 {%endhighlight%}
 
-Note that there is no + or other line break in main for the title; R observes the break in the code as a typographic instruction. The improved boxplots are shown in the following figure. 
+Note that there is no + or other line break in main for the title; R observes the break in the code as a typographic instruction. The improved box plots are shown in the following figure. 
 
-![](Charts-for-Associations_images/img4.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img4.png)
 
-Grouped Boxplots with Labels and Options
+Grouped Box plots with Labels and Options
 {:.caption}
 
 Once you have saved your work, you should clean the workspace by removing any variables or objects you created. 
@@ -248,7 +249,7 @@ Because the cars dataset contains only two variables speed and dist (i.e., dista
  
 This produces the scatter plot as shown in the following screenshot.
 
-![](Charts-for-Associations_images/img5.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img5.png)
 
 Default Scatter Plot with plot()
 {:.caption}
@@ -269,7 +270,7 @@ The above Default Scatter Plot with plot() is adequate, plot() also provides sev
 	 
 The revised scatter plot is shown in the following screenshot. 
 
-![](Charts-for-Associations_images/img6.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img6.png)
 
 Revised Scatter plot with plot()
 {:.caption}
@@ -290,12 +291,12 @@ The upward pattern that indicates a positive association between the two variabl
 
 The scatter plot with the added fit lines is shown in the following screenshot. 
 
-![](Charts-for-Associations_images/img7.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img7.png)
 
 Scatter Plot with Linear Regression and Lowess Fit Lines
 {:.caption}
 
-For a final variation on the bivariate scatter plot, you can use the scatterplot() or sp() functions from the coincidentally named car package (that in this case, stands for "Companion to Applied Regression"). This package has many variations on scatter plots. You ca use the package that has marginal boxplots, smoothers, and quantile regression intervals. See help(package = "car") for more information. 
+For a final variation on the bivariate scatter plot, you can use the scatter plot() or sp() functions from the coincidentally named car package (that in this case, stands for "Companion to Applied Regression"). This package has many variations on scatter plots. You ca use the package that has marginal box plots, smoothers, and quantile regression intervals. See help(package = "car") for more information. 
 
 First you can install and load the car package. 
 
@@ -307,7 +308,7 @@ First you can install and load the car package.
  
 {%endhighlight%}
 
-Next, you can call the scatter plot function that can be called with scatterplot() or sp()— with a few attribute arguments to alter the dots and provide titles and labels. Otherwise, the code is closed to the default setup. 
+Next, you can call the scatter plot function that can be called with scatter plot() or sp()— with a few attribute arguments to alter the dots and provide titles and labels. Otherwise, the code is closed to the default setup. 
 
 {%highlight r%}
 
@@ -325,9 +326,9 @@ Next, you can call the scatter plot function that can be called with scatterplot
    
 {%endhighlight%}
 
-The following screenshot shows the resulting chart. The marginal boxplots, smoothers, and quantile regression intervals that are included by default, make this a very information-dense graphic.
+The following screenshot shows the resulting chart. The marginal box plots, smoothers, and quantile regression intervals that are included by default, make this a very information-dense graphic.
 
-![](Charts-for-Associations_images/img8.png)
+![Grouped Bar Chart for Frequencies](Charts-for-Associations_images/img8.png)
 
 Scatter Plot created with car Package 
 {:.caption}
