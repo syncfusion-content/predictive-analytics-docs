@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview | PMML Execution Engine | Predictive Analytics | Syncfusion
-description: introduction to pmml execution engine
+description: PMML Execution engine is a PMML consumer that consumes the input PMML and creates an evaluator instance for the appropriate model.
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug
