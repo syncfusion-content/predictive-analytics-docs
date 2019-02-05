@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with PMML Execution Engine | PMML Execution Engine | Predictive Analytics | Syncfusion
+title: Working with PMML Execution Engine | Predictive Analytics | Syncfusion
 description: working with pmml execution engine
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -192,7 +192,7 @@ Console.WriteLine(predictedResult.PredictedValue);
 //Output
 
 Output: 3.50716866881611
-The predicted output (3.5) obtained from PMML Execution engine gives us a clear picture that based on given information (independant variables), the waiter may get a tip of 3.5$.In Regression Model Evaluator the term regression usually refers to the prediction of numeric values based on the Scoring procedure used in Regression Model.Here we considered the independent variables(total_bill,sex,smoker,day,time,size) and by using these independent variables we can find the result of dependent variable (tip) which is mentioned above .
+The predicted output (3.5) obtained from PMML Execution engine gives us a clear picture that based on given information (independent variables), the waiter may get a tip of 3.5$.In Regression Model Evaluator the term regression usually refers to the prediction of numeric values based on the Scoring procedure used in Regression Model.Here we considered the independent variables(total_bill,sex,smoker,day,time,size) and by using these independent variables we can find the result of dependent variable (tip) which is mentioned above .
 
 {% endhighlight %}
 
@@ -802,7 +802,7 @@ Console.WriteLine(predictedResult.PredictedValue);
 //Output
 
 Output: 2.67
-The predicted output (2.67) obtained from PMML Execution engine gives us a clear picture that based on given information (independant variables), the waiter may get a tip of $2.67. Here we considered the independent variables(total_bill,sex,smoker,day,time,size) and by using these independent variables we can find the result of dependent variable (tip) which is mentioned above.
+The predicted output (2.67) obtained from PMML Execution engine gives us a clear picture that based on given information (independent variables), the waiter may get a tip of $2.67. Here we considered the independent variables(total_bill,sex,smoker,day,time,size) and by using these independent variables we can find the result of dependent variable (tip) which is mentioned above.
 
 {% endhighlight %}
 
@@ -832,7 +832,7 @@ Gets the DataDictionary values</td></tr>
 <tr>
 <td>
 SupportVectorMachineModel</td><td>
-Gets the SupportVectorMachineModelelements values</td></tr>
+Gets the SupportVectorMachineModel elements values</td></tr>
 <tr>
 <td>
 TreeModel</td><td>
@@ -1159,7 +1159,7 @@ AssociationRulesModelEvaluator associationRules = new AssociationRulesModelEvalu
 //Gets the predicted result            
 PredictedResult predictedResult = associationRules.GetResult(input, null); 
 
-//Gets the Assocaition rule model result
+//Gets the Association rule model result
 AssociationModelResult associationModelResult = (AssociationModelResult)predictedResult; 
 associationRules.Dispose();            
 
