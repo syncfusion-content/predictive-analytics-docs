@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Statistics for One Variable | Essential Predictive Analytics | Predictive Analytics | Syncfusion
+title: Statistics -One Variable | Essential Predictive Analytics | Syncfusion
 description:  statistics for one variable 
 platform: predictive-analytics
 control: Essential Predictive Analytics

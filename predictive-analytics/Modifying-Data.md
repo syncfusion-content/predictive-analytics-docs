@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modifying Data | Essential Predictive Analytics | Predictive Analytics | Syncfusion
+title: Modifying Data | Essential Predictive Analytics | Syncfusion
 description: modifying data 
 platform: predictive-analytics
 control: Essential Predictive Analytics

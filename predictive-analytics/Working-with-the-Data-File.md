@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with the Data File | Essential Predictive Analytics | Predictive Analytics | Syncfusion
+title: Working with Data File  | Essential Predictive Analytics | Syncfusion
 description: working with the data file 
 platform: predictive-analytics
 control: Essential Predictive Analytics

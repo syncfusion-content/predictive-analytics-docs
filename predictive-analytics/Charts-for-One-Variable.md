@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Charts for One Variable | Essential Predictive Analytics | Predictive Analytics | Syncfusion
+title:  Charts for One Variable | Essential Predictive Analytics | Syncfusion
 description: charts for one variable 
 platform: predictive-analytics
 control: Essential Predictive Analytics
