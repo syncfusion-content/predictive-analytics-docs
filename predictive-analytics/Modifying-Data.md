@@ -38,7 +38,7 @@ horizontal = TRUE)  # Many high outliers. boxplot.stats(islands)  # Numbers for 
 
 The following figure shows that there are numerous outliers in this dataset. In fact, the outliers comprise almost the entire range of measurements.
 
-![](Modifying-Data_images/img1.png)
+![Modifying-Data_images-1](Modifying-Data_images/img1.png)
 
 Boxplot of Island Areas in 1000 square miles
 {:.caption}
@@ -56,7 +56,7 @@ islands.low <- islands[islands < 500]  # Delete 8 highest boxplot(islands.low, h
 
 The following figure illustrates the new boxplot for the reduced dataset: 
 
-![](Modifying-Data_images/img2.png)
+![Modifying-Data_images-2](Modifying-Data_images/img2.png)
 
 Boxplot of Island Areas (8 Largest Deleted)
 {:.caption}
@@ -90,7 +90,7 @@ horizontal = TRUE)  # Almost looks normal.
 
 The log() function calculates natural logs with base e, which is approximately 2.718. R also calculates common, base 10 logs with log10() and binary, base 2 logs with log2(), with similar results. Note that logarithms are undefined for zero. If you have zeros in your data, then you could add a small amount 0.5 or 1.0 to each score to avoid this problem. 
 
-![](Modifying-Data_images/img3.png)
+![Modifying-Data_images-3](Modifying-Data_images/img3.png)
 
 Boxplot of Log Transformed Islands Data
 {:.caption}

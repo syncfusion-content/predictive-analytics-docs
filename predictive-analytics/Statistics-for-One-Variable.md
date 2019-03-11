@@ -259,7 +259,7 @@ The histogram in the following figure shows that the distribution has a strong, 
 
 
 
-![](Statistics-for-One-Variable_images/img1.png)
+![Statistics-for-One-Variable_images-1](Statistics-for-One-Variable_images/img1.png)
 
 Histogram of Earthquake Magnitudes
 {:.caption}
