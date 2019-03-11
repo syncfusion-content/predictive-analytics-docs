@@ -9,7 +9,7 @@ documentation: ug
 
 #  Statistics for One Variable 
 
-The best beginning step for analyses is examining graphs for one variable. The following guidelines are the follow-up to graphical analysis: statistical procedures for one variable. 
+The best beginning step for analyzes is examining graphs for one variable. The following guidelines are the follow-up to graphical analysis: statistical procedures for one variable. 
 
 ## Frequencies 
 

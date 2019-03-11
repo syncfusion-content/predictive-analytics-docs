@@ -9,7 +9,7 @@ documentation: ug
 
 # Charts for One Variable 
 
-As mentioned above, analyses are most useful when graphics come first, before the statistical procedures. In addition, the individual variables that form the basis of all later work need to be well understood and, if appropriate, adapted to the analytical needs. With those two points in mind, the following guidelines begins with charts for one variable. 
+As mentioned above, analyzes are most useful when graphics come first, before the statistical procedures. In addition, the individual variables that form the basis of all later work need to be well understood and, if appropriate, adapted to the analytical needs. With those two points in mind, the following guidelines begins with charts for one variable. 
 
 ## Bar charts for categorical variables 
 
@@ -99,7 +99,7 @@ detach("package:datasets", unload = TRUE)  # Unloads data sets package. rm(list 
 
 There are two ways to save charts so you can export them. The first method, is the default method for R, is cumbersome and confusing but you can include it in your code. The second method, uses RStudio, is much simpler but uses menus. Used here in the guidelines is the second method for all the images in this book. 
 
-To save images using R's method, you must open a device or "graphical device." The following code shows how to use devices to save either PNG files for raster graphics or PDF files for vector graphics. You must use one or the other for the command; you cannot run both at once. There are also several other formats available. Refer ?png, ?pdf, and ?dev for more information on these functions. 
+To save images using R's method, you must open a device or "graphical device." The following code shows how to use devices to save either PNG files for raster graphics or PDF files for vector graphics. You must use one or the other for the command; you cannot run both at once. There are also several other formats available. Refer ?png, ?pdf, and ?Dev for more information on these functions. 
 
 ### Sample: sample_2_2.R
 

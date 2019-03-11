@@ -13,12 +13,12 @@ All data can tell an attentive analyst something of worth. The problem is that t
 
 ## Outliers 
 
-Outliers can distort analyses so much that the results are either misleading or meaningless. There are several common methods for dealing with outliers: 
+Outliers can distort analyzes so much that the results are either misleading or meaningless. There are several common methods for dealing with outliers: 
 
 * Leave them in. If they are legitimate values and a necessary part of your equations, such as calculating the value of a stock portfolio, then they should remain. 
 * Delete them. If your goal is to analyze common cases, then it may be acceptable to delete outliers. Be clear that you have done so and give your justification. 
 * Transform the data. For example, with high outliers, it may help to use a logarithmic transformation. Again, be clear that you have done so and give your justification. 
-* Use robust statistics. Measures such as the mean, the trimmed mean, or various robust estimators are less affected by outliers. These measures are, however, more difficult to implement and do not correspond to other common analyses such as regression or correlation. 
+* Use robust statistics. Measures such as the mean, the trimmed mean, or various robust estimators are less affected by outliers. These measures are, however, more difficult to implement and do not correspond to other common analyzes such as regression or correlation. 
 
 You can learn about the simplest of these adjustments: deleting outliers. You can use the islands dataset from the R datasets package. This dataset contains the areas of 48 landmasses that exceed 10,000 square miles. Several of these measurements are outliers. 
 
@@ -245,7 +245,7 @@ mean(x1, na.rm = TRUE)  # Removes NA from calculations 	 [1] 2.75
 
 {% endhighlight %}
 
-In other situations, especially multivariate analyses, it may be more helpful to replace missing values with other, valid values. This can be done with is.na() and a value to be assigned in the place of missing values, such as 0.
+In other situations, especially multivariate analyzes, it may be more helpful to replace missing values with other, valid values. This can be done with is.na() and a value to be assigned in the place of missing values, such as 0.
 
 {% highlight r %}
 

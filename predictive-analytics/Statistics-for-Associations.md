@@ -9,7 +9,7 @@ documentation: ug
 
 # Statistics for Associations 
 
-In the previous section, you have learnt to explore methods for visualizing the association between two variables. In this section, you can learn to provide the complement to those analyses by discussing statistical procedures for describing bivariate associations. This chapter includes some of the most familiar inferential statistics: correlation, regression, t-tests for two samples and paired observations, the one-factor analysis of variance, tests to compare multiple proportions, and the chi-squared test for independence. 
+In the previous section, you have learn to explore methods for visualizing the association between two variables. In this section, you can learn to provide the complement to those analyzes by discussing statistical procedures for describing bivariate associations. This chapter includes some of the most familiar inferential statistics: correlation, regression, t-tests for two samples and paired observations, the one-factor analysis of variance, tests to compare multiple proportions, and the chi-squared test for independence. 
 
 ## Correlations 
 
@@ -189,7 +189,7 @@ Multiple R-squared:  0.2697, Adjusted R-squared:  0.2445
 F-statistic: 10.71 on 1 and 29 DF,  p-value: 0.002758
 {% endhighlight %}
 
-The summary() function gives nearly everything that is needed for most analyses: the regression coefficients, their statistical significance, the R2 and adjusted R2, the _F_-value and _p_value for the entire model, and information about residuals. (See ?lm and ?summary for more information.) 
+The summary() function gives nearly everything that is needed for most analyzes: the regression coefficients, their statistical significance, the R2 and adjusted R2, the _F_-value and _p_value for the entire model, and information about residuals. (See ?lm and ?summary for more information.) 
 
 It is also possible to get confidence intervals for the regression coefficients with the confint() function: 
 
