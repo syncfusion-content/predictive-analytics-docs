@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with the Data File | Essential Predictive Analytics | Predictive Analytics | Syncfusion
+title: Working with Data File  | Essential Predictive Analytics | Syncfusion
 description: working with the data file 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -55,7 +55,7 @@ Now you can get the mean horsepower for just the eight cylinder cars. Put the na
 
 {% endhighlight %}
 
-If you plan on doing several analyses with the same subgroup, it may be helpful to create a new data frame based on that selection. In that case, make the selection and assign it to a new variable. In the following code, a data frame called v8 is created for all the eight cylinder cars. The first part of the selection in square brackets selects the rows for cars with eight cylinder engines and the blank space after the comma selects all of the variables.
+If you plan on doing several analyzes with the same subgroup, it may be helpful to create a new data frame based on that selection. In that case, make the selection and assign it to a new variable. In the following code, a data frame called v8 is created for all the eight cylinder cars. The first part of the selection in square brackets selects the rows for cars with eight cylinder engines and the blank space after the comma selects all of the variables.
 
 {% highlight r %}
 
@@ -94,7 +94,7 @@ Once you have saved your work, you can clear the workspace of unneeded variables
 
 ## Analyzing by subgroups 
 
-In this section you can learn about the methods to include all of the cases in the analyses but to organize the results by subgroups. 
+In this section you can learn about the methods to include all of the cases in the analyzes but to organize the results by subgroups. 
 
 
 
@@ -164,7 +164,7 @@ Once you have saved your work, you can clean the workspace by removing any varia
 
 ## Merging files 
 
-Analyses are often much more powerful if data from different sources are combined. For example, joining data on Internet search trends with data on demographics can give important insights for marketing researchers. In this section, you can examine the longley data from R’s datasets package. This is a data frame with seven economic variables, observed yearly from 1947 to 1962. After loading the data and displaying a few cases, you can then split the data set into three parts and then join them again to demonstrate the process. 
+Analyzes are often much more powerful if data from different sources are combined. For example, joining data on Internet search trends with data on demographics can give important insights for marketing researchers. In this section, you can examine the longley data from R’s datasets package. This is a data frame with seven economic variables, observed yearly from 1947 to 1962. After loading the data and displaying a few cases, you can then split the data set into three parts and then join them again to demonstrate the process. 
 
 ### Sample: sample_5_3.R 
 
@@ -272,7 +272,7 @@ There is one problem with this process. Notice the mismatch of index variables o
 
 {% endhighlight %}
 
-At this point, the three datasets have been successfully joined and you can proceed with our analyses. And, as before, once you have saved our work, you can clean the workspace by removing any variables or objects you created. 
+At this point, the three datasets have been successfully joined and you can proceed with our Analyzes. And, as before, once you have saved our work, you can clean the workspace by removing any variables or objects you created. 
 
 {% highlight r %}
 

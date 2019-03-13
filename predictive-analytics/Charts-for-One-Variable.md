@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Charts for One Variable | Essential Predictive Analytics | Predictive Analytics | Syncfusion
+title:  Charts for One Variable | Essential Predictive Analytics | Syncfusion
 description: charts for one variable 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -9,7 +9,7 @@ documentation: ug
 
 # Charts for One Variable 
 
-As mentioned above, analyses are most useful when graphics come first, before the statistical procedures. In addition, the individual variables that form the basis of all later work need to be well understood and, if appropriate, adapted to the analytical needs. With those two points in mind, the following guidelines begins with charts for one variable. 
+As mentioned above, analyzes are most useful when graphics come first, before the statistical procedures. In addition, the individual variables that form the basis of all later work need to be well understood and, if appropriate, adapted to the analytical needs. With those two points in mind, the following guidelines begins with charts for one variable. 
 
 ## Bar charts for categorical variables 
 
@@ -47,7 +47,7 @@ The default plot() function is adaptive. It produces different charts depending 
 
 
 
-![](Charts-for-One-Variable_images/img1.png)
+![predictive-analytics_image-1](Charts-for-One-Variable_images/img1.png)
 
 Default Bar chart from the plot() function
 {:.caption}
@@ -80,7 +80,7 @@ barplot(feeds[order(feeds)],  # Orders the bars by descending values.
 
 This series of commands produce the modified bar chart as shown in the following figure. 
 
-![](Charts-for-One-Variable_images/img2.jpeg)
+![predictive-analytics_image-2](Charts-for-One-Variable_images/img2.jpeg)
 
 Modified Bar Chart using barplot()
 {:.caption}
@@ -177,7 +177,7 @@ feeds <- table(chickwts$feed)  # Create a table of feed, place in “feeds” fe
 
 The following figure shows the resulting chart.
 
-![](Charts-for-One-Variable_images/img3.jpeg)
+![predictive-analytics_image-3](Charts-for-One-Variable_images/img3.jpeg)
 
 Default Pie Chart
 {:.caption}
@@ -196,7 +196,7 @@ As with bar charts, it can be helpful to modify this pie chart in a few ways:
 
 This produces the improved pie chart in the following figure. 
 
-![](Charts-for-One-Variable_images/img4.jpeg)
+![predictive-analytics_image-4](Charts-for-One-Variable_images/img4.jpeg)
 
 Modified Pie Chart
 {:.caption}
@@ -245,7 +245,7 @@ lynx is a time series dataset with only one variable, so you can just call the d
 
 This produces the following figure. 
 
-![](Charts-for-One-Variable_images/img5.jpeg)
+![predictive-analytics_image-5](Charts-for-One-Variable_images/img5.jpeg)
 
 Default Histogram
 {:.caption}
@@ -265,7 +265,7 @@ The above figure is a respectable chart, using nothing more than the default set
 
 This code produces the following figure.
 
-![](Charts-for-One-Variable_images/img6.jpeg)
+![predictive-analytics_image-6](Charts-for-One-Variable_images/img6.jpeg)
 
 Modified Histogram
 {:.caption}
@@ -301,7 +301,7 @@ lines(density(lynx, adjust = 3), col = "darkgreen", lwd = 2)
 
 In this case, the curve() function calls for a dnorm distribution, or normal density distribution. There are many other choices; refer “?curve” for more. The first line also uses two functions as arguments: mean = mean(lynx) and sd = sd(lynx). These functions match the curve's mean and standard deviation to the histogram's. This shortcut saves effort and rounding error. The kernel density estimates work on the empirical data, so there is no need to adjust parameters other than bandwidth. Refer “?kernel” for more. The rug mirrors the distribution. The result is displayed in the following figure. 
 
-![](Charts-for-One-Variable_images/img7.png)
+![predictive-analytics_image-7](Charts-for-One-Variable_images/img7.png)
 
 Histogram with superimposed normal curve
 {:.caption}
@@ -330,7 +330,7 @@ The last univariate chart explained here is the boxplot. Boxplots are well suite
 
 This command produces the rudimentary boxplot as displayed in the following figure. 
 
-![](Charts-for-One-Variable_images/img8.png)
+![predictive-analytics_image-8](Charts-for-One-Variable_images/img8.png)
 
 Default Boxplot
 {:.caption}
@@ -348,7 +348,7 @@ The above figure would be better with labels and if it were horizontal. There ar
 
 This produces the improved boxplot in the following figure. 
 
-![](Charts-for-One-Variable_images/img9.png)
+![predictive-analytics_image-9](Charts-for-One-Variable_images/img9.png)
 
 Modified Boxplot
 {:.caption}

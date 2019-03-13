@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Modifying Data | Essential Predictive Analytics | Predictive Analytics | Syncfusion
+title: Modifying Data | Essential Predictive Analytics | Syncfusion
 description: modifying data 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -13,12 +13,12 @@ All data can tell an attentive analyst something of worth. The problem is that t
 
 ## Outliers 
 
-Outliers can distort analyses so much that the results are either misleading or meaningless. There are several common methods for dealing with outliers: 
+Outliers can distort analyzes so much that the results are either misleading or meaningless. There are several common methods for dealing with outliers: 
 
 * Leave them in. If they are legitimate values and a necessary part of your equations, such as calculating the value of a stock portfolio, then they should remain. 
 * Delete them. If your goal is to analyze common cases, then it may be acceptable to delete outliers. Be clear that you have done so and give your justification. 
 * Transform the data. For example, with high outliers, it may help to use a logarithmic transformation. Again, be clear that you have done so and give your justification. 
-* Use robust statistics. Measures such as the mean, the trimmed mean, or various robust estimators are less affected by outliers. These measures are, however, more difficult to implement and do not correspond to other common analyses such as regression or correlation. 
+* Use robust statistics. Measures such as the mean, the trimmed mean, or various robust estimators are less affected by outliers. These measures are, however, more difficult to implement and do not correspond to other common analyzes such as regression or correlation. 
 
 You can learn about the simplest of these adjustments: deleting outliers. You can use the islands dataset from the R datasets package. This dataset contains the areas of 48 landmasses that exceed 10,000 square miles. Several of these measurements are outliers. 
 
@@ -38,7 +38,7 @@ horizontal = TRUE)  # Many high outliers. boxplot.stats(islands)  # Numbers for 
 
 The following figure shows that there are numerous outliers in this dataset. In fact, the outliers comprise almost the entire range of measurements.
 
-![](Modifying-Data_images/img1.png)
+![Modifying-Data_images-1](Modifying-Data_images/img1.png)
 
 Boxplot of Island Areas in 1000 square miles
 {:.caption}
@@ -56,7 +56,7 @@ islands.low <- islands[islands < 500]  # Delete 8 highest boxplot(islands.low, h
 
 The following figure illustrates the new boxplot for the reduced dataset: 
 
-![](Modifying-Data_images/img2.png)
+![Modifying-Data_images-2](Modifying-Data_images/img2.png)
 
 Boxplot of Island Areas (8 Largest Deleted)
 {:.caption}
@@ -90,7 +90,7 @@ horizontal = TRUE)  # Almost looks normal.
 
 The log() function calculates natural logs with base e, which is approximately 2.718. R also calculates common, base 10 logs with log10() and binary, base 2 logs with log2(), with similar results. Note that logarithms are undefined for zero. If you have zeros in your data, then you could add a small amount 0.5 or 1.0 to each score to avoid this problem. 
 
-![](Modifying-Data_images/img3.png)
+![Modifying-Data_images-3](Modifying-Data_images/img3.png)
 
 Boxplot of Log Transformed Islands Data
 {:.caption}
@@ -245,7 +245,7 @@ mean(x1, na.rm = TRUE)  # Removes NA from calculations 	 [1] 2.75
 
 {% endhighlight %}
 
-In other situations, especially multivariate analyses, it may be more helpful to replace missing values with other, valid values. This can be done with is.na() and a value to be assigned in the place of missing values, such as 0.
+In other situations, especially multivariate analyzes, it may be more helpful to replace missing values with other, valid values. This can be done with is.na() and a value to be assigned in the place of missing values, such as 0.
 
 {% highlight r %}
 

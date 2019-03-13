@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Statistics for One Variable | Essential Predictive Analytics | Predictive Analytics | Syncfusion
+title: Statistics -One Variable | Essential Predictive Analytics | Syncfusion
 description:  statistics for one variable 
 platform: predictive-analytics
 control: Essential Predictive Analytics
@@ -9,7 +9,7 @@ documentation: ug
 
 #  Statistics for One Variable 
 
-The best beginning step for analyses is examining graphs for one variable. The following guidelines are the follow-up to graphical analysis: statistical procedures for one variable. 
+The best beginning step for analyzes is examining graphs for one variable. The following guidelines are the follow-up to graphical analysis: statistical procedures for one variable. 
 
 ## Frequencies 
 
@@ -259,7 +259,7 @@ The histogram in the following figure shows that the distribution has a strong, 
 
 
 
-![](Statistics-for-One-Variable_images/img1.png)
+![Statistics-for-One-Variable_images-1](Statistics-for-One-Variable_images/img1.png)
 
 Histogram of Earthquake Magnitudes
 {:.caption}
