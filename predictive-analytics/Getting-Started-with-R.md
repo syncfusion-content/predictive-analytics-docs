@@ -536,11 +536,11 @@ Bar Chart with default colors
 
 You can improve the above figure by changing the colors of the bars using the col attribute in the barplot function. R gives you several methods to specify colors. 
 
-R has names for 657 colors, arranged in alphabetical order, except for white, that is first on the list. You can see a text list of all the color names by entering colors(). You can also see a PDF with color charts [here](http://research.stowers.org/mcm/efg/R/Color/Chart)[.](http://research.stowers.org/mcm/efg/R/Color/Chart) If you want to change the bars to slategray3, you can do so in several ways: 
+R has names for 657 colors, arranged in alphabetical order, except for white, that is first on the list. You can see a text list of all the color names by entering colors(). You can also see a PDF with color charts [here](https://rstudio-pubs-static.s3.amazonaws.com/3486_79191ad32cf74955b4502b8530aad627.html). If you want to change the bars to slategray3, you can do so in several ways: 
 
 * Color name: slategray3. 
 * Color location in list: slategray3 is index number 602 in the vector of colors. 
-* RGB hex codes: According to this [Stowers Institute chart](http://research.stowers.org/mcm/efg/R/Color/Chart/ColorChart.pdf)[,](http://research.stowers.org/mcm/efg/R/Color/Chart/ColorChart.pdf) slategray3 is #9FB6CD 
+* RGB hex codes: According to this [Stowers Institute chart](https://rstudio-pubs-static.s3.amazonaws.com/3486_79191ad32cf74955b4502b8530aad627.html), slategray3 is #9FB6CD 
 * RGB color on a 0-255 scale: Use col2rgb("slategray3")  to get 159, 182, and 205 or see the values on the previous PDF. You must specify 255 as the maximum value. 
 * RGB color on a 0-1 scale: Divide the previous values by 255 to get .62, .71, and .80. 
 
