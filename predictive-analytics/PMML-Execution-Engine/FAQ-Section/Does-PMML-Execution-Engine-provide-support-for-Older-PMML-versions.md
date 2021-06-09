@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Does PMML Execution Engine provide support for Older PMML versions | PMML Execution Engine | Predictive Analytics | Syncfusion
-description: does pmml execution engine provide support for older pmml versions?
+title: PMML Execution Engine support in Predictive Analytics | Syncfusion
+description: Does pmml execution engine provide support for older pmml versions in Syncfusion Essential Predictive Analytics, its elements, and more.
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug
