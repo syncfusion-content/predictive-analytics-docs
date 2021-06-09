@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Charts for Three or More Variables | Essential Predictive Analytics | Predictive Analytics | Syncfusion
-description: charts for three or more variables 
+title: Charts for Three or More Variables in Predictive Analytics| Syncfusion
+description: Charts for three or more variables in Syncfusion Essential Studio Predictive Analytics control, and more.
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug

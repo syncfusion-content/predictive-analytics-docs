@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started | PMML Execution Engine | Predictive Analytics | Syncfusion
-description: getting started
+title: Getting Started with Essential Predictive Analytics | Syncfusion
+description: Learn here about getting started with Syncfusion Essential Studio Predictive Analytics control, its elements, and more.
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Essential Predictive Analytics
 
 This section provides you the basic information about getting started with predictive analytics, that is, how to create a model in R, generate a PMML file and finally, how to deploy it in a .NET application using the PMML Execution Engine.
 
