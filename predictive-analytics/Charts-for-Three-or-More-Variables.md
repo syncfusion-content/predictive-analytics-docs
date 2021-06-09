@@ -73,7 +73,7 @@ Then you can add a legend using the interactive locator(1) function that lets yo
 
 The resulting chart is shown in the following screenshot.
 
-![](Charts-for-Three-or-More-Variables_images/img1.jpeg)
+![Charts-for-Three-or-More-Variables_images1](Charts-for-Three-or-More-Variables_images/img1.jpeg)
 
 Grouped Bar Plot for Means
 {:.caption}
@@ -139,7 +139,7 @@ You can use the scatterplot() function that can also be called with abbreviated 
 
 The resulting chart is shown in the following screenshot. 
 
-![](Charts-for-Three-or-More-Variables_images/img2.jpeg)
+![Charts-for-Three-or-More-Variables_images2](Charts-for-Three-or-More-Variables_images/img2.jpeg)
 
 Scatter Plot by group
 {:.caption}
@@ -193,7 +193,7 @@ four variables from iris.
 
 The resulting plot is shown in the following screenshot.
 
-![](Charts-for-Three-or-More-Variables_images/img3.jpeg)
+![Charts-for-Three-or-More-Variables_images3](Charts-for-Three-or-More-Variables_images/img3.jpeg)
 
 Scatterplot Matrix with pairs()
 {:.caption}
@@ -245,7 +245,7 @@ pch = 16,  # Uses solid dots for points.       # Next line color dots by "Specie
 
 The resulting chart is shown in the following screenshot.
 
-![](Charts-for-Three-or-More-Variables_images/img4.jpeg)
+![Charts-for-Three-or-More-Variables_images4](Charts-for-Three-or-More-Variables_images/img4.jpeg)
 
 Scatter plot Matrix with Custom Function
 {:.caption}
@@ -271,7 +271,7 @@ scatterplotMatrix(~Petal.Length + Petal.Width +
 
 The previous command produces the following chart as shown.
 
-![](Charts-for-Three-or-More-Variables_images/img5.jpeg)
+![Charts-for-Three-or-More-Variables_images5](Charts-for-Three-or-More-Variables_images/img5.jpeg)
 
 Scatter Plot Matrix with the scatterplotmatrix() Function from the car package
 {:.caption}
