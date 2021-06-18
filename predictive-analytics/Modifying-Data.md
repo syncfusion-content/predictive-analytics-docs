@@ -269,7 +269,7 @@ x3 <- ifelse(is.na(x1), mean(x1, na.rm = TRUE), x1)  # Impute mean x3  # Show re
 
 {% endhighlight %}
 
-These are a few very basic approaches to dealing with missing data. The treatment of missing data is an active area of research and many packages have been developed for this in R. Because these packages are updated or released frequently, you can look at R’s official [CRAN website](http://cran.r-project.org/web/packages/available_packages_by_name.html)[ ](http://cran.r-project.org/web/packages/available_packages_by_name.html)or the third-party [CRANtastic]("http://crantastic.org/")[.]("http://crantastic.org/")
+These are a few very basic approaches to dealing with missing data. The treatment of missing data is an active area of research and many packages have been developed for this in R. Because these packages are updated or released frequently, you can look at R’s official [CRAN website](http://cran.r-project.org/web/packages/available_packages_by_name.html)[ ](http://cran.r-project.org/web/packages/available_packages_by_name.html)or the third-party [CRANtastic]("https://cran.r-project.org/")
 
 
 
