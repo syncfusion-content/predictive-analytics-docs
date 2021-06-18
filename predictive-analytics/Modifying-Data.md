@@ -7,9 +7,9 @@ control: Essential Predictive Analytics
 documentation: ug
 ---
 
-# Modifying Data 
+# Modifying Data in Syncfusion Essential Predictive Analytics
 
-All data can tell an attentive analyst something of worth. knfjnfjnf The problem is that the story you are able to get from the data may not be the story that you need. One method for getting results that are more closely aligned to your research questions can be to modify the data. Explained here are four kinds of modifications that can help you get more insights out of your data: compensating for outliers, transforming distributions, creating composite variables, and dealing with missing data. 
+All data can tell an attentive analyst something of worth. The problem is that the story you are able to get from the data may not be the story that you need. One method for getting results that are more closely aligned to your research questions can be to modify the data. Explained here are four kinds of modifications that can help you get more insights out of your data: compensating for outliers, transforming distributions, creating composite variables, and dealing with missing data. 
 
 ## Outliers 
 
@@ -269,7 +269,7 @@ x3 <- ifelse(is.na(x1), mean(x1, na.rm = TRUE), x1)  # Impute mean x3  # Show re
 
 {% endhighlight %}
 
-These are a few very basic approaches to dealing with missing data. The treatment of missing data is an active area of research and many packages have been developed for this in R. Because these packages are updated or released frequently, you can look at R’s official [CRAN website](http://cran.r-project.org/web/packages/available_packages_by_name.html)[ ](http://cran.r-project.org/web/packages/available_packages_by_name.html)or the third-party [CRANtastic](http://crantastic.org/)[.](http://crantastic.org/)
+These are a few very basic approaches to dealing with missing data. The treatment of missing data is an active area of research and many packages have been developed for this in R. Because these packages are updated or released frequently, you can look at R’s official [CRAN website](http://cran.r-project.org/web/packages/available_packages_by_name.html)[ ](http://cran.r-project.org/web/packages/available_packages_by_name.html)or the third-party [CRANtastic]("http://crantastic.org/")[.]("http://crantastic.org/")
 
 
 

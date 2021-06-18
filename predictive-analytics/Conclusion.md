@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Conclusion in Essential Predictive Analytics Control | Syncfusion
-description: Learn here about all conclusion of Syncfusion Essential Studio Predictive Analytics control, and more.
+title: Conclusion | Essential Predictive Analytics | Predictive Analytics | Syncfusion
+description: conclusion 
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug
 ---
 
-# Conclusion in Syncfusion Essential Predictive Analytics
+# Conclusion 
 
 ## Next steps 
 
