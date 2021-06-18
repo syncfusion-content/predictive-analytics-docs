@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Statistics -One Variable | Essential Predictive Analytics | Syncfusion
-description:  statistics for one variable 
+description: Learn here about statistics for one variable in Syncfusion Essential Predictive Analytics control, and more.
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug

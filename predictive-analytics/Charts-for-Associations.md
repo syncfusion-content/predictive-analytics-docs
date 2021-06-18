@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Charts for Associations | Predictive Analytics | Syncfusion
-description: charts for associations 
+description: Learn here about Charts for Associations in Syncfusion Essential Predictive Analytics Control, and more.
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug

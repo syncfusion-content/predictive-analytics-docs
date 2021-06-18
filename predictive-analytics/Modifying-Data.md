@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Modifying Data | Essential Predictive Analytics | Syncfusion
-description: modifying data 
+description: Learn here about modifying data in Syncfusion Essential Studio Predictive Analytics control, and more.
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug
