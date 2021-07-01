@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Statistics -One Variable | Essential Predictive Analytics | Syncfusion
-description:  statistics for one variable 
+description: Learn here about statistics for one variable in Syncfusion Essential Predictive Analytics control, and more.
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug
@@ -13,7 +13,7 @@ The best beginning step for analyzes is examining graphs for one variable. The f
 
 ## Frequencies 
 
-The most common statistics for categorical variables are freqncies and proportions. First create a dataset based on a recent Google search. 
+The most common statistics for categorical variables are frequencies and proportions. First create a dataset based on a recent Google search. 
 
 ### Sample: sample_3_1.R 
 

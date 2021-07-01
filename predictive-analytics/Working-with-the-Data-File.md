@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Data File  | Essential Predictive Analytics | Syncfusion
-description: working with the data file 
+description: Learn here about working with the data file in Syncfusion Essential Predictive Analytics Control, and more.
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug
