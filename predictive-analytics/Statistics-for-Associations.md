@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Statistics Associations | Essential Predictive Analytics | Syncfusion
-description: statistics for associations 
+description: Learn here about statistics for associations in Syncfusion Essential Predictive Analytics control, and more.
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug
