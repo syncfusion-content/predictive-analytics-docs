@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Charts for Associations | Predictive Analytics | Syncfusion
-description: charts for associations 
+description: Learn here about Charts for Associations in Syncfusion Essential Predictive Analytics Control, and more.
 platform: predictive-analytics
 control: Essential Predictive Analytics
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Charts for Associations 
 
-Graphics can provide vital context and insight to the knfjnfjnfjnf analysis that could be easily lost if the statistical procedures came first. Accordingly, in the guidelines on univariate analysis, you learn about charts for one variable and then statistics for one variable. Following that pattern, you can learn about bivariate associations, with charts for association, and statistics for association. 
+Graphics can provide vital context and insight to the analysis that could be easily lost if the statistical procedures came first. Accordingly, in the guidelines on univariate analysis, you learn about charts for one variable and then statistics for one variable. Following that pattern, you can learn about bivariate associations, with charts for association, and statistics for association. 
 
 ## Grouped Bar Charts of Frequencies 
 
