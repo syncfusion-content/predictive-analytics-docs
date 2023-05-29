@@ -15,9 +15,9 @@ R is a free, open-source statistical programming language. Its utility and popul
 
 R is available for Windows, Mac, and Linux computers and can be downloaded for free. Installation is a simple process.
 
-1. Open a web browser and go to  [R Project site](http://www.r-project.org/).
+1. Open a web browser and go to  [R Project site](https://www.r-project.org/).
 2. Under “Getting Started,” click “download R,” where you can choose a server from dozens of servers with downloads.
-3. Though you can choose any of the servers, it is best to click the link [http://cran.rstudio.com/ ](http://cran.rstudio.com/)under “0-Cloud”.
+3. Though you can choose any of the servers, it is best to click the link [https://cran.rstudio.com/ ](https://cran.rstudio.com/)under “0-Cloud”.
 4. Click the download link for your operating system; the top option is often the best.
 5. Open the downloaded file and follow the instructions to install the software.
 
@@ -25,7 +25,7 @@ You should now have a functional copy of R on your computer. When you double-cli
 
 
 
-![Default Startup Window for R](Getting-Started-with-R_images/img1.png)
+![Default Startup Window for R in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-started-with-r-startup-window.png)
 
 Default Startup Window for R
 {:.caption}
@@ -36,7 +36,7 @@ that way. For example, opening Terminal on Mac and typing R at the prompt, gives
 
 
 
-![Calling R from Command-line](Getting-Started-with-R_images/img2.png)
+![Calling R from Command-line in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-command-line.png)
 
 Calling R from Command-line
 {:.caption}
@@ -51,7 +51,7 @@ R is a great way to work with data but the interface is not perfect. Part of the
 
 Like R, RStudio is also available for Windows, Mac, and Linux computers and can be downloaded for free. Again, installation is a simple process, but note that you must first install R.
 
-1. Open a web browser and go to <http://www.rstudio.com>
+1. Open a web browser and go to <https://posit.co/>
 2. Click “Download now”.
 3. RStudio can run on desktop or over a Linux server. For the desktop version, click “Download RStudio Desktop”.
 4. RStudio checks your operating system. Click the link under “Recommended for your system”.
@@ -61,7 +61,7 @@ When you double-click the RStudio icon, you can see something like the following
 
 
 
-![Studio Startup Window](Getting-Started-with-R_images/img3.png)
+![Studio Startup Window in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-studio-startup-window.png)
 
 Studio Startup Window
 {:.caption}
@@ -229,7 +229,7 @@ Clear the entire workspace.
 
 The default installation of R is impressive in its functionality but it cannot do everything. One of the great strengths of R is that you can add packages. Packages are bundles of code that extend R's capabilities. In other languages, these bundles are libraries, but in R the library is the place that stores all the packages. Packages for R can come from two different places. 
 
-Some packages ship with R but are not active by default. You can see these in the Packages tab in RStudio. Other packages are available online at repositories. A list of available packages can be viewed [here](http://cran.r-project.org/web/views)[.](http://cran.r-project.org/web/views) This webpage is part of the Comprehensive R Archive Network (CRAN). It contains a list of topics or "task views" for packages. When you click on a topic, it takes you to an annotated list with links to individual packages. You can also search for packages by name [here](http://cran.r-project.org/web/packages/available_packages_by_name.html)[.](http://cran.r-project.org/web/packages/available_packages_by_name.html) Another good option is the website [CRANtastic](http://crantastic.org/)[.](http://crantastic.org/) All the packages at these sites are, like R, free and open source.  
+Some packages ship with R but are not active by default. You can see these in the Packages tab in RStudio. Other packages are available online at repositories. A list of available packages can be viewed [here](https://cran.r-project.org/web/views/)[.](https://cran.r-project.org/web/views/) This webpage is part of the Comprehensive R Archive Network (CRAN). It contains a list of topics or "task views" for packages. When you click on a topic, it takes you to an annotated list with links to individual packages. You can also search for packages by name [here](https://cran.r-project.org/web/packages/available_packages_by_name.html)[.](https://cran.r-project.org/web/packages/available_packages_by_name.html) Another good option is the website [CRANtastic](https://crantastic.org/)[.](https://crantastic.org/) All the packages at these sites are, like R, free and open source.  
 
 To see the packages that are currently installed or loaded, use the following functions: 
 
@@ -280,7 +280,7 @@ If you would like to delete a package, use remove.packages(), like this: remove.
 
 ## R’s datasets package 
 
-The built-in package "datasets" makes it easy to experiment with R's procedures using real data. Although this package is part of R's base installation, you must load it. You can either select it in the Packages tab or enter library("datasets") or require("datasets"). You can see a list of the available data sets by typing data() or by going to the [R Datasets](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[ ](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[Package](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[ ](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)list. 
+The built-in package "datasets" makes it easy to experiment with R's procedures using real data. Although this package is part of R's base installation, you must load it. You can either select it in the Packages tab or enter library("datasets") or require("datasets"). You can see a list of the available data sets by typing data() or by going to the [R Datasets](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[ ](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[Package](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[ ](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)list. 
 
 For more information on a particular data set, you can search R Help by typing “?” and the name of the dataset with no space: ?airmiles. You can also see the contents of the dataset by entering its name: airmiles. To see the structure of the dataset, use str(), like this: str(airmiles). This shows you what kind of data set it is, how many observations and variables it has, and the first few values. 
 
@@ -446,7 +446,7 @@ UCBAdmissions  # Prints six tables; one for each department.
 
 This code produces the following figure, an unusual 3-way bar plot. When you want a simple bar chart of the number of people who applied to each of the six departments, this doesn't work. 
 
-![Default Plot of UCBAdmissions](Getting-Started-with-R_images/img4.jpeg)
+![Default Plot of UCBAdmissions in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-default-plot.jpeg)
 
 Default Plot of UCBAdmissions
 {:.caption}
@@ -529,7 +529,7 @@ Default barplot
 {%endhighlight%}
 
 
-![Bar Chart with default colors](Getting-Started-with-R_images/img5.png)
+![Bar Chart with default colors in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-bar-chart-with-default-chart.png)
 
 Bar Chart with default colors
 {:.caption}
@@ -560,7 +560,7 @@ barplot(x, col = rgb(159, 182, 205, max = 255))  # RGB 0-255 barplot(x, col = rg
 
 Any of the previous commands produce the chart in the following figure.
 
-![Colored Bar Chart](Getting-Started-with-R_images/img6.png)
+![Colored Bar Chart in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-colored-bar-chart.png)
 
 Colored Bar Chart
 {:.caption}
@@ -587,12 +587,12 @@ To use the topo.colors palette for the six bars, enter the following:
 
 The output of the previous code is shown in the following figure.
 
-![Bar Chart with R palette - topo.colors](Getting-Started-with-R_images/img7.png)
+![Bar Chart with R palette - topo.colors in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-topo-colours.png)
 
 Bar Chart with R palette "topo.colors"
 {:.caption}
 
-An attractive alternative to R's palettes is the package RColorBrewer. This package derives from the excellent website [ColorBrewer 2.0](http://colorbrewer2.org/)[.](http://colorbrewer2.org/) RColorBrewer provides several palettes of sequential, diverging, and qualitative colors. To use RColorBrewer, you must first install it and load it in R: 
+An attractive alternative to R's palettes is the package RColorBrewer. This package derives from the excellent website [ColorBrewer 2.0](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3)[.](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) RColorBrewer provides several palettes of sequential, diverging, and qualitative colors. To use RColorBrewer, you must first install it and load it in R: 
 
 {%highlight r%}
 
@@ -606,14 +606,14 @@ I encourage you to explore the help information for RColorBrewer by entering hel
 
 This produces the following figure. The overlapping labels are due to the landscape aspect ratio.
 
-![All RColorBrewer Palettes](Getting-Started-with-R_images/img8.png)
+![All RColorBrewer Palettes in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-all-rcolorbrewer-palettes.png)
 
 All RColorBrewer Palettes
 {:.caption}
 
 You can get a better view of an individual palette by specifying the palette and the number of colors desired, like this: display.brewer.pal(8, "Accent"). The following figure illustrates this palette. 
 
-![Preview of the RColorBrewer Palette - Accent](Getting-Started-with-R_images/img9.png)
+![Preview of the RColorBrewer Palette - Accent in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-palette-accent.png)
 
 Preview of the RColorBrewer Palette “Accent” 
 {:.caption}
@@ -630,7 +630,7 @@ barplot(x, col = brewer.pal(6, "Blues"))
 
 This command produces the following figure. 
 
-![Bar Chart with RColorBrewer Palette](Getting-Started-with-R_images/img10.png)
+![Bar Chart with RColorBrewer Palette in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-bar-chart-with-rcolorbrewer.png)
 
 Bar Chart with RColorBrewer Palette
 {:.caption}
