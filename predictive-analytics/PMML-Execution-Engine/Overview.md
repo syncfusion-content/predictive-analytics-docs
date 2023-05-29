@@ -13,7 +13,7 @@ This section explains you the PMML Execution Engine with its key features, prere
 
 ## Introduction to PMML Execution Engine
 
-PMML Execution Engine is a C# library developed for predicting results based on predicted modelling done in PMML over the input data and you can run on the following .NET platforms – Windows Forms.NET, WinRT, WPF, UWP, ASP.NET, ASP.NET Core and ASP.NET MVC. PMML stands for Predictive Model Markup Language. It is an XML-based file format developed by the [Data Mining Group](http://www.dmg.org) to provide a way for applications to describe and exchange models produced by data mining and machine learning algorithms.
+PMML Execution Engine is a C# library developed for predicting results based on predicted modelling done in PMML over the input data and you can run on the following .NET platforms – Windows Forms.NET, WinRT, WPF, UWP, ASP.NET, ASP.NET Core and ASP.NET MVC. PMML stands for Predictive Model Markup Language. It is an XML-based file format developed by the [Data Mining Group](https://dmg.org/) to provide a way for applications to describe and exchange models produced by data mining and machine learning algorithms.
 
 ## Use Case Scenario
 
@@ -24,7 +24,7 @@ PMML Execution Engine is used to make predictions based on the input PMML file. 
 Important features of PMML Execution Engine are as follows,
 
 * Predicts the results for corresponding model mentioned in the PMML loaded.
-* The results are exactly similar to that obtained from the [R](http://cran.r-project.org/) software.
+* The results are exactly similar to that obtained from the [R](https://cran.r-project.org/) software.
 * Predicts both classification (Categorical values) as well as regression (Numeric values).
 * Calculates the probability of prediction in case of categorical values.
 * The models currently supported in PMML Execution Engine are,
@@ -140,14 +140,14 @@ Represents an example</td></tr>
 <tr>
 <td>
 Tip</td><td>
-{{ '![Tip icon](Overview_images/img2.jpeg) '| markdownify }}
+{{ '![Tip icon in Predictive Analytics PMML Execution Engine](overview_images/predictive-analytics-pmml-execution-engine-tip-icon.jpeg) '| markdownify }}
 
 </td><td>
 Represents useful hints that helps you in using the controls/features</td></tr>
 <tr>
 <td>
 Additional Information</td><td>
-{{ '![Additional Information icon](Overview_images/img3.jpeg) '| markdownify }}
+{{ '![Additional Information icon in Predictive Analytics PMML Execution Engine](overview_images/predictive-analytics-pmml-execution-additional-information-icon.jpeg) '| markdownify }}
 
 </td><td>
 Represents additional information on the topic</td></tr>
