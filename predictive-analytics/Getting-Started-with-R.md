@@ -25,7 +25,7 @@ You should now have a functional copy of R on your computer. When you double-cli
 
 
 
-![Default Startup Window for R in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-started-with-r-startup-window.png)
+![Default Startup Window for R](getting-started-with-r_images/predictive-analytics-startup-window.png)
 
 Default Startup Window for R
 {:.caption}
@@ -36,7 +36,7 @@ that way. For example, opening Terminal on Mac and typing R at the prompt, gives
 
 
 
-![Calling R from Command-line in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-command-line.png)
+![Calling R from Command-line](getting-started-with-r_images/predictive-analytics-command-line.png)
 
 Calling R from Command-line
 {:.caption}
@@ -61,7 +61,7 @@ When you double-click the RStudio icon, you can see something like the following
 
 
 
-![Studio Startup Window in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-studio-startup-window.png)
+![Studio Startup Window](getting-started-with-r_images/predictive-analytics-studio-startup-window.png)
 
 Studio Startup Window
 {:.caption}
@@ -446,7 +446,7 @@ UCBAdmissions  # Prints six tables; one for each department.
 
 This code produces the following figure, an unusual 3-way bar plot. When you want a simple bar chart of the number of people who applied to each of the six departments, this doesn't work. 
 
-![Default Plot of UCBAdmissions in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-default-plot.jpeg)
+![Default Plot of UCBAdmissions](getting-started-with-r_images/predictive-analytics-default-plot.jpeg)
 
 Default Plot of UCBAdmissions
 {:.caption}
@@ -529,7 +529,7 @@ Default barplot
 {%endhighlight%}
 
 
-![Bar Chart with default colors in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-bar-chart-with-default-chart.png)
+![Bar Chart with default colors](getting-started-with-r_images/predictive-analytics-default-chart.png)
 
 Bar Chart with default colors
 {:.caption}
@@ -560,7 +560,7 @@ barplot(x, col = rgb(159, 182, 205, max = 255))  # RGB 0-255 barplot(x, col = rg
 
 Any of the previous commands produce the chart in the following figure.
 
-![Colored Bar Chart in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-colored-bar-chart.png)
+![Colored Bar Chart in Predictive Analytics](getting-started-with-r_images/predictive-analytics-colored-bar-chart.png)
 
 Colored Bar Chart
 {:.caption}
@@ -587,7 +587,7 @@ To use the topo.colors palette for the six bars, enter the following:
 
 The output of the previous code is shown in the following figure.
 
-![Bar Chart with R palette - topo.colors in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-topo-colours.png)
+![Bar Chart with R palette - topo.colors](getting-started-with-r_images/predictive-analytics-topo-colours.png)
 
 Bar Chart with R palette "topo.colors"
 {:.caption}
@@ -606,14 +606,14 @@ I encourage you to explore the help information for RColorBrewer by entering hel
 
 This produces the following figure. The overlapping labels are due to the landscape aspect ratio.
 
-![All RColorBrewer Palettes in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-all-rcolorbrewer-palettes.png)
+![All RColorBrewer Palettes](getting-started-with-r_images/predictive-analytics-rcolorbrewer-palettes.png)
 
 All RColorBrewer Palettes
 {:.caption}
 
 You can get a better view of an individual palette by specifying the palette and the number of colors desired, like this: display.brewer.pal(8, "Accent"). The following figure illustrates this palette. 
 
-![Preview of the RColorBrewer Palette - Accent in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-palette-accent.png)
+![Preview of the RColorBrewer Palette - Accent](getting-started-with-r_images/predictive-analytics-palette-accent.png)
 
 Preview of the RColorBrewer Palette “Accent” 
 {:.caption}
@@ -630,7 +630,7 @@ barplot(x, col = brewer.pal(6, "Blues"))
 
 This command produces the following figure. 
 
-![Bar Chart with RColorBrewer Palette in Predictive Analytics Getting Started](getting-started-with-r_images/predictive-analytics-getting-Started-with-r-bar-chart-with-rcolorbrewer.png)
+![Bar Chart with RColorBrewer Palette](getting-started-with-r_images/predictive-analytics-bar-chart-with-rcolorbrewer.png)
 
 Bar Chart with RColorBrewer Palette
 {:.caption}
