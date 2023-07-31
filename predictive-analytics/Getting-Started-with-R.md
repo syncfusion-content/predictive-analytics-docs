@@ -61,7 +61,7 @@ When you double-click the RStudio icon, you can see something like the following
 
 
 
-![Studio Startup Window](getting-started-with-r_images/predictive-analytics-studio-startup-window.png)
+![Studio Startup Window](getting-started-with-r_images/predictive-analytics-installing-r-studio.png)
 
 Studio Startup Window
 {:.caption}
