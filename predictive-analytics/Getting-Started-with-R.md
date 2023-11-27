@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with R | Predictive Analytics | Syncfusion
+title: Getting Started with R in Predictive Analytics | Syncfusion
 description: R is a free open-source statistical programming language  and environment for statistical data manipulation, computing, calculation and graphical display.
 platform: predictive-analytics
 control: Essential Predictive Analytics
