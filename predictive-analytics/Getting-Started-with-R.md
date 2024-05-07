@@ -7,7 +7,7 @@ control: Essential Predictive Analytics
 documentation: ug
 ---
 
-# Getting Started with R
+# Getting Started with R in Predictive Analytics
 
 R is a free, open-source statistical programming language. Its utility and popularity show the same explosive growth that characterizes the increasing availability and variety of data. And while the command-line interface of R can be intimidating at first, the strengths of this approach, such as increased ability to share and reproduce analysis, soon become apparent. The following guidelines serve as an introduction to R for those who are intrigued by its possibilities. Chapter 1 lays out the steps for installing R and a companion product, RStudio, for working with variables and data sets, and for discovering the power of the third-party packages that supplement R’s functionality.
 
