@@ -7,7 +7,7 @@ control: Essential Predictive Analytics
 documentation: ug
 ---
 
-# Getting Started with R
+# Getting Started with R in Predictive Analytics
 
 R is a free, open-source statistical programming language. Its utility and popularity show the same explosive growth that characterizes the increasing availability and variety of data. And while the command-line interface of R can be intimidating at first, the strengths of this approach, such as increased ability to share and reproduce analysis, soon become apparent. The following guidelines serve as an introduction to R for those who are intrigued by its possibilities. Chapter 1 lays out the steps for installing R and a companion product, RStudio, for working with variables and data sets, and for discovering the power of the third-party packages that supplement R’s functionality.
 
@@ -280,7 +280,7 @@ If you would like to delete a package, use remove.packages(), like this: remove.
 
 ## R’s datasets package 
 
-The built-in package "datasets" makes it easy to experiment with R's procedures using real data. Although this package is part of R's base installation, you must load it. You can either select it in the Packages tab or enter library("datasets") or require("datasets"). You can see a list of the available data sets by typing data() or by going to the [R Datasets](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[ ](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[Package](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[ ](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)list. 
+The built-in package "datasets" makes it easy to experiment with R's procedures using real data. Although this package is part of R's base installation, you must load it. You can either select it in the Packages tab or enter library("datasets") or require("datasets"). You can see a list of the available data sets by typing data() or by going to the [R Datasets](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[ ](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[Package](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)[ ](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html)list. 
 
 For more information on a particular data set, you can search R Help by typing “?” and the name of the dataset with no space: ?airmiles. You can also see the contents of the dataset by entering its name: airmiles. To see the structure of the dataset, use str(), like this: str(airmiles). This shows you what kind of data set it is, how many observations and variables it has, and the first few values. 
 
