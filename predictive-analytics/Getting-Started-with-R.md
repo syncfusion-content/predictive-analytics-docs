@@ -25,7 +25,7 @@ You should now have a functional copy of R on your computer. When you double-cli
 
 
 
-![Default Startup Window for R](Getting-Started-with-R_images/img1.png)
+![Default Startup Window for R.](Getting-Started-with-R_images/getting-started-with-window-for-r.png)
 
 Default Startup Window for R
 {:.caption}
@@ -36,7 +36,7 @@ that way. For example, opening Terminal on Mac and typing R at the prompt, gives
 
 
 
-![Calling R from Command-line](Getting-Started-with-R_images/img2.png)
+![Calling R from Command-line.](Getting-Started-with-R_images/calling-r-for-comand-line.png)
 
 Calling R from Command-line
 {:.caption}
@@ -61,7 +61,7 @@ When you double-click the RStudio icon, you can see something like the following
 
 
 
-![Studio Startup Window](Getting-Started-with-R_images/img3.png)
+![Studio Startup Window.](Getting-Started-with-R_images/studio-startup-window.png)
 
 Studio Startup Window
 {:.caption}
@@ -446,7 +446,7 @@ UCBAdmissions  # Prints six tables; one for each department.
 
 This code produces the following figure, an unusual 3-way bar plot. When you want a simple bar chart of the number of people who applied to each of the six departments, this doesn't work. 
 
-![Default Plot of UCBAdmissions](Getting-Started-with-R_images/img4.jpeg)
+![Default Plot of UCBAdmissions.](Getting-Started-with-R_images/default-plot-of-ucbadmissions.jpeg)
 
 Default Plot of UCBAdmissions
 {:.caption}
@@ -529,7 +529,7 @@ Default barplot
 {%endhighlight%}
 
 
-![Bar Chart with default colors](Getting-Started-with-R_images/img5.png)
+![Bar Chart with default colors.](Getting-Started-with-R_images/bar-chart-with-default-colors.png)
 
 Bar Chart with default colors
 {:.caption}
@@ -560,7 +560,7 @@ barplot(x, col = rgb(159, 182, 205, max = 255))  # RGB 0-255 barplot(x, col = rg
 
 Any of the previous commands produce the chart in the following figure.
 
-![Colored Bar Chart](Getting-Started-with-R_images/img6.png)
+![Colored Bar Chart.](Getting-Started-with-R_images/colored-bar-chart.png)
 
 Colored Bar Chart
 {:.caption}
@@ -587,7 +587,7 @@ To use the topo.colors palette for the six bars, enter the following:
 
 The output of the previous code is shown in the following figure.
 
-![Bar Chart with R palette - topo.colors](Getting-Started-with-R_images/img7.png)
+![Bar Chart with R palette - topo.colors](Getting-Started-with-R_images/bar-chart-with-r-palette.png)
 
 Bar Chart with R palette "topo.colors"
 {:.caption}
@@ -606,14 +606,14 @@ I encourage you to explore the help information for RColorBrewer by entering hel
 
 This produces the following figure. The overlapping labels are due to the landscape aspect ratio.
 
-![All RColorBrewer Palettes](Getting-Started-with-R_images/img8.png)
+![All RColorBrewer Palettes.](Getting-Started-with-R_images/all-recolorbrewer-palettes.png)
 
 All RColorBrewer Palettes
 {:.caption}
 
 You can get a better view of an individual palette by specifying the palette and the number of colors desired, like this: display.brewer.pal(8, "Accent"). The following figure illustrates this palette. 
 
-![Preview of the RColorBrewer Palette - Accent](Getting-Started-with-R_images/img9.png)
+![Preview of the RColorBrewer Palette - Accent.](Getting-Started-with-R_images/preview-of-rcolorbrewer-palette.png)
 
 Preview of the RColorBrewer Palette “Accent” 
 {:.caption}
@@ -630,7 +630,7 @@ barplot(x, col = brewer.pal(6, "Blues"))
 
 This command produces the following figure. 
 
-![Bar Chart with RColorBrewer Palette](Getting-Started-with-R_images/img10.png)
+![Bar Chart with RColorBrewer Palette](Getting-Started-with-R_images/bar-chart-with-rcolorbrewer-palette.png)
 
 Bar Chart with RColorBrewer Palette
 {:.caption}
