@@ -36,7 +36,7 @@ that way. For example, opening Terminal on Mac and typing R at the prompt, gives
 
 
 
-![Calling R from Command-line in Predictive Analytics.](getting-started-with-R_images/calling-r-in-predictive-analytics.png)
+![Typing R at the prompt in Predictive Analytics.](getting-started-with-R_images/typing-r-at-the-prompt-in-predictive-analytics.png)
 
 Calling R from Command-line
 {:.caption}
@@ -61,7 +61,7 @@ When you double-click the RStudio icon, you can see something like the following
 
 
 
-![Studio Startup Window in Predictive Analytics.](getting-started-with-r_images/studio-startup-in-predictive-analytics.png)
+![Double-click the RStudio icon in Predictive Analytics.](getting-started-with-r_images/double-click-the-rstudio-icon-in-predictive-analytics.png)
 
 Studio Startup Window
 {:.caption}
@@ -446,7 +446,7 @@ UCBAdmissions  # Prints six tables; one for each department.
 
 This code produces the following figure, an unusual 3-way bar plot. When you want a simple bar chart of the number of people who applied to each of the six departments, this doesn't work. 
 
-![Default Plot of UCBAdmissions in Predictive Analytics.](getting-started-with-r_images/default-plot-in-predictive-analytics.jpeg)
+![Unusual 3-way bar plot in Predictive Analytics.](getting-started-with-r_images/unusual-3-way-bar-plot-in-predictive-analytics.jpeg)
 
 Default Plot of UCBAdmissions
 {:.caption}
@@ -529,7 +529,7 @@ Default barplot
 {%endhighlight%}
 
 
-![Bar Chart with default colors in Predictive Analytics.](getting-started-with-r_images/bar-chart-with-default-in-predictive-analytics.png)
+![Bar plot with default colors in Predictive Analytics.](getting-started-with-r_images/bar-plot-with-default-in-predictive-analytics.png)
 
 Bar Chart with default colors
 {:.caption}
@@ -587,7 +587,7 @@ To use the topo.colors palette for the six bars, enter the following:
 
 The output of the previous code is shown in the following figure.
 
-![Bar Chart with R palette in Predictive Analytics.](getting-started-with-r_images/bar-chart-with-r-palette-in-predictive-analytics.png)
+![Bar plot with built-in palette in Predictive Analytics.](getting-started-with-r_images/bar-plot-with-built-in-palette-in-predictive-analytics.png)
 
 Bar Chart with R palette "topo.colors"
 {:.caption}
