@@ -7,7 +7,7 @@ control: Essential Predictive Analytics
 documentation: ug
 ---
 
-# Getting Started with Essential Predictive Analytics
+# Getting Started with Essential<sup style="font-size:70%">&reg;</sup> Predictive Analytics
 
 This section provides you the basic information about getting started with predictive analytics, that is, how to create a model in R, generate a PMML file and finally, how to deploy it in a .NET application using the PMML Execution Engine.
 
@@ -17,7 +17,7 @@ Several samples are included with the product. Each sample contains R code that 
 
 R is a free software programming language and software environment for statistical computing and graphics. The R language is widely used among statisticians and data miners for developing statistical software and data analysis. R is freely available from [http://www.r-project.org/](http://www.r-project.org/).
 
-Syncfusion has published an eBook titled “R Succinctly” that allows you to quickly get started with the R modeling environment. This book is included with the documentation for this product.
+Syncfusion<sup style="font-size:70%">&reg;</sup> has published an eBook titled “R Succinctly” that allows you to quickly get started with the R modeling environment. This book is included with the documentation for this product.
 
 Once you build a model using R or any other modeling environment of your choice, you can export the model to PMML. The persisted model is then a stand-alone representation of the model that can then be interpreted at runtime by a suitable model such as the PMML engine. During deployment time there is no need for the original modeling environment or runtime to be present in any form.
 
@@ -66,9 +66,9 @@ The generated PMML file for the simple regression model illustrated in the sampl
 
 <PMML version="4.1" xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_1 http://www.dmg.org/v4-1/pmml-4-1.xsd">
 
- <Header copyright="Copyright (c) 2014 Syncfusion" description="Linear Regression Model">
+ <Header copyright="Copyright (c) 2014 Syncfusion<sup style="font-size:70%">&reg;</sup>" description="Linear Regression Model">
 
-  <Extension name="user" value="Syncfusion" extender="Rattle/PMML"/>
+  <Extension name="user" value="Syncfusion<sup style="font-size:70%">&reg;</sup>" extender="Rattle/PMML"/>
 
   <Application name="Rattle/PMML" version="1.4"/>
 
