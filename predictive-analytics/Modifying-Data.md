@@ -7,7 +7,7 @@ control: Essential Predictive Analytics
 documentation: ug
 ---
 
-# Modifying Data in Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> Predictive Analytics
+# Modifying Data in Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Predictive Analytics
 
 All data can tell an attentive analyst something of worth. The problem is that the story you are able to get from the data may not be the story that you need. One method for getting results that are more closely aligned to your research questions can be to modify the data. Explained here are four kinds of modifications that can help you get more insights out of your data: compensating for outliers, transforming distributions, creating composite variables, and dealing with missing data. 
 
