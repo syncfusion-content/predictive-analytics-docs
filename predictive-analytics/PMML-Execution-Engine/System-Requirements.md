@@ -13,7 +13,7 @@ The following topic describes the system requirements needed by Syncfusion<sup s
 
 ## Operating Systems
 
-Syncfusion PMML Execution Engine can be installed on any of the following operating systems:
+Syncfusion<sup style="font-size:70%">&reg;</sup> PMML Execution Engine can be installed on any of the following operating systems:
 
 * Windows 10
 * Windows 8, 8.1
