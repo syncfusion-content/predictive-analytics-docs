@@ -9,11 +9,11 @@ documentation: ug
 
 # System Requirements
 
-The following topic describes the system requirements needed by Syncfusion PMML Execution Engine.
+The following topic describes the system requirements needed by Syncfusion<sup style="font-size:70%">&reg;</sup> PMML Execution Engine.
 
 ## Operating Systems
 
-Syncfusion PMML Execution Engine can be installed on any of the following operating systems:
+Syncfusion<sup style="font-size:70%">&reg;</sup> PMML Execution Engine can be installed on any of the following operating systems:
 
 * Windows 10
 * Windows 8, 8.1
@@ -30,7 +30,7 @@ Syncfusion PMML Execution Engine can be installed on any of the following operat
 
 ## Development Environment
 
-In order to develop applications with Syncfusion PMML Execution Engine, you need to have installed anyone of the Visual Studio version.
+In order to develop applications with Syncfusion<sup style="font-size:70%">&reg;</sup> PMML Execution Engine, you need to have installed anyone of the Visual Studio version.
 
 * Microsoft Visual Studio 2008
 * Microsoft Visual Studio 2010
